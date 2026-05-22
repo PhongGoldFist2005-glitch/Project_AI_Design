@@ -1,2 +1,2 @@
 # Project_AI_Design
-Tiny-Yolo-ite
+Tiny-Yolo-lite
