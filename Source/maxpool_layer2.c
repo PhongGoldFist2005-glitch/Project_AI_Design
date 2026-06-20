@@ -8,39 +8,33 @@ void maxpool_layer2(
     data_t output[POOL2_ROWS][POOL2_COLS][C2]
 ){
     Channel:
-    for(int i = 0; i < C2; i++){
+    for(int ch = 0; ch < C2; ch++){
 
         Row:
-        for(int j = 0; j < CONV2_ROWS - 1; j += POOL_SIZE){
+        for(int out_row = 0; out_row < POOL2_ROWS; out_row++){
 
-        	// Prevent overflowed array.
             Col:
-            for(int k = 0; k < CONV2_COLS - 1; k += POOL_SIZE){
+            for(int out_col = 0; out_col < POOL2_COLS; out_col++){
 
-                data_t maxvalue = 0;
+                int in_row = out_row * POOL_SIZE;
+                int in_col = out_col * POOL_SIZE;
+                data_t maxvalue = input[in_row][in_col][ch];
 
-                int row_end =
-                    (j + POOL_SIZE < CONV2_ROWS)
-                    ? (j + POOL_SIZE)
-                    : CONV2_ROWS;
+                POOL_ROW:
+                for(int pool_row = 0; pool_row < POOL_SIZE; pool_row++){
 
-                int col_end =
-                    (k + POOL_SIZE < CONV2_COLS)
-                    ? (k + POOL_SIZE)
-                    : CONV2_COLS;
+                    POOL_COL:
+                    for(int pool_col = 0; pool_col < POOL_SIZE; pool_col++){
 
-                MAX_ROW:
-                for(int a = j; a < row_end; a++){
+                        data_t value =
+                            input[in_row + pool_row][in_col + pool_col][ch];
 
-                    MAX_COL:
-                    for(int b = k; b < col_end; b++){
-
-                        if(input[a][b][i] > maxvalue)
-                            maxvalue = input[a][b][i];
+                        if(value > maxvalue)
+                            maxvalue = value;
                     }
                 }
 
-                output[j/POOL_SIZE][k/POOL_SIZE][i] = maxvalue;
+                output[out_row][out_col][ch] = maxvalue;
             }
         }
     }
