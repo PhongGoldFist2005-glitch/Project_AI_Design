@@ -19,6 +19,28 @@ static data_t test_det  [GRID_SIZE][GRID_SIZE][DET_OUT];
 static data_t det_in       [GRID_SIZE][GRID_SIZE][DET_OUT];
 static data_t decode_result[GRID_SIZE][GRID_SIZE][BOX_SIZE][OUTPUT_DECODED];
 
+/* Must match the diagnostic coefficient banks in weights.h. */
+static const data_t conv1_coeff[C1] = {
+     1,  2, -3,  5, -7,  3, -5,  6
+};
+
+static const data_t conv2_coeff[C2] = {
+     1,  2, -3,  5, -7,  3, -5,  6,
+     7, -2,  4, -6,  9, -4,  8, -9
+};
+
+static const data_t conv3_coeff[C3] = {
+      1,   2,  -3,   5,  -7,   3,  -5,   6,
+      7,  -2,   4,  -6,   9,  -4,   8,  -9,
+     10,  -8,  11, -10,   3,  -7,   5, -11,
+      6,  -5,   2,  -4,   7,  -9,   8,  -6
+};
+
+static const data_t det_coeff[DET_OUT] = {
+     1,  2, -3,  5, -7,  3, -5,  6,
+     7, -2,  4, -6,  9, -4,  8, -9
+};
+
 static void record_mismatch(
     const char *test_name,
     int i0,
@@ -232,10 +254,8 @@ static int test_conv1_relu(void)
     for (r = 0; r < CONV1_ROWS; r++) {
         for (c = 0; c < CONV1_COLS; c++) {
             for (oc = 0; oc < C1; oc++) {
-                data_t expected = 0;
-
-                if (oc == 0 && image[r][c][0] > 0)
-                    expected = image[r][c][0];
+                data_t product = image[r][c][0] * conv1_coeff[oc];
+                data_t expected = (product > 0) ? product : 0;
 
                 if (test_conv1[r][c][oc] != expected)
                     record_mismatch("T6-conv1", r, c, oc, 0,
@@ -244,7 +264,7 @@ static int test_conv1_relu(void)
         }
     }
 
-    return report_test("TEST 6: Conv1 sparse tap and ReLU", errors);
+    return report_test("TEST 6: Conv1 signed multiply and ReLU", errors);
 }
 
 static int test_conv2_relu(void)
@@ -269,10 +289,8 @@ static int test_conv2_relu(void)
     for (r = 0; r < CONV2_ROWS; r++) {
         for (c = 0; c < CONV2_COLS; c++) {
             for (oc = 0; oc < C2; oc++) {
-                data_t expected = 0;
-
-                if (oc == 0 && test_pool1[r][c][0] > 0)
-                    expected = test_pool1[r][c][0];
+                data_t product = test_pool1[r][c][0] * conv2_coeff[oc];
+                data_t expected = (product > 0) ? product : 0;
 
                 if (test_conv2[r][c][oc] != expected)
                     record_mismatch("T7-conv2", r, c, oc, 0,
@@ -281,7 +299,7 @@ static int test_conv2_relu(void)
         }
     }
 
-    return report_test("TEST 7: Conv2 sparse tap and ReLU", errors);
+    return report_test("TEST 7: Conv2 signed multiply and ReLU", errors);
 }
 
 static int test_conv3_relu(void)
@@ -306,10 +324,8 @@ static int test_conv3_relu(void)
     for (r = 0; r < CONV3_ROWS; r++) {
         for (c = 0; c < CONV3_COLS; c++) {
             for (oc = 0; oc < C3; oc++) {
-                data_t expected = 0;
-
-                if (oc == 0 && test_pool2[r][c][0] > 0)
-                    expected = test_pool2[r][c][0];
+                data_t product = test_pool2[r][c][0] * conv3_coeff[oc];
+                data_t expected = (product > 0) ? product : 0;
 
                 if (test_conv3[r][c][oc] != expected)
                     record_mismatch("T8-conv3", r, c, oc, 0,
@@ -318,7 +334,7 @@ static int test_conv3_relu(void)
         }
     }
 
-    return report_test("TEST 8: Conv3 sparse tap and ReLU", errors);
+    return report_test("TEST 8: Conv3 signed multiply and ReLU", errors);
 }
 
 static int test_maxpool1(void)
@@ -411,7 +427,7 @@ static int test_detection_head(void)
     for (r = 0; r < GRID_SIZE; r++) {
         for (c = 0; c < GRID_SIZE; c++) {
             for (oc = 0; oc < DET_OUT; oc++) {
-                data_t expected = (oc == 0) ? test_conv3[r][c][0] : 0;
+                data_t expected = test_conv3[r][c][0] * det_coeff[oc];
 
                 if (test_det[r][c][oc] != expected)
                     record_mismatch("T11-head", r, c, oc, 0,
@@ -420,7 +436,7 @@ static int test_detection_head(void)
         }
     }
 
-    return report_test("TEST 11: Detection Head sparse tap", errors);
+    return report_test("TEST 11: Detection Head signed multiply", errors);
 }
 
 static int test_decode_full_mapping(void)
@@ -517,12 +533,11 @@ static int test_nonzero_top(void)
 
             for (b = 0; b < BOX_SIZE; b++) {
                 for (v = 0; v < OUTPUT_DECODED; v++) {
-                    data_t expected = 0;
+                    int channel = b * OUTPUT_DECODED + v;
+                    data_t expected = path_value * det_coeff[channel];
 
-                    if (b == 0 && v == 0)
-                        expected = path_value;
-                    else if (v == 4)
-                        expected = 500;
+                    if (v == 4)
+                        expected = expected_sigmoid(expected);
 
                     if (result[r][c][b][v] != expected)
                         record_mismatch("T14-top", r, c, b, v,
