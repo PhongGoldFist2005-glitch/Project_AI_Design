@@ -1,9 +1,8 @@
 #include "tinyyolo_lite.h"
+#include "weights.h"
 
 void conv_layer3(
     data_t input [POOL2_ROWS][POOL2_COLS][C2],
-    data_t weight[KERNAL_SIZE][KERNAL_SIZE][C2][C3],
-    data_t bias  [C3],
     data_t output[CONV3_ROWS][CONV3_COLS][C3]
 )
 {
@@ -16,7 +15,7 @@ void conv_layer3(
         for (col = 0; col < CONV3_COLS; col++) {
             LOOP_OC:
             for (oc = 0; oc < C3; oc++) {
-                sum = bias[oc];
+                sum = b_conv3[oc];
                 LOOP_KR:
                 for (kr = 0; kr < KERNAL_SIZE; kr++) {
                     LOOP_KC:
@@ -24,7 +23,7 @@ void conv_layer3(
                         LOOP_IC:
                         for (ic = 0; ic < C2; ic++) {
                             sum += input[row+kr][col+kc][ic]
-                                 * weight[kr][kc][ic][oc];
+                                 * w_conv3[kr][kc][ic][oc];
                         }
                     }
                 }
