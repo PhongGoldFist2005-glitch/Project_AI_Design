@@ -46,22 +46,16 @@ typedef int data_t;
 
 void conv_layer1(
     data_t input [INPUT_ROWS][INPUT_COLS][INPUT_CH],
-    data_t weight[KERNAL_SIZE][KERNAL_SIZE][INPUT_CH][C1],
-    data_t bias  [C1],
     data_t output[CONV1_ROWS][CONV1_COLS][C1]
 );
 
 void conv_layer2(
     data_t input [POOL1_ROWS][POOL1_COLS][C1],
-    data_t weight[KERNAL_SIZE][KERNAL_SIZE][C1][C2],
-    data_t bias  [C2],
     data_t output[CONV2_ROWS][CONV2_COLS][C2]
 );
 
 void conv_layer3(
     data_t input [POOL2_ROWS][POOL2_COLS][C2],
-    data_t weight[KERNAL_SIZE][KERNAL_SIZE][C2][C3],
-    data_t bias  [C3],
     data_t output[CONV3_ROWS][CONV3_COLS][C3]
 );
 
@@ -77,8 +71,6 @@ void maxpool_layer2(
 
 void detection_head(
     data_t input [CONV3_ROWS][CONV3_COLS][C3],
-    data_t weight[KERNAL_DETECT][KERNAL_DETECT][C3][DET_OUT],
-    data_t bias  [DET_OUT],
     data_t output[GRID_SIZE][GRID_SIZE][DET_OUT]
 );
 
@@ -92,19 +84,6 @@ void decode(
 // ============================================================
 void tinyyolo_lite(
     data_t image  [INPUT_ROWS][INPUT_COLS][INPUT_CH],
-
-    data_t w_conv1[KERNAL_SIZE][KERNAL_SIZE][INPUT_CH][C1],
-    data_t b_conv1[C1],
-
-    data_t w_conv2[KERNAL_SIZE][KERNAL_SIZE][C1][C2],
-    data_t b_conv2[C2],
-
-    data_t w_conv3[KERNAL_SIZE][KERNAL_SIZE][C2][C3],
-    data_t b_conv3[C3],
-
-    data_t w_det  [KERNAL_DETECT][KERNAL_DETECT][C3][DET_OUT],
-    data_t b_det  [DET_OUT],
-
     data_t output [GRID_SIZE][GRID_SIZE][BOX_SIZE][OUTPUT_DECODED]
 );
 
