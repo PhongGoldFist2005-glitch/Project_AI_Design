@@ -19,28 +19,6 @@ static data_t test_det  [GRID_SIZE][GRID_SIZE][DET_OUT];
 static data_t det_in       [GRID_SIZE][GRID_SIZE][DET_OUT];
 static data_t decode_result[GRID_SIZE][GRID_SIZE][BOX_SIZE][OUTPUT_DECODED];
 
-/* Must match the diagnostic coefficient banks in weights.h. */
-static const data_t conv1_coeff[C1] = {
-     1,  2, -3,  5, -7,  3, -5,  6
-};
-
-static const data_t conv2_coeff[C2] = {
-     1,  2, -3,  5, -7,  3, -5,  6,
-     7, -2,  4, -6,  9, -4,  8, -9
-};
-
-static const data_t conv3_coeff[C3] = {
-      1,   2,  -3,   5,  -7,   3,  -5,   6,
-      7,  -2,   4,  -6,   9,  -4,   8,  -9,
-     10,  -8,  11, -10,   3,  -7,   5, -11,
-      6,  -5,   2,  -4,   7,  -9,   8,  -6
-};
-
-static const data_t det_coeff[DET_OUT] = {
-     1,  2, -3,  5, -7,  3, -5,  6,
-     7, -2,  4, -6,  9, -4,  8, -9
-};
-
 static void record_mismatch(
     const char *test_name,
     int i0,
@@ -82,6 +60,63 @@ static data_t expected_sigmoid(data_t x)
     if (x > 8)
         return 1000;
     return lut[x + 8];
+}
+
+/* Independent golden calculations for the dense convolution weights. */
+static data_t reference_conv1(int row, int col, int oc)
+{
+    int kr, kc, ic;
+    long long sum = b_conv1[oc];
+
+    for (kr = 0; kr < KERNAL_SIZE; kr++)
+        for (kc = 0; kc < KERNAL_SIZE; kc++)
+            for (ic = 0; ic < INPUT_CH; ic++)
+                sum += (long long)image[row + kr][col + kc][ic]
+                     * w_conv1[kr][kc][ic][oc];
+
+    return (sum > 0) ? (data_t)sum : 0;
+}
+
+static data_t reference_conv2(int row, int col, int oc)
+{
+    int kr, kc, ic;
+    long long sum = b_conv2[oc];
+
+    for (kr = 0; kr < KERNAL_SIZE; kr++)
+        for (kc = 0; kc < KERNAL_SIZE; kc++)
+            for (ic = 0; ic < C1; ic++)
+                sum += (long long)test_pool1[row + kr][col + kc][ic]
+                     * w_conv2[kr][kc][ic][oc];
+
+    return (sum > 0) ? (data_t)sum : 0;
+}
+
+static data_t reference_conv3(int row, int col, int oc)
+{
+    int kr, kc, ic;
+    long long sum = b_conv3[oc];
+
+    for (kr = 0; kr < KERNAL_SIZE; kr++)
+        for (kc = 0; kc < KERNAL_SIZE; kc++)
+            for (ic = 0; ic < C2; ic++)
+                sum += (long long)test_pool2[row + kr][col + kc][ic]
+                     * w_conv3[kr][kc][ic][oc];
+
+    return (sum > 0) ? (data_t)sum : 0;
+}
+
+static data_t reference_detection(int row, int col, int oc)
+{
+    int kr, kc, ic;
+    long long sum = b_det[oc];
+
+    for (kr = 0; kr < KERNAL_DETECT; kr++)
+        for (kc = 0; kc < KERNAL_DETECT; kc++)
+            for (ic = 0; ic < C3; ic++)
+                sum += (long long)test_conv3[row + kr][col + kc][ic]
+                     * w_det[kr][kc][ic][oc];
+
+    return (data_t)sum;
 }
 
 static void clear_top_io(void)
@@ -254,8 +289,7 @@ static int test_conv1_relu(void)
     for (r = 0; r < CONV1_ROWS; r++) {
         for (c = 0; c < CONV1_COLS; c++) {
             for (oc = 0; oc < C1; oc++) {
-                data_t product = image[r][c][0] * conv1_coeff[oc];
-                data_t expected = (product > 0) ? product : 0;
+                data_t expected = reference_conv1(r, c, oc);
 
                 if (test_conv1[r][c][oc] != expected)
                     record_mismatch("T6-conv1", r, c, oc, 0,
@@ -289,8 +323,7 @@ static int test_conv2_relu(void)
     for (r = 0; r < CONV2_ROWS; r++) {
         for (c = 0; c < CONV2_COLS; c++) {
             for (oc = 0; oc < C2; oc++) {
-                data_t product = test_pool1[r][c][0] * conv2_coeff[oc];
-                data_t expected = (product > 0) ? product : 0;
+                data_t expected = reference_conv2(r, c, oc);
 
                 if (test_conv2[r][c][oc] != expected)
                     record_mismatch("T7-conv2", r, c, oc, 0,
@@ -324,8 +357,7 @@ static int test_conv3_relu(void)
     for (r = 0; r < CONV3_ROWS; r++) {
         for (c = 0; c < CONV3_COLS; c++) {
             for (oc = 0; oc < C3; oc++) {
-                data_t product = test_pool2[r][c][0] * conv3_coeff[oc];
-                data_t expected = (product > 0) ? product : 0;
+                data_t expected = reference_conv3(r, c, oc);
 
                 if (test_conv3[r][c][oc] != expected)
                     record_mismatch("T8-conv3", r, c, oc, 0,
@@ -427,7 +459,7 @@ static int test_detection_head(void)
     for (r = 0; r < GRID_SIZE; r++) {
         for (c = 0; c < GRID_SIZE; c++) {
             for (oc = 0; oc < DET_OUT; oc++) {
-                data_t expected = test_conv3[r][c][0] * det_coeff[oc];
+                data_t expected = reference_detection(r, c, oc);
 
                 if (test_det[r][c][oc] != expected)
                     record_mismatch("T11-head", r, c, oc, 0,
@@ -508,6 +540,7 @@ static int test_nonzero_top(void)
 {
     int r, c, ch, b, v;
     int errors = 0;
+    int nonzero_raw = 0;
     long long checksum = 0;
 
     printf("--- TEST 14: non-zero end-to-end top-level ---\n");
@@ -515,29 +548,33 @@ static int test_nonzero_top(void)
 
     for (r = 0; r < INPUT_ROWS; r++) {
         for (c = 0; c < INPUT_COLS; c++) {
-            image[r][c][0] = r * INPUT_COLS + c + 1;
-            for (ch = 1; ch < INPUT_CH; ch++) {
-                image[r][c][ch] = (r + c + ch) % 4;
-            }
+            for (ch = 0; ch < INPUT_CH; ch++)
+                image[r][c][ch] =
+                    ((r * r + c * c + 3 * r * c
+                      + 7 * r + 11 * c + 5 * ch) % 5) - 2;
         }
     }
+
+    conv_layer1(image, test_conv1);
+    maxpool_layer1(test_conv1, test_pool1);
+    conv_layer2(test_pool1, test_conv2);
+    maxpool_layer2(test_conv2, test_pool2);
+    conv_layer3(test_pool2, test_conv3);
+    detection_head(test_conv3, test_det);
+    decode(test_det, decode_result);
 
     tinyyolo_lite(image, result);
 
     for (r = 0; r < GRID_SIZE; r++) {
         for (c = 0; c < GRID_SIZE; c++) {
-            data_t path_value =
-                image[4 * r + 3][4 * c + 3][0];
-
             checksum += result[r][c][0][0];
 
             for (b = 0; b < BOX_SIZE; b++) {
                 for (v = 0; v < OUTPUT_DECODED; v++) {
-                    int channel = b * OUTPUT_DECODED + v;
-                    data_t expected = path_value * det_coeff[channel];
+                    data_t expected = decode_result[r][c][b][v];
 
-                    if (v == 4)
-                        expected = expected_sigmoid(expected);
+                    if (v != 4 && expected != 0)
+                        nonzero_raw++;
 
                     if (result[r][c][b][v] != expected)
                         record_mismatch("T14-top", r, c, b, v,
@@ -547,10 +584,71 @@ static int test_nonzero_top(void)
         }
     }
 
+    if (nonzero_raw == 0) {
+        printf("[FAIL] T14-top produced no non-zero raw outputs\n");
+        errors++;
+    }
+
     if (errors == 0)
-        printf("       non-zero output checksum = %lld\n", checksum);
+        printf("       output checksum = %lld, non-zero raw values = %d\n",
+               checksum, nonzero_raw);
 
     return report_test("TEST 14: non-zero end-to-end pipeline", errors);
+}
+
+static int test_dense_weight_coverage(void)
+{
+    int kr, kc, ic, oc;
+    int errors = 0;
+    int zeros = 0;
+    long long total = 0;
+
+    printf("--- TEST 15: dense weight coverage ---\n");
+
+    for (kr = 0; kr < KERNAL_SIZE; kr++)
+        for (kc = 0; kc < KERNAL_SIZE; kc++)
+            for (ic = 0; ic < INPUT_CH; ic++)
+                for (oc = 0; oc < C1; oc++) {
+                    total++;
+                    if (w_conv1[kr][kc][ic][oc] == 0)
+                        zeros++;
+                }
+
+    for (kr = 0; kr < KERNAL_SIZE; kr++)
+        for (kc = 0; kc < KERNAL_SIZE; kc++)
+            for (ic = 0; ic < C1; ic++)
+                for (oc = 0; oc < C2; oc++) {
+                    total++;
+                    if (w_conv2[kr][kc][ic][oc] == 0)
+                        zeros++;
+                }
+
+    for (kr = 0; kr < KERNAL_SIZE; kr++)
+        for (kc = 0; kc < KERNAL_SIZE; kc++)
+            for (ic = 0; ic < C2; ic++)
+                for (oc = 0; oc < C3; oc++) {
+                    total++;
+                    if (w_conv3[kr][kc][ic][oc] == 0)
+                        zeros++;
+                }
+
+    for (kr = 0; kr < KERNAL_DETECT; kr++)
+        for (kc = 0; kc < KERNAL_DETECT; kc++)
+            for (ic = 0; ic < C3; ic++)
+                for (oc = 0; oc < DET_OUT; oc++) {
+                    total++;
+                    if (w_det[kr][kc][ic][oc] == 0)
+                        zeros++;
+                }
+
+    if (zeros != 0) {
+        printf("[FAIL] dense weights contain %d zero coefficient(s)\n", zeros);
+        errors += zeros;
+    } else {
+        printf("       checked %lld coefficients: no zero taps\n", total);
+    }
+
+    return report_test("TEST 15: every convolution tap is non-zero", errors);
 }
 
 static void print_zero_decode_slice(void)
@@ -594,6 +692,7 @@ int main(void)
     total++; passed += test_decode_full_mapping();
     total++; passed += test_decode_saturation();
     total++; passed += test_nonzero_top();
+    total++; passed += test_dense_weight_coverage();
 
     print_zero_decode_slice();
 
