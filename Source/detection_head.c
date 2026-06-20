@@ -1,9 +1,8 @@
 #include "tinyyolo_lite.h"
+#include "weights.h"
 
 void detection_head(
     data_t input[CONV3_ROWS][CONV3_COLS][C3],
-    data_t weight[KERNAL_DETECT][KERNAL_DETECT][C3][DET_OUT],
-    data_t bias[DET_OUT],
     data_t output[GRID_SIZE][GRID_SIZE][DET_OUT]
 ){
 	OUTPUT_CHANNEL:
@@ -15,7 +14,7 @@ void detection_head(
         	OUTPUT_COLS:
             for(int ox = 0; ox < GRID_SIZE; ox++){
 
-                int sum = bias[oc];
+                int sum = b_det[oc];
 
                 INPUT_CHANNELS:
                 for(int ic = 0; ic < C3; ic++){
@@ -28,7 +27,7 @@ void detection_head(
 
                             sum +=
                                 input[oy + ky][ox + kx][ic] *
-                                weight[ky][kx][ic][oc];
+                                w_det[ky][kx][ic][oc];
                         }
                     }
                 }
@@ -38,4 +37,3 @@ void detection_head(
         }
     }
 }
-
