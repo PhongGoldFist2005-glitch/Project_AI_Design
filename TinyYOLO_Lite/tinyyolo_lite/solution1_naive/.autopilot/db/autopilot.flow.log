@@ -1,0 +1,1460 @@
+INFO-FLOW: Workspace E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive opened at Sat Jun 20 22:51:47 +0700 2026
+Execute     config_clock -quiet -name default -period 10 -default=false 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+Execute     open_platform DefaultPlatform 
+Execute     import_lib E:/Xilinx/Vivado/2018.3/common/technology/xilinx/zynq/zynq 
+Execute       source E:/Xilinx/Vivado/2018.3/common/technology/xilinx/common/xilinx.lib 
+Execute         source E:/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/xilinx_interface.lib 
+Execute           source E:/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/plb46.lib 
+Execute           source E:/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/fsl.lib 
+Execute           source E:/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/axi4.lib 
+Execute           source E:/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/maxi.lib 
+Execute           source E:/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/saxilite.lib 
+Execute         source E:/Xilinx/Vivado/2018.3/common/technology/xilinx/common/dsp48.lib 
+Execute         source E:/Xilinx/Vivado/2018.3/common/technology/xilinx/ip/dds_compiler.lib 
+Execute         source E:/Xilinx/Vivado/2018.3/common/technology/xilinx/ip/xfft.lib 
+Execute         source E:/Xilinx/Vivado/2018.3/common/technology/xilinx/ip/xfir.lib 
+Execute       source E:/Xilinx/Vivado/2018.3/common/technology/xilinx/common/xilinx_old.lib 
+Execute       source E:/Xilinx/Vivado/2018.3/common/technology/xilinx/common/xilinx_vivado.lib 
+Execute       source E:/Xilinx/Vivado/2018.3/common/technology/xilinx/common/xilinx.hlp 
+Execute         source E:/Xilinx/Vivado/2018.3/common/technology/xilinx/common/target_info.tcl 
+Execute         source E:/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute           source E:/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/maxi.hlp 
+Execute           source E:/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/saxilite.hlp 
+Execute         source E:/Xilinx/Vivado/2018.3/common/technology/xilinx/common/dsp48.hlp 
+Execute       source E:/Xilinx/Vivado/2018.3/common/technology/xilinx/zynq/dsp48e1.hlp 
+Execute       get_default_platform 
+Execute       config_chip_info -quiet -resource  {SLICE 13300}  {LUT 53200}     {FF 106400} {DSP48E 220}   {BRAM 280}  
+Execute       config_chip_info -quiet -speed medium 
+Execute       source E:/Xilinx/Vivado/2018.3/common/technology/xilinx/common/xilinx.hlp 
+Execute         source E:/Xilinx/Vivado/2018.3/common/technology/xilinx/common/target_info.tcl 
+Execute         source E:/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute           source E:/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/maxi.hlp 
+Execute           source E:/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/saxilite.hlp 
+Execute         source E:/Xilinx/Vivado/2018.3/common/technology/xilinx/common/dsp48.hlp 
+Execute     source E:/Xilinx/Vivado/2018.3/common/technology/xilinx/zynq/zynq.gen 
+Execute       source E:/Xilinx/Vivado/2018.3/common/technology/xilinx/common/virtex.gen 
+Execute         source E:/Xilinx/Vivado/2018.3/common/technology/xilinx/common/xilinx.gen 
+Execute           source E:/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/plb46.gen 
+Execute           source E:/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/fsl.gen 
+Execute           source E:/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/axi4.gen 
+Execute           source E:/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute             source E:/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/saxilite.gen 
+Execute             source E:/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/maxi.gen 
+Execute           source E:/Xilinx/Vivado/2018.3/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute           source E:/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute           source E:/Xilinx/Vivado/2018.3/common/technology/xilinx/ip/dds_compiler.gen 
+Execute           source E:/Xilinx/Vivado/2018.3/common/technology/xilinx/ip/util.gen 
+Execute           source E:/Xilinx/Vivado/2018.3/common/technology/xilinx/ip/xfft.gen 
+Execute           source E:/Xilinx/Vivado/2018.3/common/technology/xilinx/ip/xfir.gen 
+Command         ap_source done; 0.124 sec.
+Execute         source E:/Xilinx/Vivado/2018.3/common/technology/xilinx/common/dsp48.gen 
+Command       ap_source done; 0.127 sec.
+Command     ap_source done; 0.127 sec.
+Execute     open_platform DefaultPlatform 
+Execute     import_lib E:/Xilinx/Vivado/2018.3/common/technology/xilinx/zynq/zynq_fpv6 
+Execute       source E:/Xilinx/Vivado/2018.3/common/technology/xilinx/common/xilinx_fpv7.lib 
+Execute         source E:/Xilinx/Vivado/2018.3/common/technology/xilinx/common/xilinx_hp.lib 
+Execute       source E:/Xilinx/Vivado/2018.3/common/technology/xilinx/common/xilinx_fpv.hlp 
+Execute         source E:/Xilinx/Vivado/2018.3/common/technology/xilinx/common/xilinx.hlp 
+Execute           source E:/Xilinx/Vivado/2018.3/common/technology/xilinx/common/target_info.tcl 
+Execute           source E:/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute             source E:/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/maxi.hlp 
+Execute             source E:/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/saxilite.hlp 
+Execute           source E:/Xilinx/Vivado/2018.3/common/technology/xilinx/common/dsp48.hlp 
+Execute       source E:/Xilinx/Vivado/2018.3/common/technology/xilinx/zynq/zynq_hp.hlp 
+Execute     source E:/Xilinx/Vivado/2018.3/common/technology/xilinx/zynq/zynq_fpv6.gen 
+Execute       source E:/Xilinx/Vivado/2018.3/common/technology/xilinx/common/xilinx_fpv6.gen 
+Execute     set_part xc7z020clg484-1 
+Execute       add_library xilinx/zynq/zynq:xc7z020:clg484:-1 
+Execute         get_default_platform 
+Execute         license_isbetapart xc7z020 
+Command         license_isbetapart done; error code: 1; 
+Execute         get_default_platform 
+Execute         config_chip_info -quiet -resource  {SLICE 13300}  {LUT 53200}     {FF 106400} {DSP48E 220}   {BRAM 280}  
+Execute         config_chip_info -quiet -speed slow 
+Execute       add_library xilinx/zynq/zynq_fpv6 
+Execute         get_default_platform 
+INFO: [HLS 200-10] Setting target device to 'xc7z020clg484-1'
+Execute       get_default_platform 
+Command     set_part done; 0.107 sec.
+Execute     get_default_platform 
+Execute     config_chip_info -quiet -resource  {SLICE 13300}  {LUT 53200}     {FF 106400} {DSP48E 220}   {BRAM 280}  
+Execute     config_chip_info -quiet -speed slow 
+Command   open_solution done; 0.327 sec.
+Execute   set_part xc7z020clg484-1 -tool vivado 
+Execute     add_library xilinx/zynq/zynq:xc7z020:clg484:-1 
+Execute       get_default_platform 
+Execute       license_isbetapart xc7z020 
+Command       license_isbetapart done; error code: 1; 
+Execute       get_default_platform 
+Execute       config_chip_info -quiet -resource  {SLICE 13300}  {LUT 53200}     {FF 106400} {DSP48E 220}   {BRAM 280}  
+Execute       config_chip_info -quiet -speed slow 
+Execute     add_library xilinx/zynq/zynq_fpv6 
+Execute       get_default_platform 
+Execute     get_default_platform 
+Execute   create_clock -period 10 -name default 
+Execute   csynth_design 
+Execute     get_config_compile -effort 
+Execute     get_config_compile -enable_clang39 
+Execute     get_config_compile -g 
+Execute     get_config_compile -lm 
+Execute     get_config_compile -ng 
+Execute     get_config_compile -opt_fp 
+Execute     get_config_compile -skip_cdt 
+Execute     get_config_compile -skip_syncheck 
+Execute     get_config_compile -skip_transform 
+Execute     config_compile -blackbox  
+Execute     get_config_compile -keep_printf 
+Execute     elaborate -effort=medium -skip_syncheck=0 -keep_printf=0 -lm=0 -skip_cdt=0 -skip_transform=0 -ng=0 -g=0 -opt_fp=0 -from_csynth_design=1 
+Execute       get_config_schedule -relax_ii_for_timing 
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+Execute       get_config_schedule -suppress_dependence_error_break 
+INFO: [HLS 200-10] Analyzing design file 'conv_relu1.c' ... 
+INFO-FLOW: Compiling one TU...
+Execute       is_m_axi_addr64 
+INFO-FLOW: Handling conv_relu1.c as C
+Execute       get_default_platform 
+Execute       is_encrypted conv_relu1.c 
+INFO-FLOW: Running: GCC PP
+INFO-FLOW: Source preprocessing
+Execute       clang  -fno-limit-debug-info -gcc-toolchain "E:/Xilinx/Vivado/2018.3/msys" -hls  -fno-exceptions  -D__llvm__  -E "conv_relu1.c"     -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -std=gnu89   -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "E:/Xilinx/Vivado/2018.3/common/technology/autopilot" -I "E:/Xilinx/Vivado/2018.3/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -D__cdecl=  -o "E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/conv_relu1.pp.0.c" 
+INFO-FLOW: exec E:/Xilinx/Vivado/2018.3/win64/tools/clang/bin/clang -fno-limit-debug-info -gcc-toolchain E:/Xilinx/Vivado/2018.3/msys -hls -fno-exceptions -D__llvm__ -E conv_relu1.c -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -std=gnu89 -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I E:/Xilinx/Vivado/2018.3/common/technology/autopilot -I E:/Xilinx/Vivado/2018.3/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -D__cdecl= -o E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/conv_relu1.pp.0.c
+Command       clang done; 0.668 sec.
+Execute       tidy_31 xilinx-xfmat-array-geometry E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/conv_relu1.pp.0.c std=gnu89 
+INFO-FLOW: exec E:/Xilinx/Vivado/2018.3/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* -checks=-*,xilinx-xfmat-array-geometry -quiet -fix E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/conv_relu1.pp.0.c -- -std=gnu89 -fhls -ferror-limit=0
+Command       tidy_31 done; 0.121 sec.
+INFO-FLOW: Syntax Checking before pre-processing...
+Execute       clang -syntaxcheck -src E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/conv_relu1.pp.0.c  -fno-limit-debug-info -gcc-toolchain "E:/Xilinx/Vivado/2018.3/msys" -hls    -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -std=gnu89   -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "E:/Xilinx/Vivado/2018.3/common/technology/autopilot" -I "E:/Xilinx/Vivado/2018.3/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -D__cdecl=  "E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/conv_relu1.pp.0.c"  -o "E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/useless.bc"  
+INFO-FLOW: exec E:/Xilinx/Vivado/2018.3/win64/tools/clang/bin/clang -fno-limit-debug-info -gcc-toolchain E:/Xilinx/Vivado/2018.3/msys -hls -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -std=gnu89 -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I E:/Xilinx/Vivado/2018.3/common/technology/autopilot -I E:/Xilinx/Vivado/2018.3/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -D__cdecl= E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/conv_relu1.pp.0.c -o E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/useless.bc
+Command       clang done; 0.647 sec.
+INFO-FLOW: Done: GCC PP time: 1.4 seconds per iteration
+Execute       list_core -type functional_unit 
+Execute       tidy_31 xilinx-systemc-detector E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/conv_relu1.pp.0.c std=gnu89 -directive=E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/.systemc_flag 
+INFO-FLOW: exec E:/Xilinx/Vivado/2018.3/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* -checks=-*,xilinx-systemc-detector -import-directive=E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/.systemc_flag -quiet -fix-errors E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/conv_relu1.pp.0.c -- -std=gnu89 -fhls -ferror-limit=0
+INFO-FLOW: Running: tidy-3.1 CDT preprocess
+Execute       tidy_31 xilinx-directive2pragma E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/conv_relu1.pp.0.c std=gnu89 -directive=E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/all.directive.json 
+INFO-FLOW: exec E:/Xilinx/Vivado/2018.3/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* -checks=-*,xilinx-directive2pragma -import-directive=E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/all.directive.json -quiet -fix-errors E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/conv_relu1.pp.0.c -- -std=gnu89 -fhls -ferror-limit=0
+Execute       get_config_dataflow -strict_mode 
+Execute       ap_eval exec -ignorestderr E:/Xilinx/Vivado/2018.3/win64/tools/clang-3.9-csynth/bin/xilinx-dataflow-lawyer -export-fixes=E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/xilinx-dataflow-lawyer.conv_relu1.pp.0.c.diag.yml E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/conv_relu1.pp.0.c -- -std=gnu99 -fhls -ferror-limit=0 -fstrict-dataflow > E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/xilinx-dataflow-lawyer.conv_relu1.pp.0.c.out.log 2> E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/xilinx-dataflow-lawyer.conv_relu1.pp.0.c.err.log 
+Execute       tidy_31 -errorcheck xilinx-constantarray-param,xilinx-resource-pragma-transformer,xilinx-xfmat-array-geometry E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/conv_relu1.pp.0.c std=gnu89 
+Execute         ap_eval exec -ignorestderr E:/Xilinx/Vivado/2018.3/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -export-fixes=E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/tidy-3.1.conv_relu1.pp.0.c.diag.yml -header-filter=.* -checks=-*,xilinx-constantarray-param,xilinx-resource-pragma-transformer,xilinx-xfmat-array-geometry -quiet -fix-errors E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/conv_relu1.pp.0.c -- -std=gnu89 -fhls -ferror-limit=0 > E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/tidy-3.1.conv_relu1.pp.0.c.out.log 2> E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/tidy-3.1.conv_relu1.pp.0.c.err.log 
+Command         ap_eval done; 0.158 sec.
+Execute         ap_eval exec -ignorestderr E:/Xilinx/Vivado/2018.3/win64/tools/clang-3.9-csynth/bin/xilinx-legacy-rewriter E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/conv_relu1.pp.0.c -- -std=gnu89 -fhls -ferror-limit=0 > E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/xilinx-legacy-rewriter.conv_relu1.pp.0.c.out.log 2> E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/xilinx-legacy-rewriter.conv_relu1.pp.0.c.err.log 
+Command       tidy_31 done; 0.24 sec.
+INFO-FLOW: Done: tidy-3.1 CDT preprocess time: 0.4 seconds per iteration
+INFO-FLOW: Pragma Handling...
+Execute       tidy_31 xilinx-ssdm-intrinsics-arguments E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/conv_relu1.pragma.1.c std=gnu89 
+INFO-FLOW: exec E:/Xilinx/Vivado/2018.3/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* -checks=-*,xilinx-ssdm-intrinsics-arguments -quiet -fix-errors E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/conv_relu1.pragma.1.c -- -std=gnu89 -fhls -ferror-limit=0
+Execute       get_default_platform 
+INFO-FLOW: Processing labels
+Execute       clang -src E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/conv_relu1.pragma.2.c  -fno-limit-debug-info -gcc-toolchain E:/Xilinx/Vivado/2018.3/msys -hls -hls-analyze-label -hls-analyze-pragma -fno-exceptions  -D__llvm__  -w  "E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/conv_relu1.pragma.2.c"    -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -std=gnu89  -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "E:/Xilinx/Vivado/2018.3/common/technology/autopilot" -I "E:/Xilinx/Vivado/2018.3/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -g -o "E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/conv_relu1.bc" 
+INFO-FLOW: exec E:/Xilinx/Vivado/2018.3/win64/tools/clang/bin/clang -fno-limit-debug-info -gcc-toolchain E:/Xilinx/Vivado/2018.3/msys -hls -hls-analyze-label -hls-analyze-pragma -fno-exceptions -D__llvm__ -w E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/conv_relu1.pragma.2.c -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -std=gnu89 -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I E:/Xilinx/Vivado/2018.3/common/technology/autopilot -I E:/Xilinx/Vivado/2018.3/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -g -o E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/conv_relu1.bc
+Command       clang done; 0.665 sec.
+INFO: [HLS 200-10] Analyzing design file 'conv_relu2.c' ... 
+INFO-FLOW: Compiling one TU...
+Execute       is_m_axi_addr64 
+INFO-FLOW: Handling conv_relu2.c as C
+Execute       get_default_platform 
+Execute       is_encrypted conv_relu2.c 
+INFO-FLOW: Running: GCC PP
+INFO-FLOW: Source preprocessing
+Execute       clang  -fno-limit-debug-info -gcc-toolchain "E:/Xilinx/Vivado/2018.3/msys" -hls  -fno-exceptions  -D__llvm__  -E "conv_relu2.c"     -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -std=gnu89   -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "E:/Xilinx/Vivado/2018.3/common/technology/autopilot" -I "E:/Xilinx/Vivado/2018.3/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -D__cdecl=  -o "E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/conv_relu2.pp.0.c" 
+INFO-FLOW: exec E:/Xilinx/Vivado/2018.3/win64/tools/clang/bin/clang -fno-limit-debug-info -gcc-toolchain E:/Xilinx/Vivado/2018.3/msys -hls -fno-exceptions -D__llvm__ -E conv_relu2.c -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -std=gnu89 -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I E:/Xilinx/Vivado/2018.3/common/technology/autopilot -I E:/Xilinx/Vivado/2018.3/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -D__cdecl= -o E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/conv_relu2.pp.0.c
+Command       clang done; 0.729 sec.
+Execute       tidy_31 xilinx-xfmat-array-geometry E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/conv_relu2.pp.0.c std=gnu89 
+INFO-FLOW: exec E:/Xilinx/Vivado/2018.3/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* -checks=-*,xilinx-xfmat-array-geometry -quiet -fix E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/conv_relu2.pp.0.c -- -std=gnu89 -fhls -ferror-limit=0
+INFO-FLOW: Syntax Checking before pre-processing...
+Execute       clang -syntaxcheck -src E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/conv_relu2.pp.0.c  -fno-limit-debug-info -gcc-toolchain "E:/Xilinx/Vivado/2018.3/msys" -hls    -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -std=gnu89   -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "E:/Xilinx/Vivado/2018.3/common/technology/autopilot" -I "E:/Xilinx/Vivado/2018.3/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -D__cdecl=  "E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/conv_relu2.pp.0.c"  -o "E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/useless.bc"  
+INFO-FLOW: exec E:/Xilinx/Vivado/2018.3/win64/tools/clang/bin/clang -fno-limit-debug-info -gcc-toolchain E:/Xilinx/Vivado/2018.3/msys -hls -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -std=gnu89 -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I E:/Xilinx/Vivado/2018.3/common/technology/autopilot -I E:/Xilinx/Vivado/2018.3/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -D__cdecl= E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/conv_relu2.pp.0.c -o E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/useless.bc
+Command       clang done; 0.572 sec.
+INFO-FLOW: Done: GCC PP time: 1.4 seconds per iteration
+Execute       list_core -type functional_unit 
+Execute       tidy_31 xilinx-systemc-detector E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/conv_relu2.pp.0.c std=gnu89 -directive=E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/.systemc_flag 
+INFO-FLOW: exec E:/Xilinx/Vivado/2018.3/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* -checks=-*,xilinx-systemc-detector -import-directive=E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/.systemc_flag -quiet -fix-errors E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/conv_relu2.pp.0.c -- -std=gnu89 -fhls -ferror-limit=0
+INFO-FLOW: Running: tidy-3.1 CDT preprocess
+Execute       tidy_31 xilinx-directive2pragma E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/conv_relu2.pp.0.c std=gnu89 -directive=E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/all.directive.json 
+INFO-FLOW: exec E:/Xilinx/Vivado/2018.3/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* -checks=-*,xilinx-directive2pragma -import-directive=E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/all.directive.json -quiet -fix-errors E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/conv_relu2.pp.0.c -- -std=gnu89 -fhls -ferror-limit=0
+Execute       get_config_dataflow -strict_mode 
+Execute       ap_eval exec -ignorestderr E:/Xilinx/Vivado/2018.3/win64/tools/clang-3.9-csynth/bin/xilinx-dataflow-lawyer -export-fixes=E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/xilinx-dataflow-lawyer.conv_relu2.pp.0.c.diag.yml E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/conv_relu2.pp.0.c -- -std=gnu99 -fhls -ferror-limit=0 -fstrict-dataflow > E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/xilinx-dataflow-lawyer.conv_relu2.pp.0.c.out.log 2> E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/xilinx-dataflow-lawyer.conv_relu2.pp.0.c.err.log 
+Execute       tidy_31 -errorcheck xilinx-constantarray-param,xilinx-resource-pragma-transformer,xilinx-xfmat-array-geometry E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/conv_relu2.pp.0.c std=gnu89 
+Execute         ap_eval exec -ignorestderr E:/Xilinx/Vivado/2018.3/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -export-fixes=E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/tidy-3.1.conv_relu2.pp.0.c.diag.yml -header-filter=.* -checks=-*,xilinx-constantarray-param,xilinx-resource-pragma-transformer,xilinx-xfmat-array-geometry -quiet -fix-errors E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/conv_relu2.pp.0.c -- -std=gnu89 -fhls -ferror-limit=0 > E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/tidy-3.1.conv_relu2.pp.0.c.out.log 2> E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/tidy-3.1.conv_relu2.pp.0.c.err.log 
+Command         ap_eval done; 0.145 sec.
+Execute         ap_eval exec -ignorestderr E:/Xilinx/Vivado/2018.3/win64/tools/clang-3.9-csynth/bin/xilinx-legacy-rewriter E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/conv_relu2.pp.0.c -- -std=gnu89 -fhls -ferror-limit=0 > E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/xilinx-legacy-rewriter.conv_relu2.pp.0.c.out.log 2> E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/xilinx-legacy-rewriter.conv_relu2.pp.0.c.err.log 
+Command       tidy_31 done; 0.211 sec.
+INFO-FLOW: Done: tidy-3.1 CDT preprocess time: 0.3 seconds per iteration
+INFO-FLOW: Pragma Handling...
+Execute       tidy_31 xilinx-ssdm-intrinsics-arguments E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/conv_relu2.pragma.1.c std=gnu89 
+INFO-FLOW: exec E:/Xilinx/Vivado/2018.3/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* -checks=-*,xilinx-ssdm-intrinsics-arguments -quiet -fix-errors E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/conv_relu2.pragma.1.c -- -std=gnu89 -fhls -ferror-limit=0
+Execute       get_default_platform 
+INFO-FLOW: Processing labels
+Execute       clang -src E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/conv_relu2.pragma.2.c  -fno-limit-debug-info -gcc-toolchain E:/Xilinx/Vivado/2018.3/msys -hls -hls-analyze-label -hls-analyze-pragma -fno-exceptions  -D__llvm__  -w  "E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/conv_relu2.pragma.2.c"    -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -std=gnu89  -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "E:/Xilinx/Vivado/2018.3/common/technology/autopilot" -I "E:/Xilinx/Vivado/2018.3/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -g -o "E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/conv_relu2.bc" 
+INFO-FLOW: exec E:/Xilinx/Vivado/2018.3/win64/tools/clang/bin/clang -fno-limit-debug-info -gcc-toolchain E:/Xilinx/Vivado/2018.3/msys -hls -hls-analyze-label -hls-analyze-pragma -fno-exceptions -D__llvm__ -w E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/conv_relu2.pragma.2.c -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -std=gnu89 -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I E:/Xilinx/Vivado/2018.3/common/technology/autopilot -I E:/Xilinx/Vivado/2018.3/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -g -o E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/conv_relu2.bc
+Command       clang done; 0.607 sec.
+INFO: [HLS 200-10] Analyzing design file 'conv_relu3.c' ... 
+INFO-FLOW: Compiling one TU...
+Execute       is_m_axi_addr64 
+INFO-FLOW: Handling conv_relu3.c as C
+Execute       get_default_platform 
+Execute       is_encrypted conv_relu3.c 
+INFO-FLOW: Running: GCC PP
+INFO-FLOW: Source preprocessing
+Execute       clang  -fno-limit-debug-info -gcc-toolchain "E:/Xilinx/Vivado/2018.3/msys" -hls  -fno-exceptions  -D__llvm__  -E "conv_relu3.c"     -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -std=gnu89   -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "E:/Xilinx/Vivado/2018.3/common/technology/autopilot" -I "E:/Xilinx/Vivado/2018.3/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -D__cdecl=  -o "E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/conv_relu3.pp.0.c" 
+INFO-FLOW: exec E:/Xilinx/Vivado/2018.3/win64/tools/clang/bin/clang -fno-limit-debug-info -gcc-toolchain E:/Xilinx/Vivado/2018.3/msys -hls -fno-exceptions -D__llvm__ -E conv_relu3.c -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -std=gnu89 -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I E:/Xilinx/Vivado/2018.3/common/technology/autopilot -I E:/Xilinx/Vivado/2018.3/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -D__cdecl= -o E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/conv_relu3.pp.0.c
+Command       clang done; 0.593 sec.
+Execute       tidy_31 xilinx-xfmat-array-geometry E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/conv_relu3.pp.0.c std=gnu89 
+INFO-FLOW: exec E:/Xilinx/Vivado/2018.3/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* -checks=-*,xilinx-xfmat-array-geometry -quiet -fix E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/conv_relu3.pp.0.c -- -std=gnu89 -fhls -ferror-limit=0
+INFO-FLOW: Syntax Checking before pre-processing...
+Execute       clang -syntaxcheck -src E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/conv_relu3.pp.0.c  -fno-limit-debug-info -gcc-toolchain "E:/Xilinx/Vivado/2018.3/msys" -hls    -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -std=gnu89   -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "E:/Xilinx/Vivado/2018.3/common/technology/autopilot" -I "E:/Xilinx/Vivado/2018.3/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -D__cdecl=  "E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/conv_relu3.pp.0.c"  -o "E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/useless.bc"  
+INFO-FLOW: exec E:/Xilinx/Vivado/2018.3/win64/tools/clang/bin/clang -fno-limit-debug-info -gcc-toolchain E:/Xilinx/Vivado/2018.3/msys -hls -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -std=gnu89 -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I E:/Xilinx/Vivado/2018.3/common/technology/autopilot -I E:/Xilinx/Vivado/2018.3/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -D__cdecl= E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/conv_relu3.pp.0.c -o E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/useless.bc
+Command       clang done; 0.565 sec.
+INFO-FLOW: Done: GCC PP time: 1.2 seconds per iteration
+Execute       list_core -type functional_unit 
+Execute       tidy_31 xilinx-systemc-detector E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/conv_relu3.pp.0.c std=gnu89 -directive=E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/.systemc_flag 
+INFO-FLOW: exec E:/Xilinx/Vivado/2018.3/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* -checks=-*,xilinx-systemc-detector -import-directive=E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/.systemc_flag -quiet -fix-errors E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/conv_relu3.pp.0.c -- -std=gnu89 -fhls -ferror-limit=0
+INFO-FLOW: Running: tidy-3.1 CDT preprocess
+Execute       tidy_31 xilinx-directive2pragma E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/conv_relu3.pp.0.c std=gnu89 -directive=E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/all.directive.json 
+INFO-FLOW: exec E:/Xilinx/Vivado/2018.3/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* -checks=-*,xilinx-directive2pragma -import-directive=E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/all.directive.json -quiet -fix-errors E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/conv_relu3.pp.0.c -- -std=gnu89 -fhls -ferror-limit=0
+Execute       get_config_dataflow -strict_mode 
+Execute       ap_eval exec -ignorestderr E:/Xilinx/Vivado/2018.3/win64/tools/clang-3.9-csynth/bin/xilinx-dataflow-lawyer -export-fixes=E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/xilinx-dataflow-lawyer.conv_relu3.pp.0.c.diag.yml E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/conv_relu3.pp.0.c -- -std=gnu99 -fhls -ferror-limit=0 -fstrict-dataflow > E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/xilinx-dataflow-lawyer.conv_relu3.pp.0.c.out.log 2> E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/xilinx-dataflow-lawyer.conv_relu3.pp.0.c.err.log 
+Execute       tidy_31 -errorcheck xilinx-constantarray-param,xilinx-resource-pragma-transformer,xilinx-xfmat-array-geometry E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/conv_relu3.pp.0.c std=gnu89 
+Execute         ap_eval exec -ignorestderr E:/Xilinx/Vivado/2018.3/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -export-fixes=E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/tidy-3.1.conv_relu3.pp.0.c.diag.yml -header-filter=.* -checks=-*,xilinx-constantarray-param,xilinx-resource-pragma-transformer,xilinx-xfmat-array-geometry -quiet -fix-errors E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/conv_relu3.pp.0.c -- -std=gnu89 -fhls -ferror-limit=0 > E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/tidy-3.1.conv_relu3.pp.0.c.out.log 2> E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/tidy-3.1.conv_relu3.pp.0.c.err.log 
+Command         ap_eval done; 0.151 sec.
+Execute         ap_eval exec -ignorestderr E:/Xilinx/Vivado/2018.3/win64/tools/clang-3.9-csynth/bin/xilinx-legacy-rewriter E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/conv_relu3.pp.0.c -- -std=gnu89 -fhls -ferror-limit=0 > E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/xilinx-legacy-rewriter.conv_relu3.pp.0.c.out.log 2> E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/xilinx-legacy-rewriter.conv_relu3.pp.0.c.err.log 
+Command       tidy_31 done; 0.213 sec.
+INFO-FLOW: Done: tidy-3.1 CDT preprocess time: 0.3 seconds per iteration
+INFO-FLOW: Pragma Handling...
+Execute       tidy_31 xilinx-ssdm-intrinsics-arguments E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/conv_relu3.pragma.1.c std=gnu89 
+INFO-FLOW: exec E:/Xilinx/Vivado/2018.3/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* -checks=-*,xilinx-ssdm-intrinsics-arguments -quiet -fix-errors E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/conv_relu3.pragma.1.c -- -std=gnu89 -fhls -ferror-limit=0
+Execute       get_default_platform 
+INFO-FLOW: Processing labels
+Execute       clang -src E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/conv_relu3.pragma.2.c  -fno-limit-debug-info -gcc-toolchain E:/Xilinx/Vivado/2018.3/msys -hls -hls-analyze-label -hls-analyze-pragma -fno-exceptions  -D__llvm__  -w  "E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/conv_relu3.pragma.2.c"    -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -std=gnu89  -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "E:/Xilinx/Vivado/2018.3/common/technology/autopilot" -I "E:/Xilinx/Vivado/2018.3/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -g -o "E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/conv_relu3.bc" 
+INFO-FLOW: exec E:/Xilinx/Vivado/2018.3/win64/tools/clang/bin/clang -fno-limit-debug-info -gcc-toolchain E:/Xilinx/Vivado/2018.3/msys -hls -hls-analyze-label -hls-analyze-pragma -fno-exceptions -D__llvm__ -w E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/conv_relu3.pragma.2.c -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -std=gnu89 -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I E:/Xilinx/Vivado/2018.3/common/technology/autopilot -I E:/Xilinx/Vivado/2018.3/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -g -o E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/conv_relu3.bc
+Command       clang done; 0.58 sec.
+INFO: [HLS 200-10] Analyzing design file 'decode.c' ... 
+INFO-FLOW: Compiling one TU...
+Execute       is_m_axi_addr64 
+INFO-FLOW: Handling decode.c as C
+Execute       get_default_platform 
+Execute       is_encrypted decode.c 
+INFO-FLOW: Running: GCC PP
+INFO-FLOW: Source preprocessing
+Execute       clang  -fno-limit-debug-info -gcc-toolchain "E:/Xilinx/Vivado/2018.3/msys" -hls  -fno-exceptions  -D__llvm__  -E "decode.c"     -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -std=gnu89   -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "E:/Xilinx/Vivado/2018.3/common/technology/autopilot" -I "E:/Xilinx/Vivado/2018.3/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -D__cdecl=  -o "E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/decode.pp.0.c" 
+INFO-FLOW: exec E:/Xilinx/Vivado/2018.3/win64/tools/clang/bin/clang -fno-limit-debug-info -gcc-toolchain E:/Xilinx/Vivado/2018.3/msys -hls -fno-exceptions -D__llvm__ -E decode.c -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -std=gnu89 -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I E:/Xilinx/Vivado/2018.3/common/technology/autopilot -I E:/Xilinx/Vivado/2018.3/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -D__cdecl= -o E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/decode.pp.0.c
+Command       clang done; 0.563 sec.
+Execute       tidy_31 xilinx-xfmat-array-geometry E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/decode.pp.0.c std=gnu89 
+INFO-FLOW: exec E:/Xilinx/Vivado/2018.3/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* -checks=-*,xilinx-xfmat-array-geometry -quiet -fix E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/decode.pp.0.c -- -std=gnu89 -fhls -ferror-limit=0
+INFO-FLOW: Syntax Checking before pre-processing...
+Execute       clang -syntaxcheck -src E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/decode.pp.0.c  -fno-limit-debug-info -gcc-toolchain "E:/Xilinx/Vivado/2018.3/msys" -hls    -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -std=gnu89   -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "E:/Xilinx/Vivado/2018.3/common/technology/autopilot" -I "E:/Xilinx/Vivado/2018.3/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -D__cdecl=  "E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/decode.pp.0.c"  -o "E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/useless.bc"  
+INFO-FLOW: exec E:/Xilinx/Vivado/2018.3/win64/tools/clang/bin/clang -fno-limit-debug-info -gcc-toolchain E:/Xilinx/Vivado/2018.3/msys -hls -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -std=gnu89 -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I E:/Xilinx/Vivado/2018.3/common/technology/autopilot -I E:/Xilinx/Vivado/2018.3/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -D__cdecl= E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/decode.pp.0.c -o E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/useless.bc
+Command       clang done; 0.588 sec.
+INFO-FLOW: Done: GCC PP time: 1.2 seconds per iteration
+Execute       list_core -type functional_unit 
+Execute       tidy_31 xilinx-systemc-detector E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/decode.pp.0.c std=gnu89 -directive=E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/.systemc_flag 
+INFO-FLOW: exec E:/Xilinx/Vivado/2018.3/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* -checks=-*,xilinx-systemc-detector -import-directive=E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/.systemc_flag -quiet -fix-errors E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/decode.pp.0.c -- -std=gnu89 -fhls -ferror-limit=0
+INFO-FLOW: Running: tidy-3.1 CDT preprocess
+Execute       tidy_31 xilinx-directive2pragma E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/decode.pp.0.c std=gnu89 -directive=E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/all.directive.json 
+INFO-FLOW: exec E:/Xilinx/Vivado/2018.3/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* -checks=-*,xilinx-directive2pragma -import-directive=E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/all.directive.json -quiet -fix-errors E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/decode.pp.0.c -- -std=gnu89 -fhls -ferror-limit=0
+Execute       get_config_dataflow -strict_mode 
+Execute       ap_eval exec -ignorestderr E:/Xilinx/Vivado/2018.3/win64/tools/clang-3.9-csynth/bin/xilinx-dataflow-lawyer -export-fixes=E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/xilinx-dataflow-lawyer.decode.pp.0.c.diag.yml E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/decode.pp.0.c -- -std=gnu99 -fhls -ferror-limit=0 -fstrict-dataflow > E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/xilinx-dataflow-lawyer.decode.pp.0.c.out.log 2> E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/xilinx-dataflow-lawyer.decode.pp.0.c.err.log 
+Execute       tidy_31 -errorcheck xilinx-constantarray-param,xilinx-resource-pragma-transformer,xilinx-xfmat-array-geometry E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/decode.pp.0.c std=gnu89 
+Execute         ap_eval exec -ignorestderr E:/Xilinx/Vivado/2018.3/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -export-fixes=E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/tidy-3.1.decode.pp.0.c.diag.yml -header-filter=.* -checks=-*,xilinx-constantarray-param,xilinx-resource-pragma-transformer,xilinx-xfmat-array-geometry -quiet -fix-errors E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/decode.pp.0.c -- -std=gnu89 -fhls -ferror-limit=0 > E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/tidy-3.1.decode.pp.0.c.out.log 2> E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/tidy-3.1.decode.pp.0.c.err.log 
+Command         ap_eval done; 0.154 sec.
+Execute         ap_eval exec -ignorestderr E:/Xilinx/Vivado/2018.3/win64/tools/clang-3.9-csynth/bin/xilinx-legacy-rewriter E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/decode.pp.0.c -- -std=gnu89 -fhls -ferror-limit=0 > E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/xilinx-legacy-rewriter.decode.pp.0.c.out.log 2> E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/xilinx-legacy-rewriter.decode.pp.0.c.err.log 
+Command       tidy_31 done; 0.228 sec.
+INFO-FLOW: Done: tidy-3.1 CDT preprocess time: 0.4 seconds per iteration
+INFO-FLOW: Pragma Handling...
+Execute       tidy_31 xilinx-ssdm-intrinsics-arguments E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/decode.pragma.1.c std=gnu89 
+INFO-FLOW: exec E:/Xilinx/Vivado/2018.3/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* -checks=-*,xilinx-ssdm-intrinsics-arguments -quiet -fix-errors E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/decode.pragma.1.c -- -std=gnu89 -fhls -ferror-limit=0
+Execute       get_default_platform 
+INFO-FLOW: Processing labels
+Execute       clang -src E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/decode.pragma.2.c  -fno-limit-debug-info -gcc-toolchain E:/Xilinx/Vivado/2018.3/msys -hls -hls-analyze-label -hls-analyze-pragma -fno-exceptions  -D__llvm__  -w  "E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/decode.pragma.2.c"    -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -std=gnu89  -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "E:/Xilinx/Vivado/2018.3/common/technology/autopilot" -I "E:/Xilinx/Vivado/2018.3/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -g -o "E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/decode.bc" 
+INFO-FLOW: exec E:/Xilinx/Vivado/2018.3/win64/tools/clang/bin/clang -fno-limit-debug-info -gcc-toolchain E:/Xilinx/Vivado/2018.3/msys -hls -hls-analyze-label -hls-analyze-pragma -fno-exceptions -D__llvm__ -w E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/decode.pragma.2.c -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -std=gnu89 -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I E:/Xilinx/Vivado/2018.3/common/technology/autopilot -I E:/Xilinx/Vivado/2018.3/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -g -o E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/decode.bc
+Command       clang done; 0.578 sec.
+INFO: [HLS 200-10] Analyzing design file 'detection_head.c' ... 
+INFO-FLOW: Compiling one TU...
+Execute       is_m_axi_addr64 
+INFO-FLOW: Handling detection_head.c as C
+Execute       get_default_platform 
+Execute       is_encrypted detection_head.c 
+INFO-FLOW: Running: GCC PP
+INFO-FLOW: Source preprocessing
+Execute       clang  -fno-limit-debug-info -gcc-toolchain "E:/Xilinx/Vivado/2018.3/msys" -hls  -fno-exceptions  -D__llvm__  -E "detection_head.c"     -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -std=gnu89   -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "E:/Xilinx/Vivado/2018.3/common/technology/autopilot" -I "E:/Xilinx/Vivado/2018.3/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -D__cdecl=  -o "E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/detection_head.pp.0.c" 
+INFO-FLOW: exec E:/Xilinx/Vivado/2018.3/win64/tools/clang/bin/clang -fno-limit-debug-info -gcc-toolchain E:/Xilinx/Vivado/2018.3/msys -hls -fno-exceptions -D__llvm__ -E detection_head.c -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -std=gnu89 -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I E:/Xilinx/Vivado/2018.3/common/technology/autopilot -I E:/Xilinx/Vivado/2018.3/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -D__cdecl= -o E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/detection_head.pp.0.c
+Command       clang done; 0.562 sec.
+Execute       tidy_31 xilinx-xfmat-array-geometry E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/detection_head.pp.0.c std=gnu89 
+INFO-FLOW: exec E:/Xilinx/Vivado/2018.3/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* -checks=-*,xilinx-xfmat-array-geometry -quiet -fix E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/detection_head.pp.0.c -- -std=gnu89 -fhls -ferror-limit=0
+INFO-FLOW: Syntax Checking before pre-processing...
+Execute       clang -syntaxcheck -src E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/detection_head.pp.0.c  -fno-limit-debug-info -gcc-toolchain "E:/Xilinx/Vivado/2018.3/msys" -hls    -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -std=gnu89   -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "E:/Xilinx/Vivado/2018.3/common/technology/autopilot" -I "E:/Xilinx/Vivado/2018.3/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -D__cdecl=  "E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/detection_head.pp.0.c"  -o "E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/useless.bc"  
+INFO-FLOW: exec E:/Xilinx/Vivado/2018.3/win64/tools/clang/bin/clang -fno-limit-debug-info -gcc-toolchain E:/Xilinx/Vivado/2018.3/msys -hls -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -std=gnu89 -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I E:/Xilinx/Vivado/2018.3/common/technology/autopilot -I E:/Xilinx/Vivado/2018.3/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -D__cdecl= E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/detection_head.pp.0.c -o E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/useless.bc
+Command       clang done; 0.552 sec.
+INFO-FLOW: Done: GCC PP time: 1.2 seconds per iteration
+Execute       list_core -type functional_unit 
+Execute       tidy_31 xilinx-systemc-detector E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/detection_head.pp.0.c std=gnu89 -directive=E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/.systemc_flag 
+INFO-FLOW: exec E:/Xilinx/Vivado/2018.3/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* -checks=-*,xilinx-systemc-detector -import-directive=E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/.systemc_flag -quiet -fix-errors E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/detection_head.pp.0.c -- -std=gnu89 -fhls -ferror-limit=0
+INFO-FLOW: Running: tidy-3.1 CDT preprocess
+Execute       tidy_31 xilinx-directive2pragma E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/detection_head.pp.0.c std=gnu89 -directive=E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/all.directive.json 
+INFO-FLOW: exec E:/Xilinx/Vivado/2018.3/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* -checks=-*,xilinx-directive2pragma -import-directive=E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/all.directive.json -quiet -fix-errors E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/detection_head.pp.0.c -- -std=gnu89 -fhls -ferror-limit=0
+Execute       get_config_dataflow -strict_mode 
+Execute       ap_eval exec -ignorestderr E:/Xilinx/Vivado/2018.3/win64/tools/clang-3.9-csynth/bin/xilinx-dataflow-lawyer -export-fixes=E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/xilinx-dataflow-lawyer.detection_head.pp.0.c.diag.yml E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/detection_head.pp.0.c -- -std=gnu99 -fhls -ferror-limit=0 -fstrict-dataflow > E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/xilinx-dataflow-lawyer.detection_head.pp.0.c.out.log 2> E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/xilinx-dataflow-lawyer.detection_head.pp.0.c.err.log 
+Execute       tidy_31 -errorcheck xilinx-constantarray-param,xilinx-resource-pragma-transformer,xilinx-xfmat-array-geometry E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/detection_head.pp.0.c std=gnu89 
+Execute         ap_eval exec -ignorestderr E:/Xilinx/Vivado/2018.3/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -export-fixes=E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/tidy-3.1.detection_head.pp.0.c.diag.yml -header-filter=.* -checks=-*,xilinx-constantarray-param,xilinx-resource-pragma-transformer,xilinx-xfmat-array-geometry -quiet -fix-errors E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/detection_head.pp.0.c -- -std=gnu89 -fhls -ferror-limit=0 > E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/tidy-3.1.detection_head.pp.0.c.out.log 2> E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/tidy-3.1.detection_head.pp.0.c.err.log 
+Command         ap_eval done; 0.145 sec.
+Execute         ap_eval exec -ignorestderr E:/Xilinx/Vivado/2018.3/win64/tools/clang-3.9-csynth/bin/xilinx-legacy-rewriter E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/detection_head.pp.0.c -- -std=gnu89 -fhls -ferror-limit=0 > E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/xilinx-legacy-rewriter.detection_head.pp.0.c.out.log 2> E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/xilinx-legacy-rewriter.detection_head.pp.0.c.err.log 
+Command       tidy_31 done; 0.21 sec.
+INFO-FLOW: Done: tidy-3.1 CDT preprocess time: 0.3 seconds per iteration
+INFO-FLOW: Pragma Handling...
+Execute       tidy_31 xilinx-ssdm-intrinsics-arguments E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/detection_head.pragma.1.c std=gnu89 
+INFO-FLOW: exec E:/Xilinx/Vivado/2018.3/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* -checks=-*,xilinx-ssdm-intrinsics-arguments -quiet -fix-errors E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/detection_head.pragma.1.c -- -std=gnu89 -fhls -ferror-limit=0
+Execute       get_default_platform 
+INFO-FLOW: Processing labels
+Execute       clang -src E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/detection_head.pragma.2.c  -fno-limit-debug-info -gcc-toolchain E:/Xilinx/Vivado/2018.3/msys -hls -hls-analyze-label -hls-analyze-pragma -fno-exceptions  -D__llvm__  -w  "E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/detection_head.pragma.2.c"    -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -std=gnu89  -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "E:/Xilinx/Vivado/2018.3/common/technology/autopilot" -I "E:/Xilinx/Vivado/2018.3/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -g -o "E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/detection_head.bc" 
+INFO-FLOW: exec E:/Xilinx/Vivado/2018.3/win64/tools/clang/bin/clang -fno-limit-debug-info -gcc-toolchain E:/Xilinx/Vivado/2018.3/msys -hls -hls-analyze-label -hls-analyze-pragma -fno-exceptions -D__llvm__ -w E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/detection_head.pragma.2.c -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -std=gnu89 -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I E:/Xilinx/Vivado/2018.3/common/technology/autopilot -I E:/Xilinx/Vivado/2018.3/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -g -o E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/detection_head.bc
+Command       clang done; 0.569 sec.
+INFO: [HLS 200-10] Analyzing design file 'maxpool_1.c' ... 
+INFO-FLOW: Compiling one TU...
+Execute       is_m_axi_addr64 
+INFO-FLOW: Handling maxpool_1.c as C
+Execute       get_default_platform 
+Execute       is_encrypted maxpool_1.c 
+INFO-FLOW: Running: GCC PP
+INFO-FLOW: Source preprocessing
+Execute       clang  -fno-limit-debug-info -gcc-toolchain "E:/Xilinx/Vivado/2018.3/msys" -hls  -fno-exceptions  -D__llvm__  -E "maxpool_1.c"     -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -std=gnu89   -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "E:/Xilinx/Vivado/2018.3/common/technology/autopilot" -I "E:/Xilinx/Vivado/2018.3/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -D__cdecl=  -o "E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/maxpool_1.pp.0.c" 
+INFO-FLOW: exec E:/Xilinx/Vivado/2018.3/win64/tools/clang/bin/clang -fno-limit-debug-info -gcc-toolchain E:/Xilinx/Vivado/2018.3/msys -hls -fno-exceptions -D__llvm__ -E maxpool_1.c -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -std=gnu89 -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I E:/Xilinx/Vivado/2018.3/common/technology/autopilot -I E:/Xilinx/Vivado/2018.3/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -D__cdecl= -o E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/maxpool_1.pp.0.c
+Command       clang done; 0.566 sec.
+Execute       tidy_31 xilinx-xfmat-array-geometry E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/maxpool_1.pp.0.c std=gnu89 
+INFO-FLOW: exec E:/Xilinx/Vivado/2018.3/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* -checks=-*,xilinx-xfmat-array-geometry -quiet -fix E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/maxpool_1.pp.0.c -- -std=gnu89 -fhls -ferror-limit=0
+INFO-FLOW: Syntax Checking before pre-processing...
+Execute       clang -syntaxcheck -src E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/maxpool_1.pp.0.c  -fno-limit-debug-info -gcc-toolchain "E:/Xilinx/Vivado/2018.3/msys" -hls    -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -std=gnu89   -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "E:/Xilinx/Vivado/2018.3/common/technology/autopilot" -I "E:/Xilinx/Vivado/2018.3/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -D__cdecl=  "E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/maxpool_1.pp.0.c"  -o "E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/useless.bc"  
+INFO-FLOW: exec E:/Xilinx/Vivado/2018.3/win64/tools/clang/bin/clang -fno-limit-debug-info -gcc-toolchain E:/Xilinx/Vivado/2018.3/msys -hls -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -std=gnu89 -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I E:/Xilinx/Vivado/2018.3/common/technology/autopilot -I E:/Xilinx/Vivado/2018.3/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -D__cdecl= E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/maxpool_1.pp.0.c -o E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/useless.bc
+Command       clang done; 0.553 sec.
+INFO-FLOW: Done: GCC PP time: 1.2 seconds per iteration
+Execute       list_core -type functional_unit 
+Execute       tidy_31 xilinx-systemc-detector E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/maxpool_1.pp.0.c std=gnu89 -directive=E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/.systemc_flag 
+INFO-FLOW: exec E:/Xilinx/Vivado/2018.3/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* -checks=-*,xilinx-systemc-detector -import-directive=E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/.systemc_flag -quiet -fix-errors E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/maxpool_1.pp.0.c -- -std=gnu89 -fhls -ferror-limit=0
+INFO-FLOW: Running: tidy-3.1 CDT preprocess
+Execute       tidy_31 xilinx-directive2pragma E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/maxpool_1.pp.0.c std=gnu89 -directive=E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/all.directive.json 
+INFO-FLOW: exec E:/Xilinx/Vivado/2018.3/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* -checks=-*,xilinx-directive2pragma -import-directive=E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/all.directive.json -quiet -fix-errors E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/maxpool_1.pp.0.c -- -std=gnu89 -fhls -ferror-limit=0
+Execute       get_config_dataflow -strict_mode 
+Execute       ap_eval exec -ignorestderr E:/Xilinx/Vivado/2018.3/win64/tools/clang-3.9-csynth/bin/xilinx-dataflow-lawyer -export-fixes=E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/xilinx-dataflow-lawyer.maxpool_1.pp.0.c.diag.yml E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/maxpool_1.pp.0.c -- -std=gnu99 -fhls -ferror-limit=0 -fstrict-dataflow > E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/xilinx-dataflow-lawyer.maxpool_1.pp.0.c.out.log 2> E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/xilinx-dataflow-lawyer.maxpool_1.pp.0.c.err.log 
+Execute       tidy_31 -errorcheck xilinx-constantarray-param,xilinx-resource-pragma-transformer,xilinx-xfmat-array-geometry E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/maxpool_1.pp.0.c std=gnu89 
+Execute         ap_eval exec -ignorestderr E:/Xilinx/Vivado/2018.3/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -export-fixes=E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/tidy-3.1.maxpool_1.pp.0.c.diag.yml -header-filter=.* -checks=-*,xilinx-constantarray-param,xilinx-resource-pragma-transformer,xilinx-xfmat-array-geometry -quiet -fix-errors E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/maxpool_1.pp.0.c -- -std=gnu89 -fhls -ferror-limit=0 > E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/tidy-3.1.maxpool_1.pp.0.c.out.log 2> E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/tidy-3.1.maxpool_1.pp.0.c.err.log 
+Command         ap_eval done; 0.149 sec.
+Execute         ap_eval exec -ignorestderr E:/Xilinx/Vivado/2018.3/win64/tools/clang-3.9-csynth/bin/xilinx-legacy-rewriter E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/maxpool_1.pp.0.c -- -std=gnu89 -fhls -ferror-limit=0 > E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/xilinx-legacy-rewriter.maxpool_1.pp.0.c.out.log 2> E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/xilinx-legacy-rewriter.maxpool_1.pp.0.c.err.log 
+Command       tidy_31 done; 0.211 sec.
+INFO-FLOW: Done: tidy-3.1 CDT preprocess time: 0.3 seconds per iteration
+INFO-FLOW: Pragma Handling...
+Execute       tidy_31 xilinx-ssdm-intrinsics-arguments E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/maxpool_1.pragma.1.c std=gnu89 
+INFO-FLOW: exec E:/Xilinx/Vivado/2018.3/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* -checks=-*,xilinx-ssdm-intrinsics-arguments -quiet -fix-errors E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/maxpool_1.pragma.1.c -- -std=gnu89 -fhls -ferror-limit=0
+Execute       get_default_platform 
+INFO-FLOW: Processing labels
+Execute       clang -src E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/maxpool_1.pragma.2.c  -fno-limit-debug-info -gcc-toolchain E:/Xilinx/Vivado/2018.3/msys -hls -hls-analyze-label -hls-analyze-pragma -fno-exceptions  -D__llvm__  -w  "E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/maxpool_1.pragma.2.c"    -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -std=gnu89  -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "E:/Xilinx/Vivado/2018.3/common/technology/autopilot" -I "E:/Xilinx/Vivado/2018.3/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -g -o "E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/maxpool_1.bc" 
+INFO-FLOW: exec E:/Xilinx/Vivado/2018.3/win64/tools/clang/bin/clang -fno-limit-debug-info -gcc-toolchain E:/Xilinx/Vivado/2018.3/msys -hls -hls-analyze-label -hls-analyze-pragma -fno-exceptions -D__llvm__ -w E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/maxpool_1.pragma.2.c -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -std=gnu89 -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I E:/Xilinx/Vivado/2018.3/common/technology/autopilot -I E:/Xilinx/Vivado/2018.3/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -g -o E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/maxpool_1.bc
+Command       clang done; 0.566 sec.
+INFO: [HLS 200-10] Analyzing design file 'maxpool_2.c' ... 
+INFO-FLOW: Compiling one TU...
+Execute       is_m_axi_addr64 
+INFO-FLOW: Handling maxpool_2.c as C
+Execute       get_default_platform 
+Execute       is_encrypted maxpool_2.c 
+INFO-FLOW: Running: GCC PP
+INFO-FLOW: Source preprocessing
+Execute       clang  -fno-limit-debug-info -gcc-toolchain "E:/Xilinx/Vivado/2018.3/msys" -hls  -fno-exceptions  -D__llvm__  -E "maxpool_2.c"     -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -std=gnu89   -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "E:/Xilinx/Vivado/2018.3/common/technology/autopilot" -I "E:/Xilinx/Vivado/2018.3/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -D__cdecl=  -o "E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/maxpool_2.pp.0.c" 
+INFO-FLOW: exec E:/Xilinx/Vivado/2018.3/win64/tools/clang/bin/clang -fno-limit-debug-info -gcc-toolchain E:/Xilinx/Vivado/2018.3/msys -hls -fno-exceptions -D__llvm__ -E maxpool_2.c -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -std=gnu89 -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I E:/Xilinx/Vivado/2018.3/common/technology/autopilot -I E:/Xilinx/Vivado/2018.3/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -D__cdecl= -o E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/maxpool_2.pp.0.c
+Command       clang done; 0.58 sec.
+Execute       tidy_31 xilinx-xfmat-array-geometry E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/maxpool_2.pp.0.c std=gnu89 
+INFO-FLOW: exec E:/Xilinx/Vivado/2018.3/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* -checks=-*,xilinx-xfmat-array-geometry -quiet -fix E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/maxpool_2.pp.0.c -- -std=gnu89 -fhls -ferror-limit=0
+INFO-FLOW: Syntax Checking before pre-processing...
+Execute       clang -syntaxcheck -src E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/maxpool_2.pp.0.c  -fno-limit-debug-info -gcc-toolchain "E:/Xilinx/Vivado/2018.3/msys" -hls    -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -std=gnu89   -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "E:/Xilinx/Vivado/2018.3/common/technology/autopilot" -I "E:/Xilinx/Vivado/2018.3/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -D__cdecl=  "E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/maxpool_2.pp.0.c"  -o "E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/useless.bc"  
+INFO-FLOW: exec E:/Xilinx/Vivado/2018.3/win64/tools/clang/bin/clang -fno-limit-debug-info -gcc-toolchain E:/Xilinx/Vivado/2018.3/msys -hls -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -std=gnu89 -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I E:/Xilinx/Vivado/2018.3/common/technology/autopilot -I E:/Xilinx/Vivado/2018.3/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -D__cdecl= E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/maxpool_2.pp.0.c -o E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/useless.bc
+Command       clang done; 0.546 sec.
+INFO-FLOW: Done: GCC PP time: 1.2 seconds per iteration
+Execute       list_core -type functional_unit 
+Execute       tidy_31 xilinx-systemc-detector E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/maxpool_2.pp.0.c std=gnu89 -directive=E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/.systemc_flag 
+INFO-FLOW: exec E:/Xilinx/Vivado/2018.3/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* -checks=-*,xilinx-systemc-detector -import-directive=E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/.systemc_flag -quiet -fix-errors E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/maxpool_2.pp.0.c -- -std=gnu89 -fhls -ferror-limit=0
+INFO-FLOW: Running: tidy-3.1 CDT preprocess
+Execute       tidy_31 xilinx-directive2pragma E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/maxpool_2.pp.0.c std=gnu89 -directive=E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/all.directive.json 
+INFO-FLOW: exec E:/Xilinx/Vivado/2018.3/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* -checks=-*,xilinx-directive2pragma -import-directive=E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/all.directive.json -quiet -fix-errors E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/maxpool_2.pp.0.c -- -std=gnu89 -fhls -ferror-limit=0
+Execute       get_config_dataflow -strict_mode 
+Execute       ap_eval exec -ignorestderr E:/Xilinx/Vivado/2018.3/win64/tools/clang-3.9-csynth/bin/xilinx-dataflow-lawyer -export-fixes=E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/xilinx-dataflow-lawyer.maxpool_2.pp.0.c.diag.yml E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/maxpool_2.pp.0.c -- -std=gnu99 -fhls -ferror-limit=0 -fstrict-dataflow > E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/xilinx-dataflow-lawyer.maxpool_2.pp.0.c.out.log 2> E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/xilinx-dataflow-lawyer.maxpool_2.pp.0.c.err.log 
+Execute       tidy_31 -errorcheck xilinx-constantarray-param,xilinx-resource-pragma-transformer,xilinx-xfmat-array-geometry E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/maxpool_2.pp.0.c std=gnu89 
+Execute         ap_eval exec -ignorestderr E:/Xilinx/Vivado/2018.3/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -export-fixes=E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/tidy-3.1.maxpool_2.pp.0.c.diag.yml -header-filter=.* -checks=-*,xilinx-constantarray-param,xilinx-resource-pragma-transformer,xilinx-xfmat-array-geometry -quiet -fix-errors E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/maxpool_2.pp.0.c -- -std=gnu89 -fhls -ferror-limit=0 > E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/tidy-3.1.maxpool_2.pp.0.c.out.log 2> E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/tidy-3.1.maxpool_2.pp.0.c.err.log 
+Command         ap_eval done; 0.154 sec.
+Execute         ap_eval exec -ignorestderr E:/Xilinx/Vivado/2018.3/win64/tools/clang-3.9-csynth/bin/xilinx-legacy-rewriter E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/maxpool_2.pp.0.c -- -std=gnu89 -fhls -ferror-limit=0 > E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/xilinx-legacy-rewriter.maxpool_2.pp.0.c.out.log 2> E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/xilinx-legacy-rewriter.maxpool_2.pp.0.c.err.log 
+Command       tidy_31 done; 0.215 sec.
+INFO-FLOW: Done: tidy-3.1 CDT preprocess time: 0.3 seconds per iteration
+INFO-FLOW: Pragma Handling...
+Execute       tidy_31 xilinx-ssdm-intrinsics-arguments E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/maxpool_2.pragma.1.c std=gnu89 
+INFO-FLOW: exec E:/Xilinx/Vivado/2018.3/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* -checks=-*,xilinx-ssdm-intrinsics-arguments -quiet -fix-errors E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/maxpool_2.pragma.1.c -- -std=gnu89 -fhls -ferror-limit=0
+Execute       get_default_platform 
+INFO-FLOW: Processing labels
+Execute       clang -src E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/maxpool_2.pragma.2.c  -fno-limit-debug-info -gcc-toolchain E:/Xilinx/Vivado/2018.3/msys -hls -hls-analyze-label -hls-analyze-pragma -fno-exceptions  -D__llvm__  -w  "E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/maxpool_2.pragma.2.c"    -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -std=gnu89  -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "E:/Xilinx/Vivado/2018.3/common/technology/autopilot" -I "E:/Xilinx/Vivado/2018.3/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -g -o "E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/maxpool_2.bc" 
+INFO-FLOW: exec E:/Xilinx/Vivado/2018.3/win64/tools/clang/bin/clang -fno-limit-debug-info -gcc-toolchain E:/Xilinx/Vivado/2018.3/msys -hls -hls-analyze-label -hls-analyze-pragma -fno-exceptions -D__llvm__ -w E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/maxpool_2.pragma.2.c -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -std=gnu89 -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I E:/Xilinx/Vivado/2018.3/common/technology/autopilot -I E:/Xilinx/Vivado/2018.3/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -g -o E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/maxpool_2.bc
+Command       clang done; 0.577 sec.
+INFO: [HLS 200-10] Analyzing design file 'tinyyolo_lite.c' ... 
+INFO-FLOW: Compiling one TU...
+Execute       is_m_axi_addr64 
+INFO-FLOW: Handling tinyyolo_lite.c as C
+Execute       get_default_platform 
+Execute       is_encrypted tinyyolo_lite.c 
+INFO-FLOW: Running: GCC PP
+INFO-FLOW: Source preprocessing
+Execute       clang  -fno-limit-debug-info -gcc-toolchain "E:/Xilinx/Vivado/2018.3/msys" -hls  -fno-exceptions  -D__llvm__  -E "tinyyolo_lite.c"     -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -std=gnu89   -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "E:/Xilinx/Vivado/2018.3/common/technology/autopilot" -I "E:/Xilinx/Vivado/2018.3/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -D__cdecl=  -o "E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/tinyyolo_lite.pp.0.c" 
+INFO-FLOW: exec E:/Xilinx/Vivado/2018.3/win64/tools/clang/bin/clang -fno-limit-debug-info -gcc-toolchain E:/Xilinx/Vivado/2018.3/msys -hls -fno-exceptions -D__llvm__ -E tinyyolo_lite.c -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -std=gnu89 -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I E:/Xilinx/Vivado/2018.3/common/technology/autopilot -I E:/Xilinx/Vivado/2018.3/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -D__cdecl= -o E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/tinyyolo_lite.pp.0.c
+Command       clang done; 0.594 sec.
+Execute       tidy_31 xilinx-xfmat-array-geometry E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/tinyyolo_lite.pp.0.c std=gnu89 
+INFO-FLOW: exec E:/Xilinx/Vivado/2018.3/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* -checks=-*,xilinx-xfmat-array-geometry -quiet -fix E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/tinyyolo_lite.pp.0.c -- -std=gnu89 -fhls -ferror-limit=0
+INFO-FLOW: Syntax Checking before pre-processing...
+Execute       clang -syntaxcheck -src E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/tinyyolo_lite.pp.0.c  -fno-limit-debug-info -gcc-toolchain "E:/Xilinx/Vivado/2018.3/msys" -hls    -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -std=gnu89   -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "E:/Xilinx/Vivado/2018.3/common/technology/autopilot" -I "E:/Xilinx/Vivado/2018.3/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -D__cdecl=  "E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/tinyyolo_lite.pp.0.c"  -o "E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/useless.bc"  
+INFO-FLOW: exec E:/Xilinx/Vivado/2018.3/win64/tools/clang/bin/clang -fno-limit-debug-info -gcc-toolchain E:/Xilinx/Vivado/2018.3/msys -hls -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -std=gnu89 -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I E:/Xilinx/Vivado/2018.3/common/technology/autopilot -I E:/Xilinx/Vivado/2018.3/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -D__cdecl= E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/tinyyolo_lite.pp.0.c -o E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/useless.bc
+Command       clang done; 0.645 sec.
+INFO-FLOW: Done: GCC PP time: 1.3 seconds per iteration
+Execute       list_core -type functional_unit 
+Execute       tidy_31 xilinx-systemc-detector E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/tinyyolo_lite.pp.0.c std=gnu89 -directive=E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/.systemc_flag 
+INFO-FLOW: exec E:/Xilinx/Vivado/2018.3/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* -checks=-*,xilinx-systemc-detector -import-directive=E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/.systemc_flag -quiet -fix-errors E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/tinyyolo_lite.pp.0.c -- -std=gnu89 -fhls -ferror-limit=0
+INFO-FLOW: Running: tidy-3.1 CDT preprocess
+Execute       tidy_31 xilinx-directive2pragma E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/tinyyolo_lite.pp.0.c std=gnu89 -directive=E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/all.directive.json 
+INFO-FLOW: exec E:/Xilinx/Vivado/2018.3/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* -checks=-*,xilinx-directive2pragma -import-directive=E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/all.directive.json -quiet -fix-errors E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/tinyyolo_lite.pp.0.c -- -std=gnu89 -fhls -ferror-limit=0
+Execute       get_config_dataflow -strict_mode 
+Execute       ap_eval exec -ignorestderr E:/Xilinx/Vivado/2018.3/win64/tools/clang-3.9-csynth/bin/xilinx-dataflow-lawyer -export-fixes=E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/xilinx-dataflow-lawyer.tinyyolo_lite.pp.0.c.diag.yml E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/tinyyolo_lite.pp.0.c -- -std=gnu99 -fhls -ferror-limit=0 -fstrict-dataflow > E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/xilinx-dataflow-lawyer.tinyyolo_lite.pp.0.c.out.log 2> E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/xilinx-dataflow-lawyer.tinyyolo_lite.pp.0.c.err.log 
+Execute       tidy_31 -errorcheck xilinx-constantarray-param,xilinx-resource-pragma-transformer,xilinx-xfmat-array-geometry E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/tinyyolo_lite.pp.0.c std=gnu89 
+Execute         ap_eval exec -ignorestderr E:/Xilinx/Vivado/2018.3/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -export-fixes=E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/tidy-3.1.tinyyolo_lite.pp.0.c.diag.yml -header-filter=.* -checks=-*,xilinx-constantarray-param,xilinx-resource-pragma-transformer,xilinx-xfmat-array-geometry -quiet -fix-errors E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/tinyyolo_lite.pp.0.c -- -std=gnu89 -fhls -ferror-limit=0 > E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/tidy-3.1.tinyyolo_lite.pp.0.c.out.log 2> E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/tidy-3.1.tinyyolo_lite.pp.0.c.err.log 
+Command         ap_eval done; 0.248 sec.
+Execute         ap_eval exec -ignorestderr E:/Xilinx/Vivado/2018.3/win64/tools/clang-3.9-csynth/bin/xilinx-legacy-rewriter E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/tinyyolo_lite.pp.0.c -- -std=gnu89 -fhls -ferror-limit=0 > E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/xilinx-legacy-rewriter.tinyyolo_lite.pp.0.c.out.log 2> E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/xilinx-legacy-rewriter.tinyyolo_lite.pp.0.c.err.log 
+Command       tidy_31 done; 0.348 sec.
+INFO-FLOW: Done: tidy-3.1 CDT preprocess time: 0.5 seconds per iteration
+INFO-FLOW: Pragma Handling...
+Execute       tidy_31 xilinx-ssdm-intrinsics-arguments E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/tinyyolo_lite.pragma.1.c std=gnu89 
+INFO-FLOW: exec E:/Xilinx/Vivado/2018.3/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* -checks=-*,xilinx-ssdm-intrinsics-arguments -quiet -fix-errors E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/tinyyolo_lite.pragma.1.c -- -std=gnu89 -fhls -ferror-limit=0
+Command       tidy_31 done; 0.137 sec.
+Execute       get_default_platform 
+INFO-FLOW: Processing labels
+Execute       clang -src E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/tinyyolo_lite.pragma.2.c  -fno-limit-debug-info -gcc-toolchain E:/Xilinx/Vivado/2018.3/msys -hls -hls-analyze-label -hls-analyze-pragma -fno-exceptions  -D__llvm__  -w  "E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/tinyyolo_lite.pragma.2.c"    -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -std=gnu89  -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "E:/Xilinx/Vivado/2018.3/common/technology/autopilot" -I "E:/Xilinx/Vivado/2018.3/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -g -o "E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/tinyyolo_lite.bc" 
+INFO-FLOW: exec E:/Xilinx/Vivado/2018.3/win64/tools/clang/bin/clang -fno-limit-debug-info -gcc-toolchain E:/Xilinx/Vivado/2018.3/msys -hls -hls-analyze-label -hls-analyze-pragma -fno-exceptions -D__llvm__ -w E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/tinyyolo_lite.pragma.2.c -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -std=gnu89 -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I E:/Xilinx/Vivado/2018.3/common/technology/autopilot -I E:/Xilinx/Vivado/2018.3/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -g -o E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/tinyyolo_lite.bc
+Command       clang done; 0.609 sec.
+INFO-FLOW: Linking Debug ...
+Execute       llvm-ld E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/conv_relu1.g.bc E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/conv_relu2.g.bc E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/conv_relu3.g.bc E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/decode.g.bc E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/detection_head.g.bc E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/maxpool_1.g.bc E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/maxpool_2.g.bc E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/tinyyolo_lite.g.bc -hls-opt -except-internalize tinyyolo_lite -LE:/Xilinx/Vivado/2018.3/win64/lib -lhlsm -lhlsmc++ -o E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/a.g 
+Command       llvm-ld done; 1.048 sec.
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:02 ; elapsed = 00:00:22 . Memory (MB): peak = 103.539 ; gain = 18.523
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:02 ; elapsed = 00:00:22 . Memory (MB): peak = 103.539 ; gain = 18.523
+Execute       get_config_sdx -target 
+Execute       opt_and_import_c a -opt_level=2 -skip_syncheck=0 -ng=0 -keep_printf=0 
+Execute         cleanup_all_models 
+INFO: [HLS 200-10] Starting code transformations ...
+Execute         transform -promote-dbg-pointer E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/a.pp.bc -o E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/a.pp.0.bc -f 
+Execute         llvm-ld E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/a.pp.0.bc -disable-opt -LE:/Xilinx/Vivado/2018.3/win64/lib -lfloatconversion -o E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/a.g.0 
+Command         llvm-ld done; 0.339 sec.
+INFO-FLOW: Running Standard Transforms...
+Execute         transform -hls -share-std-xform -demangle-name -inline-byval-memcpy -always-inline -promote-dbg-pointer -interface-preproc -mem2reg -lower-blackbox -scalarrepl -mem2reg -keep-read-access -instcombine -dce -promote-dbg-pointer -bitop-raise -loop-simplify -indvarspre -indvars -loop-simplify -xunroll -constprop -instcombine -simplifycfg -indvars -simplifycfg -dce -globaldce -basicaa -simplifycfg -mem2reg -globalopt -global-constprop -deadargelim -instcombine -simplifycfg -prune-eh -simplifycfg -scalarrepl -instcombine -reassociate -licm -simplifycfg -loop-simplify -indvars -instcombine -simplifycfg -mem2reg -loop-simplify -indvars -instcombine -gvn -gvn -instcombine -adce -break-crit-edges -simplifycfg -loop-delete -global-array-opt -dce -dse -adce -find-syn-modules -top tinyyolo_lite -deadargelim -mem2reg -instcombine -dce -presyn-prepare -auto-rom-infer -interface-preproc -syn-check -check-rec-only -find-region -simplifycfg -func-extr -function-inline -globaldce -mem2reg -instcombine -dce -gvn -globaldce -adce -adse -constprop -instcombine -bit-constprop -instcombine -dce -simplifycfg -bitop-raise -simplifycfg -dce -loop-delete -reassociate -globalopt -global-privatize -mem2reg -dce -global-constprop -pointer-simplify -constprop -dce -func-inst -deadargelim -auto-shift-reg-idiom -promote-dbg-pointer -norm-name E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/a.g.0.bc -o E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/a.g.1.bc -f -phase std-opt 
+Command         transform done; 0.235 sec.
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:02 ; elapsed = 00:00:22 . Memory (MB): peak = 105.539 ; gain = 20.523
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO-FLOW: Checking Synthesizability 1/2..
+Execute         transform -hls -syn-check -check-rec-only -disaggr -scalarrepl -norm-name -dce -mem2reg -instcombine -function-uniquify -directive-preproc -mem2reg -dse -dce -auto-rom-infer -dce -pag -array-normalize -instcombine -dce -warn-fifo-pointer -array-seg-normalize -instcombine -dce -array-flatten -instcombine -dce -array-burst -dce -deadargelim -promote-global-argument -simplifycfg -mem2reg -globaldce -resolve-double-ptr -dce -deadargelim -dce -instcombine -function-inline -globaldce -dce -doublePtrSimplify -doublePtrElim -dce -doublePtrSimplify -promote-dbg-pointer -dce -scalarrepl -dse -adse -instcombine -ptrLegalization -simplifycfg -dce -instcombine -pointer-simplify -ptrArgReplace -dce -instcombine -disaggr -scalarrepl -norm-name -dce -mem2reg -instcombine -ptrLegalization -simplifycfg -deadargelim -instcombine -dce -inst-simplify -function-uniquify -directive-preproc -mem2reg -dse -dce -globaldce -check-dspbuiltin E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/a.g.1.bc -o E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/a.g.2.prechk.bc -f 
+INFO: [XFORM 203-602] Inlining function 'sigmoid' into 'decode' (decode.c:65) automatically.
+Command         transform done; 0.309 sec.
+INFO-FLOW: Checking Synthesizability 2/2..
+Execute         transform -syn-check E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/a.g.2.prechk.bc -o E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/a.g.2.bc -f -phase syn-check 
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:02 ; elapsed = 00:00:23 . Memory (MB): peak = 106.258 ; gain = 21.242
+INFO-FLOW: Compiler optimizing ...
+INFO-FLOW: Share syncheck's 1.bc for syn flow: copy E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/a.g.1.bc to E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/a.o.1.bc
+INFO-FLOW: Presyn 1...
+Execute         transform -hls -tmp E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db -interface-port-rename -type-info -function-uniquify -directive-preproc -mem2reg -dse -dce -disaggr -scalarrepl -norm-name -deadargelim -mem2reg -instcombine -dce -simplifycfg -auto-rom-infer -dce -function-uniquify -resource-proc -simplifycfg -mem2reg -globaldce -resolve-double-ptr -dce -deadargelim -dce -instcombine -clib-intrinsic-prepare -dce -func-buffer -dce -pag -array-normalize -func-legal -instcombine -gvn -constprop -dce -ptrArgReplace -mem2reg -instcombine -dce -array-seg-normalize -deadargelim -instcombine -dce -pointer-simplify -dce -port-alignment -dce -interface-preproc -data-pack -instcombine -dce -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -gvn -gvn -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -adse -adce -loop-simplify -indvars -instcombine -gvn -loop-simplify -mem2reg -dce -find-region -instcombine -auto-loop-pipeline -inst-simplify -interface-preproc -cfgopt -instcombine -indvars -auto-loop-unroll -loop-simplify -loop-bound -xunroll -constprop -instcombine -simplifycfg -indvars -simplifycfg -dce -globaldce -clean-region -attach-range -gvn -inst-simplify -constprop -simplifycfg -dce -pointer-simplify -dce -globalopt -constprop -dce -array-promote -constprop -instcombine -dce -ptrArgReplace -mem2reg -instcombine -simplifycfg -dce -auto-par -instcombine -dce -array-transform-check -array-reshape -instcombine -simplifycfg -dce -ptrArgReplace -deadargelim -mem2reg -instcombine -simplifycfg -dce -indvars -loop-simplify -loop-bound -xunroll -constprop -instcombine -simplifycfg -indvars -simplifycfg -dce -globaldce -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -duplicate-dataflow-processes -globaldce -instcombine -array-partition -instcombine -simplifycfg -dce -ptrArgReplace -global-constprop -deadargelim -mem2reg -func-legal -instcombine -dce -global-constprop -deadargelim -mem2reg -instcombine -simplifycfg -dce -merge-param -deadargelim -globalopt -constprop -dce -array-promote -constprop -instcombine -dce -ptrArgReplace -mem2reg -instcombine -simplifycfg -dce -mem-intrinsic-preproc -dce -global-internalize -global-privatize -mem2reg -globaldce -promote-global-argument -ptrArgReplace -mem2reg -instcombine -dce -globalopt -mergereturn -simplify-global-access -mem2reg -dce -pointer-simplify -dce -functionattrs -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -gvn -gvn -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -adse -adce -inst-simplify -dce -norm-name -function-inline -globaldce -func-inst -constprop -instcombine -simplifycfg -dce -func-legal -dce -loop-bound -arraycheck -bitwidthmin -on-by-dataflow -loop-delete -instcombine -simplifycfg -globaldce -dce -gvn -deadargelim -dce -loop-simplify -clean-region -simplifycfg -propagate-stable-arguments -loop-stream -instcombine -simplifycfg -dce -globaldce -duplicate-dataflow-processes -stream-intrinsic-preproc -dce -check-ap-stream -loop-simplify -eliminate-keepreads -extract-dataflow-in-loop -loop-simplify -dce -gvn -deadargelim -dse -check-dataflow-syntax -legalize-stream-variable -legalize-global -extract-subproc -dce -dead-channel-elimination -canonicalize-gep -globaldce -dce -gvn -deadargelim -annotate-dataflow-channels -scalar-propagation -deadargelim -globaldce -mem2reg -check-dataflow-channels -function-stream -dce -globaldce -prop-fifo-spec -internal-stream-gen -canonicalize-gep -globaldce -dce -gvn -deadargelim -mergereturn -indvars -loop-simplify -instcombine -array-stream -array-seg-normalize -array-partition -func-legal -instcombine -simplifycfg -dce -bundle-memfifo-ops -deadargelim -function-uniquify -directive-preproc -mem2reg -dse -dce -group-axi-access -licm -simplifycfg -dce -loop-delete -norm-name E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/a.o.1.bc -o E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/a.o.1.tmp.bc -f 
+INFO: [XFORM 203-602] Inlining function 'sigmoid' into 'decode' (decode.c:65) automatically.
+Command         transform done; 1.052 sec.
+INFO-FLOW: Presyn 2...
+Execute         transform -hls -keep-callgraph -scalarrepl -mem2reg -port-alignment -attach-range -dce -pipe-mux-gen -indvars -loop-bound -inst-simplify -instcombine -dce -merge-array-access -mem2reg -dce -clean-region -mergereturn -if-conv -instcombine -dce -constprop -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -gvn -gvn -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -adse -adce -scalarrepl -mem2reg -global-constprop -deadargelim -deadargelim -instcombine -dce -simplifycfg -ptrArgReplace -mem2reg -function-inline -globaldce -mem2reg -instcombine -dce -expr-balance -instcombine -dce -bitwidthmin -interface-preproc -directive-preproc -inst-rectify -instcombine -dce -functionattrs -constprop -instcombine -bit-constprop -simplify-global-access -globalopt -globaldce -inst-simplify -instcombine -elimdeaddata -dce -loop-delete -simplifycfg -loop-simplify -auto-burst -norm-name E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/a.o.1.tmp.bc -o E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/a.o.2.bc -f -phase presyn 
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (decode.c:48:40) to (decode.c:68:30) in function 'decode'... converting 4 basic blocks.
+Command         transform done; 0.522 sec.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:04 ; elapsed = 00:00:24 . Memory (MB): peak = 127.863 ; gain = 42.848
+INFO-FLOW: Building ssdm...
+Execute         transform -hls -function-uniquify -auto-function-inline -globaldce -ptrArgReplace -mem2reg -instcombine -dce -reset-lda -loop-simplify -indvars -licm -loop-dep -loop-bound -licm -loop-simplify -flattenloopnest -array-flatten -gvn -instcombine -dce -array-map -dce -func-legal -gvn -adce -instcombine -cfgopt -simplifycfg -loop-simplify -array-burst -promote-global-argument -dce -axi4-lower -array-seg-normalize -basicaa -aggrmodref-aa -globalsmodref-aa -aggr-aa -gvn -gvn -basicaa -aggrmodref-aa -globalsmodref-aa -aggr-aa -dse -adse -adce -licm -inst-simplify -dce -globaldce -instcombine -array-stream -eliminate-keepreads -instcombine -dce -deadargelim -doublePtrSimplify -doublePtrElim -dce -doublePtrSimplify -promote-dbg-pointer -dce -scalarrepl -mem2reg -disaggr -norm-name -mem2reg -instcombine -dse -adse -adce -ptrLegalization -dce -auto-rom-infer -array-flatten -dce -instcombine -check-doubleptr -loop-rot -constprop -cfgopt -simplifycfg -loop-simplify -indvars -pointer-simplify -dce -loop-bound -loop-simplify -loop-preproc -constprop -global-constprop -gvn -mem2reg -instcombine -dce -loop-bound -loop-merge -dce -bitwidthmin -deadargelim -dce -canonicalize-dataflow -dce -scalar-propagation -deadargelim -globaldce -mem2reg -read-loop-dep -interface-preproc -directive-preproc -interface-gen -bram-byte-enable -deadargelim -inst-simplify -dce -gvn -mem2reg -instcombine -dce -adse -loop-bound -instcombine -cfgopt -simplifycfg -loop-simplify -clean-region -io-protocol -find-region -mem2reg -bitop-raise -inst-simplify -inst-rectify -instcombine -adce -deadargelim -loop-simplify -phi-opt -bitop-raise -cfgopt -simplifycfg -strip-dead-prototypes -interface-lower -bitop-lower -intrinsic-lower -auto-function-inline -basicaa -aggrmodref-aa -globalsmodref-aa -aggr-aa -inst-simplify -simplifycfg -loop-simplify -mergereturn -inst-simplify -inst-rectify -dce -load-elim -bitop-lower -loop-rewind -pointer-simplify -dce -cfgopt -dce -bitwidth -loop-bound -loop-dep -read-loop-dep -dce -check-stream -norm-name -legalize -validate-dataflow -inst-clarity -cdfg-build E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/a.o.2.bc -o E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/a.o.3.bc -f -phase build-ssdm 
+Command         transform done; 1.531 sec.
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:05 ; elapsed = 00:00:26 . Memory (MB): peak = 191.043 ; gain = 106.027
+INFO-FLOW: Finish building internal data model.
+Command       opt_and_import_c done; 4.127 sec.
+Command     elaborate done; 24.786 sec.
+Execute     autosyn -from_csynth_design=1 
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO-FLOW: Synthesizing C/C++ design ...
+INFO: [HLS 200-10] Synthesizing 'tinyyolo_lite' ...
+Execute       ap_set_top_model tinyyolo_lite 
+Execute       get_model_list tinyyolo_lite -filter all-wo-channel -topdown 
+Execute       preproc_iomode -model tinyyolo_lite 
+Execute       preproc_iomode -model decode 
+Execute       preproc_iomode -model detection_head 
+Execute       preproc_iomode -model conv_layer3 
+Execute       preproc_iomode -model maxpool_layer2 
+Execute       preproc_iomode -model conv_layer2 
+Execute       preproc_iomode -model maxpool_layer1 
+Execute       preproc_iomode -model conv_layer1 
+Execute       get_model_list tinyyolo_lite -filter all-wo-channel 
+INFO-FLOW: Model list for configure: conv_layer1 maxpool_layer1 conv_layer2 maxpool_layer2 conv_layer3 detection_head decode tinyyolo_lite
+INFO-FLOW: Configuring Module : conv_layer1 ...
+Execute       set_default_model conv_layer1 
+Execute       apply_spec_resource_limit conv_layer1 
+INFO-FLOW: Configuring Module : maxpool_layer1 ...
+Execute       set_default_model maxpool_layer1 
+Execute       apply_spec_resource_limit maxpool_layer1 
+INFO-FLOW: Configuring Module : conv_layer2 ...
+Execute       set_default_model conv_layer2 
+Execute       apply_spec_resource_limit conv_layer2 
+INFO-FLOW: Configuring Module : maxpool_layer2 ...
+Execute       set_default_model maxpool_layer2 
+Execute       apply_spec_resource_limit maxpool_layer2 
+INFO-FLOW: Configuring Module : conv_layer3 ...
+Execute       set_default_model conv_layer3 
+Execute       apply_spec_resource_limit conv_layer3 
+INFO-FLOW: Configuring Module : detection_head ...
+Execute       set_default_model detection_head 
+Execute       apply_spec_resource_limit detection_head 
+INFO-FLOW: Configuring Module : decode ...
+Execute       set_default_model decode 
+Execute       apply_spec_resource_limit decode 
+INFO-FLOW: Configuring Module : tinyyolo_lite ...
+Execute       set_default_model tinyyolo_lite 
+Execute       apply_spec_resource_limit tinyyolo_lite 
+INFO-FLOW: Model list for preprocess: conv_layer1 maxpool_layer1 conv_layer2 maxpool_layer2 conv_layer3 detection_head decode tinyyolo_lite
+INFO-FLOW: Preprocessing Module: conv_layer1 ...
+Execute       set_default_model conv_layer1 
+Execute       cdfg_preprocess -model conv_layer1 
+Execute       rtl_gen_preprocess conv_layer1 
+INFO-FLOW: Preprocessing Module: maxpool_layer1 ...
+Execute       set_default_model maxpool_layer1 
+Execute       cdfg_preprocess -model maxpool_layer1 
+Execute       rtl_gen_preprocess maxpool_layer1 
+INFO-FLOW: Preprocessing Module: conv_layer2 ...
+Execute       set_default_model conv_layer2 
+Execute       cdfg_preprocess -model conv_layer2 
+Execute       rtl_gen_preprocess conv_layer2 
+INFO-FLOW: Preprocessing Module: maxpool_layer2 ...
+Execute       set_default_model maxpool_layer2 
+Execute       cdfg_preprocess -model maxpool_layer2 
+Execute       rtl_gen_preprocess maxpool_layer2 
+INFO-FLOW: Preprocessing Module: conv_layer3 ...
+Execute       set_default_model conv_layer3 
+Execute       cdfg_preprocess -model conv_layer3 
+Execute       rtl_gen_preprocess conv_layer3 
+INFO-FLOW: Preprocessing Module: detection_head ...
+Execute       set_default_model detection_head 
+Execute       cdfg_preprocess -model detection_head 
+Execute       rtl_gen_preprocess detection_head 
+INFO-FLOW: Preprocessing Module: decode ...
+Execute       set_default_model decode 
+Execute       cdfg_preprocess -model decode 
+Execute       rtl_gen_preprocess decode 
+INFO-FLOW: Preprocessing Module: tinyyolo_lite ...
+Execute       set_default_model tinyyolo_lite 
+Execute       cdfg_preprocess -model tinyyolo_lite 
+Execute       rtl_gen_preprocess tinyyolo_lite 
+WARNING: [SYN 201-107] Renaming port name 'tinyyolo_lite/image' to 'tinyyolo_lite/image_r' to avoid the conflict with HDL keywords or other object names.
+INFO-FLOW: Model list for synthesis: conv_layer1 maxpool_layer1 conv_layer2 maxpool_layer2 conv_layer3 detection_head decode tinyyolo_lite
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'conv_layer1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       set_default_model conv_layer1 
+Execute       schedule -model conv_layer1 
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+Command       schedule done; 0.125 sec.
+INFO: [HLS 200-111]  Elapsed time: 26.026 seconds; current allocated memory: 149.296 MB.
+Execute       report -o E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/conv_layer1.verbose.sched.rpt -verbose -f 
+INFO: [HLS 200-434] Only 0 loops out of a total 6 loops have been pipelined in this design.
+Execute       db_write -o E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/conv_layer1.sched.adb -f 
+INFO-FLOW: Finish scheduling conv_layer1.
+Execute       set_default_model conv_layer1 
+Execute       bind -model conv_layer1 
+BIND OPTION: fu_weight=[ 0.0 -- 1.0 ]
+BIND OPTION: model=conv_layer1
+BIND OPTION: reg_weight=[ 0.0 -- 1.0 ]
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+Command       bind done; 0.115 sec.
+INFO: [HLS 200-111]  Elapsed time: 0.268 seconds; current allocated memory: 149.716 MB.
+Execute       report -o E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/conv_layer1.verbose.bind.rpt -verbose -f 
+Command       report done; 0.129 sec.
+Execute       db_write -o E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/conv_layer1.bind.adb -f 
+INFO-FLOW: Finish binding conv_layer1.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'maxpool_layer1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       set_default_model maxpool_layer1 
+Execute       schedule -model maxpool_layer1 
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+Command       schedule done; 0.101 sec.
+INFO: [HLS 200-111]  Elapsed time: 0.374 seconds; current allocated memory: 149.984 MB.
+Execute       report -o E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/maxpool_layer1.verbose.sched.rpt -verbose -f 
+Execute       db_write -o E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/maxpool_layer1.sched.adb -f 
+INFO-FLOW: Finish scheduling maxpool_layer1.
+Execute       set_default_model maxpool_layer1 
+Execute       bind -model maxpool_layer1 
+BIND OPTION: fu_weight=[ 0.0 -- 1.0 ]
+BIND OPTION: model=maxpool_layer1
+BIND OPTION: reg_weight=[ 0.0 -- 1.0 ]
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+Command       bind done; 0.102 sec.
+INFO: [HLS 200-111]  Elapsed time: 0.282 seconds; current allocated memory: 150.277 MB.
+Execute       report -o E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/maxpool_layer1.verbose.bind.rpt -verbose -f 
+Command       report done; 0.139 sec.
+Execute       db_write -o E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/maxpool_layer1.bind.adb -f 
+INFO-FLOW: Finish binding maxpool_layer1.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'conv_layer2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       set_default_model conv_layer2 
+Execute       schedule -model conv_layer2 
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+Command       schedule done; 0.125 sec.
+INFO: [HLS 200-111]  Elapsed time: 0.402 seconds; current allocated memory: 150.570 MB.
+Execute       report -o E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/conv_layer2.verbose.sched.rpt -verbose -f 
+Execute       db_write -o E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/conv_layer2.sched.adb -f 
+INFO-FLOW: Finish scheduling conv_layer2.
+Execute       set_default_model conv_layer2 
+Execute       bind -model conv_layer2 
+BIND OPTION: fu_weight=[ 0.0 -- 1.0 ]
+BIND OPTION: model=conv_layer2
+BIND OPTION: reg_weight=[ 0.0 -- 1.0 ]
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+Command       bind done; 0.104 sec.
+INFO: [HLS 200-111]  Elapsed time: 0.292 seconds; current allocated memory: 150.919 MB.
+Execute       report -o E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/conv_layer2.verbose.bind.rpt -verbose -f 
+Command       report done; 0.186 sec.
+Execute       db_write -o E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/conv_layer2.bind.adb -f 
+Command       db_write done; 0.11 sec.
+INFO-FLOW: Finish binding conv_layer2.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'maxpool_layer2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       set_default_model maxpool_layer2 
+Execute       schedule -model maxpool_layer2 
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+Command       schedule done; 0.124 sec.
+INFO: [HLS 200-111]  Elapsed time: 0.493 seconds; current allocated memory: 151.153 MB.
+Execute       report -o E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/maxpool_layer2.verbose.sched.rpt -verbose -f 
+Execute       db_write -o E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/maxpool_layer2.sched.adb -f 
+INFO-FLOW: Finish scheduling maxpool_layer2.
+Execute       set_default_model maxpool_layer2 
+Execute       bind -model maxpool_layer2 
+BIND OPTION: fu_weight=[ 0.0 -- 1.0 ]
+BIND OPTION: model=maxpool_layer2
+BIND OPTION: reg_weight=[ 0.0 -- 1.0 ]
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+Command       bind done; 0.114 sec.
+INFO: [HLS 200-111]  Elapsed time: 0.26 seconds; current allocated memory: 151.463 MB.
+Execute       report -o E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/maxpool_layer2.verbose.bind.rpt -verbose -f 
+Command       report done; 0.137 sec.
+Execute       db_write -o E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/maxpool_layer2.bind.adb -f 
+INFO-FLOW: Finish binding maxpool_layer2.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'conv_layer3' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       set_default_model conv_layer3 
+Execute       schedule -model conv_layer3 
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+Command       schedule done; 0.13 sec.
+INFO: [HLS 200-111]  Elapsed time: 0.418 seconds; current allocated memory: 151.715 MB.
+Execute       report -o E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/conv_layer3.verbose.sched.rpt -verbose -f 
+Execute       db_write -o E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/conv_layer3.sched.adb -f 
+INFO-FLOW: Finish scheduling conv_layer3.
+Execute       set_default_model conv_layer3 
+Execute       bind -model conv_layer3 
+BIND OPTION: fu_weight=[ 0.0 -- 1.0 ]
+BIND OPTION: model=conv_layer3
+BIND OPTION: reg_weight=[ 0.0 -- 1.0 ]
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+Command       bind done; 0.103 sec.
+INFO: [HLS 200-111]  Elapsed time: 0.281 seconds; current allocated memory: 152.070 MB.
+Execute       report -o E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/conv_layer3.verbose.bind.rpt -verbose -f 
+Command       report done; 0.136 sec.
+Execute       db_write -o E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/conv_layer3.bind.adb -f 
+INFO-FLOW: Finish binding conv_layer3.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'detection_head' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       set_default_model detection_head 
+Execute       schedule -model detection_head 
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+Command       schedule done; 0.135 sec.
+INFO: [HLS 200-111]  Elapsed time: 0.425 seconds; current allocated memory: 152.300 MB.
+Execute       report -o E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/detection_head.verbose.sched.rpt -verbose -f 
+Execute       db_write -o E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/detection_head.sched.adb -f 
+INFO-FLOW: Finish scheduling detection_head.
+Execute       set_default_model detection_head 
+Execute       bind -model detection_head 
+BIND OPTION: fu_weight=[ 0.0 -- 1.0 ]
+BIND OPTION: model=detection_head
+BIND OPTION: reg_weight=[ 0.0 -- 1.0 ]
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+Command       bind done; 0.111 sec.
+INFO: [HLS 200-111]  Elapsed time: 0.254 seconds; current allocated memory: 152.605 MB.
+Execute       report -o E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/detection_head.verbose.bind.rpt -verbose -f 
+Command       report done; 0.143 sec.
+Execute       db_write -o E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/detection_head.bind.adb -f 
+INFO-FLOW: Finish binding detection_head.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'decode' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       set_default_model decode 
+Execute       schedule -model decode 
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+Command       schedule done; 0.115 sec.
+INFO: [HLS 200-111]  Elapsed time: 0.386 seconds; current allocated memory: 152.918 MB.
+Execute       report -o E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/decode.verbose.sched.rpt -verbose -f 
+Execute       db_write -o E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/decode.sched.adb -f 
+INFO-FLOW: Finish scheduling decode.
+Execute       set_default_model decode 
+Execute       bind -model decode 
+BIND OPTION: fu_weight=[ 0.0 -- 1.0 ]
+BIND OPTION: model=decode
+BIND OPTION: reg_weight=[ 0.0 -- 1.0 ]
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+Command       bind done; 0.101 sec.
+INFO: [HLS 200-111]  Elapsed time: 0.276 seconds; current allocated memory: 153.269 MB.
+Execute       report -o E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/decode.verbose.bind.rpt -verbose -f 
+Command       report done; 0.134 sec.
+Execute       db_write -o E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/decode.bind.adb -f 
+INFO-FLOW: Finish binding decode.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'tinyyolo_lite' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       set_default_model tinyyolo_lite 
+Execute       schedule -model tinyyolo_lite 
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.332 seconds; current allocated memory: 153.365 MB.
+Execute       report -o E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/tinyyolo_lite.verbose.sched.rpt -verbose -f 
+Execute       db_write -o E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/tinyyolo_lite.sched.adb -f 
+INFO-FLOW: Finish scheduling tinyyolo_lite.
+Execute       set_default_model tinyyolo_lite 
+Execute       bind -model tinyyolo_lite 
+BIND OPTION: fu_weight=[ 0.0 -- 1.0 ]
+BIND OPTION: model=tinyyolo_lite
+BIND OPTION: reg_weight=[ 0.0 -- 1.0 ]
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+Command       bind done; 0.48 sec.
+INFO: [HLS 200-111]  Elapsed time: 0.512 seconds; current allocated memory: 153.771 MB.
+Execute       report -o E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/tinyyolo_lite.verbose.bind.rpt -verbose -f 
+Command       report done; 0.195 sec.
+Execute       db_write -o E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/tinyyolo_lite.bind.adb -f 
+INFO-FLOW: Finish binding tinyyolo_lite.
+Execute       get_model_list tinyyolo_lite -filter all-wo-channel 
+INFO-FLOW: Preprocessing for RTLGen ...
+Execute       rtl_gen_preprocess conv_layer1 
+Execute       rtl_gen_preprocess maxpool_layer1 
+Execute       rtl_gen_preprocess conv_layer2 
+Execute       rtl_gen_preprocess maxpool_layer2 
+Execute       rtl_gen_preprocess conv_layer3 
+Execute       rtl_gen_preprocess detection_head 
+Execute       rtl_gen_preprocess decode 
+Execute       rtl_gen_preprocess tinyyolo_lite 
+INFO-FLOW: Model list for RTL generation: conv_layer1 maxpool_layer1 conv_layer2 maxpool_layer2 conv_layer3 detection_head decode tinyyolo_lite
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'conv_layer1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       get_config_rtl -prefix 
+Execute       get_config_rtl -auto_prefix 
+Execute       create_rtl_model conv_layer1 -vendor xilinx -mg_file E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/conv_layer1.compgen.tcl 
+INFO: [RTGEN 206-100] Finished creating RTL model for 'conv_layer1'.
+INFO: [HLS 200-111]  Elapsed time: 0.287 seconds; current allocated memory: 154.481 MB.
+Execute       source E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/tinyyolo_lite.rtl_wrap.cfg.tcl 
+Execute       gen_rtl conv_layer1 -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/syn/systemc/conv_layer1 -synmodules conv_layer1 maxpool_layer1 conv_layer2 maxpool_layer2 conv_layer3 detection_head decode tinyyolo_lite 
+Execute       gen_rtl conv_layer1 -style xilinx -f -lang vhdl -o E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/syn/vhdl/conv_layer1 
+Execute       gen_rtl conv_layer1 -style xilinx -f -lang vlog -o E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/syn/verilog/conv_layer1 
+Execute       gen_tb_info conv_layer1 -o E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/conv_layer1 -p E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db 
+Execute       report -model conv_layer1 -o E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/syn/report/conv_layer1_csynth.rpt -f 
+Execute       report -model conv_layer1 -o E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/syn/report/conv_layer1_csynth.xml -f -x 
+Execute       report -model conv_layer1 -o E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/conv_layer1.verbose.rpt -verbose -f 
+Execute       db_write -model conv_layer1 -o E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/conv_layer1.adb -f 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'maxpool_layer1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       get_config_rtl -prefix 
+Execute       get_config_rtl -auto_prefix 
+Execute       create_rtl_model maxpool_layer1 -vendor xilinx -mg_file E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/maxpool_layer1.compgen.tcl 
+INFO: [RTGEN 206-100] Finished creating RTL model for 'maxpool_layer1'.
+INFO: [HLS 200-111]  Elapsed time: 0.344 seconds; current allocated memory: 155.170 MB.
+Execute       source E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/tinyyolo_lite.rtl_wrap.cfg.tcl 
+Execute       gen_rtl maxpool_layer1 -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/syn/systemc/maxpool_layer1 -synmodules conv_layer1 maxpool_layer1 conv_layer2 maxpool_layer2 conv_layer3 detection_head decode tinyyolo_lite 
+Execute       gen_rtl maxpool_layer1 -style xilinx -f -lang vhdl -o E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/syn/vhdl/maxpool_layer1 
+Execute       gen_rtl maxpool_layer1 -style xilinx -f -lang vlog -o E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/syn/verilog/maxpool_layer1 
+Execute       gen_tb_info maxpool_layer1 -o E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/maxpool_layer1 -p E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db 
+Execute       report -model maxpool_layer1 -o E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/syn/report/maxpool_layer1_csynth.rpt -f 
+Execute       report -model maxpool_layer1 -o E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/syn/report/maxpool_layer1_csynth.xml -f -x 
+Execute       report -model maxpool_layer1 -o E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/maxpool_layer1.verbose.rpt -verbose -f 
+Execute       db_write -model maxpool_layer1 -o E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/maxpool_layer1.adb -f 
+Command       db_write done; 0.113 sec.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'conv_layer2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       get_config_rtl -prefix 
+Execute       get_config_rtl -auto_prefix 
+Execute       create_rtl_model conv_layer2 -vendor xilinx -mg_file E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/conv_layer2.compgen.tcl 
+INFO: [RTGEN 206-100] Finished creating RTL model for 'conv_layer2'.
+INFO: [HLS 200-111]  Elapsed time: 0.384 seconds; current allocated memory: 155.791 MB.
+Execute       source E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/tinyyolo_lite.rtl_wrap.cfg.tcl 
+Execute       gen_rtl conv_layer2 -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/syn/systemc/conv_layer2 -synmodules conv_layer1 maxpool_layer1 conv_layer2 maxpool_layer2 conv_layer3 detection_head decode tinyyolo_lite 
+Execute       gen_rtl conv_layer2 -style xilinx -f -lang vhdl -o E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/syn/vhdl/conv_layer2 
+Execute       gen_rtl conv_layer2 -style xilinx -f -lang vlog -o E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/syn/verilog/conv_layer2 
+Execute       gen_tb_info conv_layer2 -o E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/conv_layer2 -p E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db 
+Execute       report -model conv_layer2 -o E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/syn/report/conv_layer2_csynth.rpt -f 
+Execute       report -model conv_layer2 -o E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/syn/report/conv_layer2_csynth.xml -f -x 
+Execute       report -model conv_layer2 -o E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/conv_layer2.verbose.rpt -verbose -f 
+Execute       db_write -model conv_layer2 -o E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/conv_layer2.adb -f 
+Command       db_write done; 0.14 sec.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'maxpool_layer2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       get_config_rtl -prefix 
+Execute       get_config_rtl -auto_prefix 
+Execute       create_rtl_model maxpool_layer2 -vendor xilinx -mg_file E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/maxpool_layer2.compgen.tcl 
+INFO: [RTGEN 206-100] Finished creating RTL model for 'maxpool_layer2'.
+INFO: [HLS 200-111]  Elapsed time: 0.45 seconds; current allocated memory: 156.383 MB.
+Execute       source E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/tinyyolo_lite.rtl_wrap.cfg.tcl 
+Execute       gen_rtl maxpool_layer2 -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/syn/systemc/maxpool_layer2 -synmodules conv_layer1 maxpool_layer1 conv_layer2 maxpool_layer2 conv_layer3 detection_head decode tinyyolo_lite 
+Execute       gen_rtl maxpool_layer2 -style xilinx -f -lang vhdl -o E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/syn/vhdl/maxpool_layer2 
+Execute       gen_rtl maxpool_layer2 -style xilinx -f -lang vlog -o E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/syn/verilog/maxpool_layer2 
+Execute       gen_tb_info maxpool_layer2 -o E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/maxpool_layer2 -p E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db 
+Execute       report -model maxpool_layer2 -o E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/syn/report/maxpool_layer2_csynth.rpt -f 
+Execute       report -model maxpool_layer2 -o E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/syn/report/maxpool_layer2_csynth.xml -f -x 
+Execute       report -model maxpool_layer2 -o E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/maxpool_layer2.verbose.rpt -verbose -f 
+Execute       db_write -model maxpool_layer2 -o E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/maxpool_layer2.adb -f 
+Command       db_write done; 0.109 sec.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'conv_layer3' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       get_config_rtl -prefix 
+Execute       get_config_rtl -auto_prefix 
+Execute       create_rtl_model conv_layer3 -vendor xilinx -mg_file E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/conv_layer3.compgen.tcl 
+INFO: [RTGEN 206-100] Finished creating RTL model for 'conv_layer3'.
+INFO: [HLS 200-111]  Elapsed time: 0.385 seconds; current allocated memory: 157.036 MB.
+Execute       source E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/tinyyolo_lite.rtl_wrap.cfg.tcl 
+Execute       gen_rtl conv_layer3 -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/syn/systemc/conv_layer3 -synmodules conv_layer1 maxpool_layer1 conv_layer2 maxpool_layer2 conv_layer3 detection_head decode tinyyolo_lite 
+Execute       gen_rtl conv_layer3 -style xilinx -f -lang vhdl -o E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/syn/vhdl/conv_layer3 
+Execute       gen_rtl conv_layer3 -style xilinx -f -lang vlog -o E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/syn/verilog/conv_layer3 
+Execute       gen_tb_info conv_layer3 -o E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/conv_layer3 -p E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db 
+Execute       report -model conv_layer3 -o E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/syn/report/conv_layer3_csynth.rpt -f 
+Execute       report -model conv_layer3 -o E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/syn/report/conv_layer3_csynth.xml -f -x 
+Execute       report -model conv_layer3 -o E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/conv_layer3.verbose.rpt -verbose -f 
+Execute       db_write -model conv_layer3 -o E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/conv_layer3.adb -f 
+Command       db_write done; 0.112 sec.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'detection_head' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       get_config_rtl -prefix 
+Execute       get_config_rtl -auto_prefix 
+Execute       create_rtl_model detection_head -vendor xilinx -mg_file E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/detection_head.compgen.tcl 
+INFO: [SYN 201-210] Renamed object name 'detection_head_w_det' to 'detection_head_w_bkb' due to the length limit 20
+INFO: [RTGEN 206-100] Finished creating RTL model for 'detection_head'.
+INFO: [HLS 200-111]  Elapsed time: 0.491 seconds; current allocated memory: 157.661 MB.
+Execute       source E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/tinyyolo_lite.rtl_wrap.cfg.tcl 
+Execute       gen_rtl detection_head -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/syn/systemc/detection_head -synmodules conv_layer1 maxpool_layer1 conv_layer2 maxpool_layer2 conv_layer3 detection_head decode tinyyolo_lite 
+Execute       gen_rtl detection_head -style xilinx -f -lang vhdl -o E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/syn/vhdl/detection_head 
+Execute       gen_rtl detection_head -style xilinx -f -lang vlog -o E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/syn/verilog/detection_head 
+Execute       gen_tb_info detection_head -o E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/detection_head -p E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db 
+Execute       report -model detection_head -o E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/syn/report/detection_head_csynth.rpt -f 
+Execute       report -model detection_head -o E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/syn/report/detection_head_csynth.xml -f -x 
+Execute       report -model detection_head -o E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/detection_head.verbose.rpt -verbose -f 
+Execute       db_write -model detection_head -o E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/detection_head.adb -f 
+Command       db_write done; 0.133 sec.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'decode' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       get_config_rtl -prefix 
+Execute       get_config_rtl -auto_prefix 
+Execute       create_rtl_model decode -vendor xilinx -mg_file E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/decode.compgen.tcl 
+INFO: [RTGEN 206-100] Finished creating RTL model for 'decode'.
+INFO: [HLS 200-111]  Elapsed time: 0.477 seconds; current allocated memory: 158.387 MB.
+Execute       source E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/tinyyolo_lite.rtl_wrap.cfg.tcl 
+Execute       gen_rtl decode -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/syn/systemc/decode -synmodules conv_layer1 maxpool_layer1 conv_layer2 maxpool_layer2 conv_layer3 detection_head decode tinyyolo_lite 
+Execute       gen_rtl decode -style xilinx -f -lang vhdl -o E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/syn/vhdl/decode 
+Execute       gen_rtl decode -style xilinx -f -lang vlog -o E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/syn/verilog/decode 
+Execute       gen_tb_info decode -o E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/decode -p E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db 
+Execute       report -model decode -o E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/syn/report/decode_csynth.rpt -f 
+Execute       report -model decode -o E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/syn/report/decode_csynth.xml -f -x 
+Execute       report -model decode -o E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/decode.verbose.rpt -verbose -f 
+Execute       db_write -model decode -o E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/decode.adb -f 
+Command       db_write done; 0.166 sec.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'tinyyolo_lite' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       get_config_rtl -prefix 
+Execute       get_config_rtl -auto_prefix 
+Execute       create_rtl_model tinyyolo_lite -vendor xilinx -mg_file E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/tinyyolo_lite.compgen.tcl 
+INFO: [RTGEN 206-500] Setting interface mode on port 'tinyyolo_lite/image_r' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'tinyyolo_lite/output_r' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'tinyyolo_lite' to 'ap_ctrl_hs'.
+INFO: [SYN 201-210] Renamed object name 'tinyyolo_lite_buf_conv1' to 'tinyyolo_lite_bufcud' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'tinyyolo_lite_buf_pool1' to 'tinyyolo_lite_bufdEe' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'tinyyolo_lite_buf_conv2' to 'tinyyolo_lite_bufeOg' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'tinyyolo_lite_buf_pool2' to 'tinyyolo_lite_buffYi' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'tinyyolo_lite_buf_conv3' to 'tinyyolo_lite_bufg8j' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'tinyyolo_lite_buf_det' to 'tinyyolo_lite_bufhbi' due to the length limit 20
+INFO: [RTGEN 206-100] Finished creating RTL model for 'tinyyolo_lite'.
+Command       create_rtl_model done; 0.249 sec.
+INFO: [HLS 200-111]  Elapsed time: 0.733 seconds; current allocated memory: 159.190 MB.
+Execute       source E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/tinyyolo_lite.rtl_wrap.cfg.tcl 
+Execute       gen_rtl tinyyolo_lite -istop -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/syn/systemc/tinyyolo_lite -synmodules conv_layer1 maxpool_layer1 conv_layer2 maxpool_layer2 conv_layer3 detection_head decode tinyyolo_lite 
+Execute       gen_rtl tinyyolo_lite -istop -style xilinx -f -lang vhdl -o E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/syn/vhdl/tinyyolo_lite 
+Execute       gen_rtl tinyyolo_lite -istop -style xilinx -f -lang vlog -o E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/syn/verilog/tinyyolo_lite 
+Execute       export_constraint_db -o E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/tinyyolo_lite.constraint.tcl -f -tool general 
+Execute       report -model tinyyolo_lite -o E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/tinyyolo_lite.design.xml -verbose -f -dv 
+Command       report done; 0.188 sec.
+Execute       report -model tinyyolo_lite -o E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/tinyyolo_lite.sdaccel.xml -verbose -f -sdaccel 
+Execute       gen_tb_info tinyyolo_lite -o E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/tinyyolo_lite -p E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db 
+Execute       report -model tinyyolo_lite -o E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/syn/report/tinyyolo_lite_csynth.rpt -f 
+Execute       report -model tinyyolo_lite -o E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/syn/report/tinyyolo_lite_csynth.xml -f -x 
+Execute       report -model tinyyolo_lite -o E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/tinyyolo_lite.verbose.rpt -verbose -f 
+Command       report done; 0.204 sec.
+Execute       db_write -model tinyyolo_lite -o E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/tinyyolo_lite.adb -f 
+Execute       sc_get_clocks tinyyolo_lite 
+Execute       get_config_export -vivado_clock 
+Execute       sc_get_portdomain tinyyolo_lite 
+INFO-FLOW: Model list for RTL component generation: conv_layer1 maxpool_layer1 conv_layer2 maxpool_layer2 conv_layer3 detection_head decode tinyyolo_lite
+INFO-FLOW: Handling components in module [conv_layer1] ... 
+Execute       source E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/conv_layer1.compgen.tcl 
+INFO-FLOW: Found component conv_layer1_w_conv1.
+INFO-FLOW: Append model conv_layer1_w_conv1
+INFO-FLOW: Handling components in module [maxpool_layer1] ... 
+Execute       source E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/maxpool_layer1.compgen.tcl 
+INFO-FLOW: Handling components in module [conv_layer2] ... 
+Execute       source E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/conv_layer2.compgen.tcl 
+INFO-FLOW: Found component conv_layer2_w_conv2.
+INFO-FLOW: Append model conv_layer2_w_conv2
+INFO-FLOW: Handling components in module [maxpool_layer2] ... 
+Execute       source E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/maxpool_layer2.compgen.tcl 
+INFO-FLOW: Handling components in module [conv_layer3] ... 
+Execute       source E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/conv_layer3.compgen.tcl 
+INFO-FLOW: Found component conv_layer3_w_conv3.
+INFO-FLOW: Append model conv_layer3_w_conv3
+INFO-FLOW: Handling components in module [detection_head] ... 
+Execute       source E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/detection_head.compgen.tcl 
+INFO-FLOW: Found component detection_head_w_bkb.
+INFO-FLOW: Append model detection_head_w_bkb
+INFO-FLOW: Handling components in module [decode] ... 
+Execute       source E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/decode.compgen.tcl 
+INFO-FLOW: Found component decode_sigmoid_lut.
+INFO-FLOW: Append model decode_sigmoid_lut
+INFO-FLOW: Handling components in module [tinyyolo_lite] ... 
+Execute       source E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/tinyyolo_lite.compgen.tcl 
+INFO-FLOW: Found component tinyyolo_lite_bufcud.
+INFO-FLOW: Append model tinyyolo_lite_bufcud
+INFO-FLOW: Found component tinyyolo_lite_bufdEe.
+INFO-FLOW: Append model tinyyolo_lite_bufdEe
+INFO-FLOW: Found component tinyyolo_lite_bufeOg.
+INFO-FLOW: Append model tinyyolo_lite_bufeOg
+INFO-FLOW: Found component tinyyolo_lite_buffYi.
+INFO-FLOW: Append model tinyyolo_lite_buffYi
+INFO-FLOW: Found component tinyyolo_lite_bufg8j.
+INFO-FLOW: Append model tinyyolo_lite_bufg8j
+INFO-FLOW: Found component tinyyolo_lite_bufhbi.
+INFO-FLOW: Append model tinyyolo_lite_bufhbi
+INFO-FLOW: Append model conv_layer1
+INFO-FLOW: Append model maxpool_layer1
+INFO-FLOW: Append model conv_layer2
+INFO-FLOW: Append model maxpool_layer2
+INFO-FLOW: Append model conv_layer3
+INFO-FLOW: Append model detection_head
+INFO-FLOW: Append model decode
+INFO-FLOW: Append model tinyyolo_lite
+INFO-FLOW: Generating RTL model list ...
+INFO-FLOW: All models in this session: conv_layer1_w_conv1 conv_layer2_w_conv2 conv_layer3_w_conv3 detection_head_w_bkb decode_sigmoid_lut tinyyolo_lite_bufcud tinyyolo_lite_bufdEe tinyyolo_lite_bufeOg tinyyolo_lite_buffYi tinyyolo_lite_bufg8j tinyyolo_lite_bufhbi conv_layer1 maxpool_layer1 conv_layer2 maxpool_layer2 conv_layer3 detection_head decode tinyyolo_lite
+INFO-FLOW: To file: write model conv_layer1_w_conv1
+INFO-FLOW: To file: write model conv_layer2_w_conv2
+INFO-FLOW: To file: write model conv_layer3_w_conv3
+INFO-FLOW: To file: write model detection_head_w_bkb
+INFO-FLOW: To file: write model decode_sigmoid_lut
+INFO-FLOW: To file: write model tinyyolo_lite_bufcud
+INFO-FLOW: To file: write model tinyyolo_lite_bufdEe
+INFO-FLOW: To file: write model tinyyolo_lite_bufeOg
+INFO-FLOW: To file: write model tinyyolo_lite_buffYi
+INFO-FLOW: To file: write model tinyyolo_lite_bufg8j
+INFO-FLOW: To file: write model tinyyolo_lite_bufhbi
+INFO-FLOW: To file: write model conv_layer1
+INFO-FLOW: To file: write model maxpool_layer1
+INFO-FLOW: To file: write model conv_layer2
+INFO-FLOW: To file: write model maxpool_layer2
+INFO-FLOW: To file: write model conv_layer3
+INFO-FLOW: To file: write model detection_head
+INFO-FLOW: To file: write model decode
+INFO-FLOW: To file: write model tinyyolo_lite
+INFO-FLOW: Finished generating RTL model list.
+
+
+INFO-FLOW: RTL Generation done.
+INFO-FLOW: CAS Generation done.
+INFO-FLOW: CBC Generation done.
+INFO-FLOW: DBG:CMD: auto_generate_csynth_design
+INFO-FLOW: DBG:CMD:     auto_generate --sim-model -phase csynth_design -d E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive
+Execute       source E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/global.setting.tcl 
+INFO-FLOW: DBG:CMD: read_platform_lib E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/global.setting.tcl
+Execute       source E:/Xilinx/Vivado/2018.3/common/technology/generic/autopilot/common.gen 
+Execute         source E:/Xilinx/Vivado/2018.3/common/technology/generic/autopilot/APCoreGen.gen 
+Execute       source E:/Xilinx/Vivado/2018.3/common/technology/generic/autopilot/op.gen 
+Execute       source E:/Xilinx/Vivado/2018.3/common/technology/generic/autopilot/op_simcore.gen 
+Execute       source E:/Xilinx/Vivado/2018.3/common/technology/generic/autopilot/interface.gen 
+Execute       source E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/global.setting.tcl 
+Execute       source E:/Xilinx/Vivado/2018.3/common/technology/xilinx/zynq/zynq.gen 
+Execute         source E:/Xilinx/Vivado/2018.3/common/technology/xilinx/common/virtex.gen 
+Execute           source E:/Xilinx/Vivado/2018.3/common/technology/xilinx/common/xilinx.gen 
+Execute             source E:/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/plb46.gen 
+Execute             source E:/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/fsl.gen 
+Execute             source E:/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/axi4.gen 
+Execute             source E:/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute               source E:/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/saxilite.gen 
+Execute               source E:/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/maxi.gen 
+Execute             source E:/Xilinx/Vivado/2018.3/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute             source E:/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute             source E:/Xilinx/Vivado/2018.3/common/technology/xilinx/ip/dds_compiler.gen 
+Execute             source E:/Xilinx/Vivado/2018.3/common/technology/xilinx/ip/util.gen 
+Execute             source E:/Xilinx/Vivado/2018.3/common/technology/xilinx/ip/xfft.gen 
+Execute             source E:/Xilinx/Vivado/2018.3/common/technology/xilinx/ip/xfir.gen 
+Command           ap_source done; 0.134 sec.
+Execute           source E:/Xilinx/Vivado/2018.3/common/technology/xilinx/common/dsp48.gen 
+Command         ap_source done; 0.137 sec.
+Command       ap_source done; 0.137 sec.
+Execute       source E:/Xilinx/Vivado/2018.3/common/technology/xilinx/zynq/zynq_fpv6.gen 
+Execute         source E:/Xilinx/Vivado/2018.3/common/technology/xilinx/common/xilinx_fpv6.gen 
+INFO-FLOW: DBG:CMD:   using AESL_AUTOCG::g_clock_period=10.000 (was NA)
+INFO-FLOW: DBG:CMD:       generate_ip_cores sim=1 export=0 expOnly=0 dstVlogDir=syn/verilog
+Execute       source E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/global.setting.tcl 
+Execute       source E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/global.setting.tcl 
+Execute       source E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/global.setting.tcl 
+Execute       source E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/conv_layer1.compgen.tcl 
+INFO: [RTMG 210-279] Implementing memory 'conv_layer1_w_conv1_rom' using distributed ROMs.
+Execute       source E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/maxpool_layer1.compgen.tcl 
+Execute       source E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/conv_layer2.compgen.tcl 
+INFO: [RTMG 210-279] Implementing memory 'conv_layer2_w_conv2_rom' using auto ROMs.
+Execute       source E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/maxpool_layer2.compgen.tcl 
+Execute       source E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/conv_layer3.compgen.tcl 
+INFO: [RTMG 210-279] Implementing memory 'conv_layer3_w_conv3_rom' using auto ROMs.
+Command       ap_source done; 0.242 sec.
+Execute       source E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/detection_head.compgen.tcl 
+INFO: [RTMG 210-279] Implementing memory 'detection_head_w_bkb_rom' using auto ROMs.
+Command       ap_source done; 0.556 sec.
+Execute       source E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/decode.compgen.tcl 
+INFO: [RTMG 210-279] Implementing memory 'decode_sigmoid_lut_rom' using distributed ROMs.
+Execute       source E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/tinyyolo_lite.compgen.tcl 
+INFO: [RTMG 210-278] Implementing memory 'tinyyolo_lite_bufcud_ram (RAM)' using block RAMs with power-on initialization.
+INFO: [RTMG 210-278] Implementing memory 'tinyyolo_lite_bufdEe_ram (RAM)' using block RAMs with power-on initialization.
+INFO: [RTMG 210-278] Implementing memory 'tinyyolo_lite_bufeOg_ram (RAM)' using block RAMs with power-on initialization.
+INFO: [RTMG 210-278] Implementing memory 'tinyyolo_lite_buffYi_ram (RAM)' using block RAMs with power-on initialization.
+INFO: [RTMG 210-278] Implementing memory 'tinyyolo_lite_bufg8j_ram (RAM)' using block RAMs with power-on initialization.
+INFO: [RTMG 210-278] Implementing memory 'tinyyolo_lite_bufhbi_ram (RAM)' using block RAMs with power-on initialization.
+Command       ap_source done; 0.221 sec.
+INFO-FLOW: DBG:CMD:     auto_generate -export -impltomg_flag -rtl both -tool Vivado -pcore_version 1.00.a -phase csynth_design -d E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive
+Execute       source E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/global.setting.tcl 
+INFO-FLOW: DBG:CMD: read_platform_lib E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/global.setting.tcl
+Execute       source E:/Xilinx/Vivado/2018.3/common/technology/generic/autopilot/common.gen 
+Execute         source E:/Xilinx/Vivado/2018.3/common/technology/generic/autopilot/APCoreGen.gen 
+Execute       source E:/Xilinx/Vivado/2018.3/common/technology/generic/autopilot/op.gen 
+Execute       source E:/Xilinx/Vivado/2018.3/common/technology/generic/autopilot/op_simcore.gen 
+Execute       source E:/Xilinx/Vivado/2018.3/common/technology/generic/autopilot/interface.gen 
+Execute       source E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/global.setting.tcl 
+Execute       source E:/Xilinx/Vivado/2018.3/common/technology/xilinx/zynq/zynq.gen 
+Execute         source E:/Xilinx/Vivado/2018.3/common/technology/xilinx/common/virtex.gen 
+Execute           source E:/Xilinx/Vivado/2018.3/common/technology/xilinx/common/xilinx.gen 
+Execute             source E:/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/plb46.gen 
+Execute             source E:/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/fsl.gen 
+Execute             source E:/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/axi4.gen 
+Execute             source E:/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute               source E:/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/saxilite.gen 
+Execute               source E:/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/maxi.gen 
+Execute             source E:/Xilinx/Vivado/2018.3/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute             source E:/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute             source E:/Xilinx/Vivado/2018.3/common/technology/xilinx/ip/dds_compiler.gen 
+Execute             source E:/Xilinx/Vivado/2018.3/common/technology/xilinx/ip/util.gen 
+Execute             source E:/Xilinx/Vivado/2018.3/common/technology/xilinx/ip/xfft.gen 
+Command             ap_source done; 0.101 sec.
+Execute             source E:/Xilinx/Vivado/2018.3/common/technology/xilinx/ip/xfir.gen 
+Command           ap_source done; 0.146 sec.
+Execute           source E:/Xilinx/Vivado/2018.3/common/technology/xilinx/common/dsp48.gen 
+Command         ap_source done; 0.15 sec.
+Command       ap_source done; 0.15 sec.
+Execute       source E:/Xilinx/Vivado/2018.3/common/technology/xilinx/zynq/zynq_fpv6.gen 
+Execute         source E:/Xilinx/Vivado/2018.3/common/technology/xilinx/common/xilinx_fpv6.gen 
+INFO-FLOW: DBG:CMD:       initCTypeInfo top_module=tinyyolo_lite xml_exists=0
+Execute       source E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/tinyyolo_lite.rtl_wrap.cfg.tcl 
+Execute       source E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/tinyyolo_lite.rtl_wrap.cfg.tcl 
+Execute       source E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/tinyyolo_lite.rtl_wrap.cfg.tcl 
+Execute       source E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/tinyyolo_lite.tbgen.tcl 
+Execute       source E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/tinyyolo_lite.tbgen.tcl 
+INFO-FLOW: DBG:CMD:       export_impl_rtl
+INFO-FLOW: DBG:CMD:       generate_ip_cores sim=0 export=0 expOnly=0 dstVlogDir=impl/.verilog
+Execute       source E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/global.setting.tcl 
+Execute       source E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/conv_layer1.compgen.tcl 
+Execute       source E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/maxpool_layer1.compgen.tcl 
+Execute       source E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/conv_layer2.compgen.tcl 
+Execute       source E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/maxpool_layer2.compgen.tcl 
+Execute       source E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/conv_layer3.compgen.tcl 
+Execute       source E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/detection_head.compgen.tcl 
+Execute       source E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/decode.compgen.tcl 
+Execute       source E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/tinyyolo_lite.compgen.tcl 
+INFO-FLOW: DBG:CMD:       generate_ip_cores sim=0 export=1 expOnly=1 dstVlogDir=impl/.pcores/verilog
+Execute       source E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/global.setting.tcl 
+Execute       source E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/conv_layer1.compgen.tcl 
+Execute       source E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/maxpool_layer1.compgen.tcl 
+Execute       source E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/conv_layer2.compgen.tcl 
+Execute       source E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/maxpool_layer2.compgen.tcl 
+Execute       source E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/conv_layer3.compgen.tcl 
+Execute       source E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/detection_head.compgen.tcl 
+Execute       source E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/decode.compgen.tcl 
+Execute       source E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/tinyyolo_lite.compgen.tcl 
+Execute         source E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/tinyyolo_lite.tbgen.tcl 
+Execute         source E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/tinyyolo_lite.tbgen.tcl 
+INFO-FLOW: DBG:CMD:       generate_ip_cores sim=0 export=0 expOnly=0 dstVlogDir=impl/.pcores/verilog_sim
+Execute       source E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/global.setting.tcl 
+Execute       source E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/conv_layer1.compgen.tcl 
+Execute       source E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/maxpool_layer1.compgen.tcl 
+Execute       source E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/conv_layer2.compgen.tcl 
+Execute       source E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/maxpool_layer2.compgen.tcl 
+Execute       source E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/conv_layer3.compgen.tcl 
+Execute       source E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/detection_head.compgen.tcl 
+Execute       source E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/decode.compgen.tcl 
+Execute       source E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/tinyyolo_lite.compgen.tcl 
+Execute       source E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/global.setting.tcl 
+Execute       source E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/tinyyolo_lite.constraint.tcl 
+Execute       source E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/tinyyolo_lite.tbgen.tcl 
+INFO-FLOW: DBG:CMD:       hasPcoreIpAdapter=false #gSsdmPorts=6
+INFO-FLOW: DBG:CMD: Skipping loadAnalyze_DB, #g_database=2
+INFO-FLOW: DBG:CMD:       generate_json is_phase_csynth=1 g_has_adaptors=false generate_bd_files=0 #modelList=19 #gSsdmPorts=6
+Execute       source E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/global.setting.tcl 
+Execute       source E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/global.setting.tcl 
+Execute       source E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/tinyyolo_lite.tbgen.tcl 
+Execute       source E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/tinyyolo_lite.tbgen.tcl 
+Execute       source E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/global.setting.tcl 
+Execute       get_config_sdx -target 
+Execute       get_config_export -xo 
+Execute       source E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/global.setting.tcl 
+Execute       source E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/tinyyolo_lite.constraint.tcl 
+Execute       sc_get_clocks tinyyolo_lite 
+Execute       source E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/global.setting.tcl 
+Execute       get_config_sdx -target 
+Execute       get_config_sdx -profile 
+Execute       ::config_rtl 
+INFO-FLOW: DBG:CMD: add_json_sdx_info kernel file does not exist: E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/kernel.internal.xml
+INFO-FLOW: DBG:CMD:       delete-temp-dirs (skipped for debug)
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:13 ; elapsed = 00:00:39 . Memory (MB): peak = 222.383 ; gain = 137.367
+INFO: [SYSC 207-301] Generating SystemC RTL for tinyyolo_lite.
+INFO: [VHDL 208-304] Generating VHDL RTL for tinyyolo_lite.
+INFO: [VLOG 209-307] Generating Verilog RTL for tinyyolo_lite.
+Command     autosyn done; 13.809 sec.
+Execute     get_part 
+Execute     get_config_export -sdx_tcl 
+Command   csynth_design done; 38.627 sec.
+Command ap_source done; 39.063 sec.
+Execute cleanup_all 
+INFO-FLOW: Workspace E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive opened at Sun Jun 21 08:47:34 +0700 2026
+Execute     config_clock -quiet -name default -period 10 -default=false 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+Execute     open_platform DefaultPlatform 
+Execute     import_lib E:/Xilinx/Vivado/2018.3/common/technology/xilinx/zynq/zynq 
+Execute       source E:/Xilinx/Vivado/2018.3/common/technology/xilinx/common/xilinx.lib 
+Execute         source E:/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/xilinx_interface.lib 
+Execute           source E:/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/plb46.lib 
+Execute           source E:/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/fsl.lib 
+Execute           source E:/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/axi4.lib 
+Execute           source E:/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/maxi.lib 
+Execute           source E:/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/saxilite.lib 
+Execute         source E:/Xilinx/Vivado/2018.3/common/technology/xilinx/common/dsp48.lib 
+Execute         source E:/Xilinx/Vivado/2018.3/common/technology/xilinx/ip/dds_compiler.lib 
+Execute         source E:/Xilinx/Vivado/2018.3/common/technology/xilinx/ip/xfft.lib 
+Execute         source E:/Xilinx/Vivado/2018.3/common/technology/xilinx/ip/xfir.lib 
+Execute       source E:/Xilinx/Vivado/2018.3/common/technology/xilinx/common/xilinx_old.lib 
+Execute       source E:/Xilinx/Vivado/2018.3/common/technology/xilinx/common/xilinx_vivado.lib 
+Execute       source E:/Xilinx/Vivado/2018.3/common/technology/xilinx/common/xilinx.hlp 
+Execute         source E:/Xilinx/Vivado/2018.3/common/technology/xilinx/common/target_info.tcl 
+Execute         source E:/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute           source E:/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/maxi.hlp 
+Execute           source E:/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/saxilite.hlp 
+Execute         source E:/Xilinx/Vivado/2018.3/common/technology/xilinx/common/dsp48.hlp 
+Execute       source E:/Xilinx/Vivado/2018.3/common/technology/xilinx/zynq/dsp48e1.hlp 
+Execute       get_default_platform 
+Execute       config_chip_info -quiet -resource  {SLICE 13300}  {LUT 53200}     {FF 106400} {DSP48E 220}   {BRAM 280}  
+Execute       config_chip_info -quiet -speed medium 
+Execute       source E:/Xilinx/Vivado/2018.3/common/technology/xilinx/common/xilinx.hlp 
+Execute         source E:/Xilinx/Vivado/2018.3/common/technology/xilinx/common/target_info.tcl 
+Execute         source E:/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute           source E:/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/maxi.hlp 
+Execute           source E:/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/saxilite.hlp 
+Execute         source E:/Xilinx/Vivado/2018.3/common/technology/xilinx/common/dsp48.hlp 
+Execute     source E:/Xilinx/Vivado/2018.3/common/technology/xilinx/zynq/zynq.gen 
+Execute       source E:/Xilinx/Vivado/2018.3/common/technology/xilinx/common/virtex.gen 
+Execute         source E:/Xilinx/Vivado/2018.3/common/technology/xilinx/common/xilinx.gen 
+Execute           source E:/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/plb46.gen 
+Execute           source E:/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/fsl.gen 
+Execute           source E:/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/axi4.gen 
+Execute           source E:/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute             source E:/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/saxilite.gen 
+Execute             source E:/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/maxi.gen 
+Execute           source E:/Xilinx/Vivado/2018.3/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute           source E:/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute           source E:/Xilinx/Vivado/2018.3/common/technology/xilinx/ip/dds_compiler.gen 
+Execute           source E:/Xilinx/Vivado/2018.3/common/technology/xilinx/ip/util.gen 
+Execute           source E:/Xilinx/Vivado/2018.3/common/technology/xilinx/ip/xfft.gen 
+Execute           source E:/Xilinx/Vivado/2018.3/common/technology/xilinx/ip/xfir.gen 
+Execute         source E:/Xilinx/Vivado/2018.3/common/technology/xilinx/common/dsp48.gen 
+Execute     open_platform DefaultPlatform 
+Execute     import_lib E:/Xilinx/Vivado/2018.3/common/technology/xilinx/zynq/zynq_fpv6 
+Execute       source E:/Xilinx/Vivado/2018.3/common/technology/xilinx/common/xilinx_fpv7.lib 
+Execute         source E:/Xilinx/Vivado/2018.3/common/technology/xilinx/common/xilinx_hp.lib 
+Execute       source E:/Xilinx/Vivado/2018.3/common/technology/xilinx/common/xilinx_fpv.hlp 
+Execute         source E:/Xilinx/Vivado/2018.3/common/technology/xilinx/common/xilinx.hlp 
+Execute           source E:/Xilinx/Vivado/2018.3/common/technology/xilinx/common/target_info.tcl 
+Execute           source E:/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute             source E:/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/maxi.hlp 
+Execute             source E:/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/saxilite.hlp 
+Execute           source E:/Xilinx/Vivado/2018.3/common/technology/xilinx/common/dsp48.hlp 
+Execute       source E:/Xilinx/Vivado/2018.3/common/technology/xilinx/zynq/zynq_hp.hlp 
+Execute     source E:/Xilinx/Vivado/2018.3/common/technology/xilinx/zynq/zynq_fpv6.gen 
+Execute       source E:/Xilinx/Vivado/2018.3/common/technology/xilinx/common/xilinx_fpv6.gen 
+Execute     set_part xc7z020clg484-1 
+Execute       add_library xilinx/zynq/zynq:xc7z020:clg484:-1 
+Execute         get_default_platform 
+Execute         license_isbetapart xc7z020 
+Command         license_isbetapart done; error code: 1; 
+Execute         get_default_platform 
+Execute         config_chip_info -quiet -resource  {SLICE 13300}  {LUT 53200}     {FF 106400} {DSP48E 220}   {BRAM 280}  
+Execute         config_chip_info -quiet -speed slow 
+Execute       add_library xilinx/zynq/zynq_fpv6 
+Execute         get_default_platform 
+INFO: [HLS 200-10] Setting target device to 'xc7z020clg484-1'
+Execute       get_default_platform 
+Execute     get_default_platform 
+Execute     config_chip_info -quiet -resource  {SLICE 13300}  {LUT 53200}     {FF 106400} {DSP48E 220}   {BRAM 280}  
+Execute     config_chip_info -quiet -speed slow 
+Command   open_solution done; 0.244 sec.
+Execute   export_design -flow impl -rtl verilog -format ip_catalog 
+Execute     get_config_export -acc 
+Execute     get_config_export -clock_margin 
+Execute     get_config_export -custom_script 
+Execute     get_config_export -description 
+Execute     get_config_export -display_name 
+Execute     get_config_export -driver_input_dir 
+Execute     get_config_export -ipname 
+Execute     get_config_export -kernel_drc 
+Execute     get_config_export -library 
+Execute     get_config_export -qor_test 
+Execute     get_config_export -sdaccel 
+Execute     get_config_export -sim 
+Execute     get_config_export -taxonomy 
+Execute     get_config_export -use_ip 
+Execute     get_config_export -use_netlist 
+Execute     get_config_export -vendor 
+Execute     get_config_export -version 
+Execute     get_config_export -xo 
+Execute     config_export -format=ip_catalog -rtl=verilog 
+INFO-FLOW: DBG:CMD: export_design_wrap: -format ip_catalog -flow impl -rtl verilog
+Execute     source E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/global.setting.tcl 
+Execute     get_config_export -vivado_clock 
+Execute     get_top 
+Execute     get_config_sdx -target 
+Execute     get_config_rtl -auto_prefix 
+Execute     get_config_sdx -target 
+INFO-FLOW: DBG:CMD:   auto_impl: pack: -export -tool vivado -rtl verilog -sdx-target none
+Execute     source E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/global.setting.tcl 
+INFO-FLOW: DBG:CMD: read_platform_lib E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/global.setting.tcl
+Execute     source E:/Xilinx/Vivado/2018.3/common/technology/generic/autopilot/common.gen 
+Execute       source E:/Xilinx/Vivado/2018.3/common/technology/generic/autopilot/APCoreGen.gen 
+Execute     source E:/Xilinx/Vivado/2018.3/common/technology/generic/autopilot/op.gen 
+Execute     source E:/Xilinx/Vivado/2018.3/common/technology/generic/autopilot/op_simcore.gen 
+Execute     source E:/Xilinx/Vivado/2018.3/common/technology/generic/autopilot/interface.gen 
+Execute     source E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/global.setting.tcl 
+Execute     source E:/Xilinx/Vivado/2018.3/common/technology/xilinx/zynq/zynq.gen 
+Execute       source E:/Xilinx/Vivado/2018.3/common/technology/xilinx/common/virtex.gen 
+Execute         source E:/Xilinx/Vivado/2018.3/common/technology/xilinx/common/xilinx.gen 
+Execute           source E:/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/plb46.gen 
+Execute           source E:/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/fsl.gen 
+Execute           source E:/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/axi4.gen 
+Execute           source E:/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute             source E:/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/saxilite.gen 
+Execute             source E:/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/maxi.gen 
+Execute           source E:/Xilinx/Vivado/2018.3/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute           source E:/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute           source E:/Xilinx/Vivado/2018.3/common/technology/xilinx/ip/dds_compiler.gen 
+Execute           source E:/Xilinx/Vivado/2018.3/common/technology/xilinx/ip/util.gen 
+Execute           source E:/Xilinx/Vivado/2018.3/common/technology/xilinx/ip/xfft.gen 
+Execute           source E:/Xilinx/Vivado/2018.3/common/technology/xilinx/ip/xfir.gen 
+Execute         source E:/Xilinx/Vivado/2018.3/common/technology/xilinx/common/dsp48.gen 
+Execute     source E:/Xilinx/Vivado/2018.3/common/technology/xilinx/zynq/zynq_fpv6.gen 
+Execute       source E:/Xilinx/Vivado/2018.3/common/technology/xilinx/common/xilinx_fpv6.gen 
+INFO-FLOW: DBG:CMD:   using AESL_AUTOCG::g_clock_period=10.000 (was NA)
+Execute     source E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/global.setting.tcl 
+INFO: [IMPL 213-8] Exporting RTL as a Vivado IP.
+Execute     source E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/global.setting.tcl 
+INFO-FLOW: DBG:CMD: automg_wrap -export -pcore_version 1.00.a -rtl vlog -sdx-target none -tool Vivado -impltomg_flag
+INFO-FLOW: DBG:CMD:     auto_generate -export -pcore_version 1.00.a -rtl vlog -sdx-target none -tool Vivado -impltomg_flag
+Execute     source E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/global.setting.tcl 
+INFO-FLOW: DBG:CMD: read_platform_lib E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/global.setting.tcl
+Execute     source E:/Xilinx/Vivado/2018.3/common/technology/generic/autopilot/common.gen 
+Execute       source E:/Xilinx/Vivado/2018.3/common/technology/generic/autopilot/APCoreGen.gen 
+Execute     source E:/Xilinx/Vivado/2018.3/common/technology/generic/autopilot/op.gen 
+Execute     source E:/Xilinx/Vivado/2018.3/common/technology/generic/autopilot/op_simcore.gen 
+Execute     source E:/Xilinx/Vivado/2018.3/common/technology/generic/autopilot/interface.gen 
+Execute     source E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/global.setting.tcl 
+Execute     source E:/Xilinx/Vivado/2018.3/common/technology/xilinx/zynq/zynq.gen 
+Execute       source E:/Xilinx/Vivado/2018.3/common/technology/xilinx/common/virtex.gen 
+Execute         source E:/Xilinx/Vivado/2018.3/common/technology/xilinx/common/xilinx.gen 
+Execute           source E:/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/plb46.gen 
+Execute           source E:/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/fsl.gen 
+Execute           source E:/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/axi4.gen 
+Execute           source E:/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute             source E:/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/saxilite.gen 
+Execute             source E:/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/maxi.gen 
+Execute           source E:/Xilinx/Vivado/2018.3/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute           source E:/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute           source E:/Xilinx/Vivado/2018.3/common/technology/xilinx/ip/dds_compiler.gen 
+Execute           source E:/Xilinx/Vivado/2018.3/common/technology/xilinx/ip/util.gen 
+Execute           source E:/Xilinx/Vivado/2018.3/common/technology/xilinx/ip/xfft.gen 
+Execute           source E:/Xilinx/Vivado/2018.3/common/technology/xilinx/ip/xfir.gen 
+Execute         source E:/Xilinx/Vivado/2018.3/common/technology/xilinx/common/dsp48.gen 
+Execute     source E:/Xilinx/Vivado/2018.3/common/technology/xilinx/zynq/zynq_fpv6.gen 
+Execute       source E:/Xilinx/Vivado/2018.3/common/technology/xilinx/common/xilinx_fpv6.gen 
+INFO-FLOW: DBG:CMD:       initCTypeInfo top_module=tinyyolo_lite xml_exists=1
+Execute     source E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/tinyyolo_lite.rtl_wrap.cfg.tcl 
+Execute     source E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/tinyyolo_lite.rtl_wrap.cfg.tcl 
+Execute     source E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/tinyyolo_lite.rtl_wrap.cfg.tcl 
+Execute     source E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/tinyyolo_lite.tbgen.tcl 
+Execute     source E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/tinyyolo_lite.tbgen.tcl 
+INFO-FLOW: DBG:CMD:       export_impl_rtl
+INFO-FLOW: DBG:CMD:       generate_ip_cores sim=0 export=0 expOnly=0 dstVlogDir=impl/.verilog
+Execute     source E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/global.setting.tcl 
+Execute     source E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/conv_layer1.compgen.tcl 
+Execute     source E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/maxpool_layer1.compgen.tcl 
+Execute     source E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/conv_layer2.compgen.tcl 
+Execute     source E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/maxpool_layer2.compgen.tcl 
+Execute     source E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/conv_layer3.compgen.tcl 
+Execute     source E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/detection_head.compgen.tcl 
+Execute     source E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/decode.compgen.tcl 
+Execute     source E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/tinyyolo_lite.compgen.tcl 
+INFO-FLOW: DBG:CMD:       generate_ip_cores sim=0 export=1 expOnly=1 dstVlogDir=impl/.pcores/verilog
+Execute     source E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/global.setting.tcl 
+Execute     source E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/conv_layer1.compgen.tcl 
+Execute     source E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/maxpool_layer1.compgen.tcl 
+Execute     source E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/conv_layer2.compgen.tcl 
+Execute     source E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/maxpool_layer2.compgen.tcl 
+Execute     source E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/conv_layer3.compgen.tcl 
+Execute     source E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/detection_head.compgen.tcl 
+Execute     source E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/decode.compgen.tcl 
+Execute     source E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/tinyyolo_lite.compgen.tcl 
+Execute       source E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/tinyyolo_lite.tbgen.tcl 
+Execute       source E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/tinyyolo_lite.tbgen.tcl 
+INFO-FLOW: DBG:CMD:       generate_ip_cores sim=0 export=0 expOnly=0 dstVlogDir=impl/.pcores/verilog_sim
+Execute     source E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/global.setting.tcl 
+Execute     source E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/conv_layer1.compgen.tcl 
+Execute     source E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/maxpool_layer1.compgen.tcl 
+Execute     source E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/conv_layer2.compgen.tcl 
+Execute     source E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/maxpool_layer2.compgen.tcl 
+Execute     source E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/conv_layer3.compgen.tcl 
+Execute     source E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/detection_head.compgen.tcl 
+Execute     source E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/decode.compgen.tcl 
+Execute     source E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/tinyyolo_lite.compgen.tcl 
+Execute     source E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/global.setting.tcl 
+Execute     source E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/tinyyolo_lite.constraint.tcl 
+Execute     source E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/tinyyolo_lite.tbgen.tcl 
+INFO-FLOW: DBG:CMD:       hasPcoreIpAdapter=false #gSsdmPorts=6
+INFO-FLOW: DBG:CMD:       generate_ip_script #gSsdmPorts=6
+Execute     source E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/tinyyolo_lite.tbgen.tcl 
+Execute     source E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/tinyyolo_lite.tbgen.tcl 
+Execute     source E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/global.setting.tcl 
+Execute     get_config_sdx -target 
+INFO-FLOW: DBG:CMD:       generate_ip_auxiliary
+Execute     source E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/global.setting.tcl 
+INFO-FLOW: DBG:CMD:       prepArgInfo -> loadAnalyze_DB top_module=tinyyolo_lite
+Execute     source E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/tinyyolo_lite.rtl_wrap.cfg.tcl 
+Execute     source E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/tinyyolo_lite.rtl_wrap.cfg.tcl 
+Execute     source E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/tinyyolo_lite.rtl_wrap.cfg.tcl 
+Execute     source E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/tinyyolo_lite.tbgen.tcl 
+Execute     source E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/tinyyolo_lite.tbgen.tcl 
+Execute     source E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/tinyyolo_lite.tbgen.tcl 
+INFO-FLOW: DBG:CMD:       generate_top_info
+INFO-FLOW: DBG:CMD:       prepArgInfo -> loadAnalyze_DB top_module=tinyyolo_lite
+Execute     source E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/tinyyolo_lite.rtl_wrap.cfg.tcl 
+Execute     source E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/tinyyolo_lite.rtl_wrap.cfg.tcl 
+Execute     source E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/tinyyolo_lite.rtl_wrap.cfg.tcl 
+Execute     source E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/tinyyolo_lite.tbgen.tcl 
+Execute     source E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/tinyyolo_lite.tbgen.tcl 
+Execute     source E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/tinyyolo_lite.tbgen.tcl 
+Execute     source E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/global.setting.tcl 
+Execute     source E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/tinyyolo_lite.constraint.tcl 
+INFO-FLOW: DBG:CMD:       generate_ipi_example_script
+INFO-FLOW: DBG:CMD:       generate_syn_sh
+Execute     source E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/global.setting.tcl 
+Execute     source E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/global.setting.tcl 
+INFO-FLOW: DBG:CMD:       generate_imp_constraints
+Execute     source E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/tinyyolo_lite.constraint.tcl 
+Execute     source E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/tinyyolo_lite.tbgen.tcl 
+Execute     source E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/tinyyolo_lite.constraint.tcl 
+Execute     source E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/tinyyolo_lite.tbgen.tcl 
+INFO-FLOW: DBG:CMD:       copy-tb-rtl-files
+INFO-FLOW: DBG:CMD:       copy-tb-data-files
+INFO-FLOW: DBG:CMD:       delete-temp-dirs (skipped for debug)
+INFO-FLOW: DBG:CMD: read_platform_lib E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/global.setting.tcl
+Execute     source E:/Xilinx/Vivado/2018.3/common/technology/generic/autopilot/common.gen 
+Execute       source E:/Xilinx/Vivado/2018.3/common/technology/generic/autopilot/APCoreGen.gen 
+Execute     source E:/Xilinx/Vivado/2018.3/common/technology/generic/autopilot/op.gen 
+Execute     source E:/Xilinx/Vivado/2018.3/common/technology/generic/autopilot/op_simcore.gen 
+Execute     source E:/Xilinx/Vivado/2018.3/common/technology/generic/autopilot/interface.gen 
+Execute     source E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/.autopilot/db/global.setting.tcl 
+Execute     source E:/Xilinx/Vivado/2018.3/common/technology/xilinx/zynq/zynq.gen 
+Execute       source E:/Xilinx/Vivado/2018.3/common/technology/xilinx/common/virtex.gen 
+Execute         source E:/Xilinx/Vivado/2018.3/common/technology/xilinx/common/xilinx.gen 
+Execute           source E:/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/plb46.gen 
+Execute           source E:/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/fsl.gen 
+Execute           source E:/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/axi4.gen 
+Execute           source E:/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute             source E:/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/saxilite.gen 
+Execute             source E:/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/maxi.gen 
+Execute           source E:/Xilinx/Vivado/2018.3/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute           source E:/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute           source E:/Xilinx/Vivado/2018.3/common/technology/xilinx/ip/dds_compiler.gen 
+Execute           source E:/Xilinx/Vivado/2018.3/common/technology/xilinx/ip/util.gen 
+Execute           source E:/Xilinx/Vivado/2018.3/common/technology/xilinx/ip/xfft.gen 
+Execute           source E:/Xilinx/Vivado/2018.3/common/technology/xilinx/ip/xfir.gen 
+Command         ap_source done; 0.111 sec.
+Execute         source E:/Xilinx/Vivado/2018.3/common/technology/xilinx/common/dsp48.gen 
+Command       ap_source done; 0.114 sec.
+Command     ap_source done; 0.114 sec.
+Execute     source E:/Xilinx/Vivado/2018.3/common/technology/xilinx/zynq/zynq_fpv6.gen 
+Execute       source E:/Xilinx/Vivado/2018.3/common/technology/xilinx/common/xilinx_fpv6.gen 
+INFO-FLOW: DBG:CMD:     exec E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/impl/ip/pack.bat
+ERROR: [IMPL 213-28] Failed to generate IP.
+Command   export_design done; error code: 2; 12.997 sec.
+Command ap_source done; error code: 1; 13.288 sec.
+Execute cleanup_all 

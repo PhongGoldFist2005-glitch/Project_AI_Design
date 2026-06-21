@@ -1,0 +1,52 @@
+<profile>
+
+<section name = "Vivado HLS Report for 'tinyyolo_lite'" level="0">
+<item name = "Date">Sun Jun 21 08:37:59 2026
+</item>
+<item name = "Version">2018.3 (Build 2405991 on Thu Dec 06 23:56:15 MST 2018)</item>
+<item name = "Project">tinyyolo_lite</item>
+<item name = "Solution">optimization_solution</item>
+<item name = "Product family">zynq</item>
+<item name = "Target device">xc7z020clg484-1</item>
+</section>
+
+<section name = "Performance Estimates" level="0">
+<item name = "Timing (ns)">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="4">Clock, Target, Estimated, Uncertainty</keys>
+<column name="ap_clk">10.00, 8.743, 1.25</column>
+</table>
+</item>
+</section>
+</item>
+<item name = "Latency (clock cycles)">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="6">, min, max, min, max, Type</keys>
+<column name="">1048587, 1048587, 1048587, 1048587, none</column>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="0">
+<keys size="7">Instance, Module, min, max, min, max, Type</keys>
+<column name="grp_conv_layer3_fu_162">conv_layer3, 138248, 138248, 138248, 138248, none</column>
+<column name="grp_detection_head_fu_240">detection_head, 177153, 177153, 177153, 177153, none</column>
+<column name="grp_conv_layer2_fu_266">conv_layer2, 228753, 228753, 228753, 228753, none</column>
+<column name="grp_conv_layer1_fu_306">conv_layer1, 492033, 492033, 492033, 492033, none</column>
+<column name="grp_maxpool_layer2_fu_326">maxpool_layer2, 3141, 3141, 3141, 3141, none</column>
+<column name="grp_maxpool_layer1_fu_366">maxpool_layer1, 7693, 7693, 7693, 7693, none</column>
+<column name="grp_decode_fu_390">decode, 1553, 1553, 1553, 1553, none</column>
+</table>
+</item>
+<item name = "Loop"><table name="" hasTotal="0">
+<keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
+</table>
+</item>
+</section>
+</item>
+</section>
+</item>
+</section>
+</profile>

@@ -1,0 +1,2516 @@
+==============================================================
+File generated on Fri Jun 19 18:20:48 +0700 2026
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2018.3 (64-bit)
+SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xc7z020clg484-1'
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+INFO: [SIM 211-1] CSim file generation done with 0 errors.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+==============================================================
+File generated on Fri Jun 19 18:22:00 +0700 2026
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2018.3 (64-bit)
+SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xc7z020clg484-1'
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+INFO: [SIM 211-1] CSim done with 0 errors.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+==============================================================
+File generated on Fri Jun 19 18:29:55 +0700 2026
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2018.3 (64-bit)
+SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xc7z020clg484-1'
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'tinyyolo_lite.c' ... 
+INFO: [HLS 200-10] Analyzing design file 'maxpool_2.c' ... 
+INFO: [HLS 200-10] Analyzing design file 'maxpool_1.c' ... 
+INFO: [HLS 200-10] Analyzing design file 'detection_head.c' ... 
+INFO: [HLS 200-10] Analyzing design file 'decode.c' ... 
+INFO: [HLS 200-10] Analyzing design file 'conv_relu3.c' ... 
+INFO: [HLS 200-10] Analyzing design file 'conv_relu2.c' ... 
+INFO: [HLS 200-10] Analyzing design file 'conv_relu1.c' ... 
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:01 ; elapsed = 00:00:18 . Memory (MB): peak = 103.812 ; gain = 18.742
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:01 ; elapsed = 00:00:18 . Memory (MB): peak = 103.812 ; gain = 18.742
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:01 ; elapsed = 00:00:18 . Memory (MB): peak = 106.152 ; gain = 21.082
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [XFORM 203-602] Inlining function 'sigmoid' into 'decode' (decode.c:65) automatically.
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:01 ; elapsed = 00:00:18 . Memory (MB): peak = 107.133 ; gain = 22.062
+INFO: [XFORM 203-602] Inlining function 'sigmoid' into 'decode' (decode.c:65) automatically.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (decode.c:48:40) to (decode.c:68:30) in function 'decode'... converting 4 basic blocks.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:02 ; elapsed = 00:00:19 . Memory (MB): peak = 128.332 ; gain = 43.262
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:03 ; elapsed = 00:00:20 . Memory (MB): peak = 191.164 ; gain = 106.094
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'tinyyolo_lite' ...
+WARNING: [SYN 201-107] Renaming port name 'tinyyolo_lite/image' to 'tinyyolo_lite/image_r' to avoid the conflict with HDL keywords or other object names.
+WARNING: [SYN 201-107] Renaming port name 'tinyyolo_lite/output' to 'tinyyolo_lite/output_r' to avoid the conflict with HDL keywords or other object names.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'conv_layer1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 19.954 seconds; current allocated memory: 149.047 MB.
+INFO: [HLS 200-434] Only 0 loops out of a total 6 loops have been pipelined in this design.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.163 seconds; current allocated memory: 149.492 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'maxpool_layer1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.143 seconds; current allocated memory: 149.740 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.135 seconds; current allocated memory: 149.977 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'conv_layer2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.145 seconds; current allocated memory: 150.214 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.146 seconds; current allocated memory: 150.535 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'maxpool_layer2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.163 seconds; current allocated memory: 150.772 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.122 seconds; current allocated memory: 151.015 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'conv_layer3' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.159 seconds; current allocated memory: 151.294 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.147 seconds; current allocated memory: 151.621 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'detection_head' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.173 seconds; current allocated memory: 151.894 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.151 seconds; current allocated memory: 152.206 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'decode' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.159 seconds; current allocated memory: 152.520 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.153 seconds; current allocated memory: 152.871 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'tinyyolo_lite' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.136 seconds; current allocated memory: 152.943 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.338 seconds; current allocated memory: 153.330 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'conv_layer1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'conv_layer1'.
+INFO: [HLS 200-111]  Elapsed time: 0.243 seconds; current allocated memory: 154.044 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'maxpool_layer1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'maxpool_layer1'.
+INFO: [HLS 200-111]  Elapsed time: 0.262 seconds; current allocated memory: 154.581 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'conv_layer2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'conv_layer2'.
+INFO: [HLS 200-111]  Elapsed time: 0.233 seconds; current allocated memory: 155.166 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'maxpool_layer2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SYN 201-210] Renamed object name 'tinyyolo_lite_mul_mul_6ns_11s_11_1_1' to 'tinyyolo_lite_mulbkb' due to the length limit 20
+INFO: [RTGEN 206-100] Generating core module 'tinyyolo_lite_mulbkb': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'maxpool_layer2'.
+INFO: [HLS 200-111]  Elapsed time: 0.316 seconds; current allocated memory: 155.745 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'conv_layer3' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'conv_layer3'.
+INFO: [HLS 200-111]  Elapsed time: 0.316 seconds; current allocated memory: 156.386 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'detection_head' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'detection_head'.
+INFO: [HLS 200-111]  Elapsed time: 0.346 seconds; current allocated memory: 157.023 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'decode' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'decode'.
+INFO: [HLS 200-111]  Elapsed time: 0.276 seconds; current allocated memory: 157.750 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'tinyyolo_lite' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'tinyyolo_lite/image_r' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'tinyyolo_lite/w_conv1' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'tinyyolo_lite/b_conv1' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'tinyyolo_lite/w_conv2' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'tinyyolo_lite/b_conv2' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'tinyyolo_lite/w_conv3' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'tinyyolo_lite/b_conv3' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'tinyyolo_lite/w_det' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'tinyyolo_lite/b_det' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'tinyyolo_lite/output_r' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'tinyyolo_lite' to 'ap_ctrl_hs'.
+INFO: [SYN 201-210] Renamed object name 'tinyyolo_lite_buf_conv1' to 'tinyyolo_lite_bufcud' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'tinyyolo_lite_buf_pool1' to 'tinyyolo_lite_bufdEe' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'tinyyolo_lite_buf_conv2' to 'tinyyolo_lite_bufeOg' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'tinyyolo_lite_buf_pool2' to 'tinyyolo_lite_buffYi' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'tinyyolo_lite_buf_conv3' to 'tinyyolo_lite_bufg8j' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'tinyyolo_lite_buf_det' to 'tinyyolo_lite_bufhbi' due to the length limit 20
+INFO: [RTGEN 206-100] Finished creating RTL model for 'tinyyolo_lite'.
+INFO: [HLS 200-111]  Elapsed time: 0.771 seconds; current allocated memory: 158.608 MB.
+INFO: [RTMG 210-279] Implementing memory 'decode_sigmoid_lut_rom' using distributed ROMs.
+INFO: [RTMG 210-278] Implementing memory 'tinyyolo_lite_bufcud_ram (RAM)' using block RAMs with power-on initialization.
+INFO: [RTMG 210-278] Implementing memory 'tinyyolo_lite_bufdEe_ram (RAM)' using block RAMs with power-on initialization.
+INFO: [RTMG 210-278] Implementing memory 'tinyyolo_lite_bufeOg_ram (RAM)' using block RAMs with power-on initialization.
+INFO: [RTMG 210-278] Implementing memory 'tinyyolo_lite_buffYi_ram (RAM)' using block RAMs with power-on initialization.
+INFO: [RTMG 210-278] Implementing memory 'tinyyolo_lite_bufg8j_ram (RAM)' using block RAMs with power-on initialization.
+INFO: [RTMG 210-278] Implementing memory 'tinyyolo_lite_bufhbi_ram (RAM)' using block RAMs with power-on initialization.
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:06 ; elapsed = 00:00:30 . Memory (MB): peak = 221.883 ; gain = 136.812
+INFO: [SYSC 207-301] Generating SystemC RTL for tinyyolo_lite.
+INFO: [VHDL 208-304] Generating VHDL RTL for tinyyolo_lite.
+INFO: [VLOG 209-307] Generating Verilog RTL for tinyyolo_lite.
+INFO: [HLS 200-112] Total elapsed time: 29.858 seconds; peak allocated memory: 158.608 MB.
+==============================================================
+File generated on Sat Jun 20 07:56:38 +0700 2026
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2018.3 (64-bit)
+SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xc7z020clg484-1'
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+INFO: [SIM 211-1] CSim done with 0 errors.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+==============================================================
+File generated on Sat Jun 20 08:02:03 +0700 2026
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2018.3 (64-bit)
+SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xc7z020clg484-1'
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+INFO: [SIM 211-1] CSim done with 0 errors.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+==============================================================
+File generated on Sat Jun 20 08:14:28 +0700 2026
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2018.3 (64-bit)
+SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xc7z020clg484-1'
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+INFO: [SIM 211-1] CSim file generation done with 0 errors.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+==============================================================
+File generated on Sat Jun 20 08:40:14 +0700 2026
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2018.3 (64-bit)
+SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xc7z020clg484-1'
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'tinyyolo_lite.c' ... 
+INFO: [HLS 200-10] Analyzing design file 'maxpool_2.c' ... 
+INFO: [HLS 200-10] Analyzing design file 'maxpool_1.c' ... 
+INFO: [HLS 200-10] Analyzing design file 'detection_head.c' ... 
+INFO: [HLS 200-10] Analyzing design file 'decode.c' ... 
+INFO: [HLS 200-10] Analyzing design file 'conv_relu3.c' ... 
+INFO: [HLS 200-10] Analyzing design file 'conv_relu2.c' ... 
+INFO: [HLS 200-10] Analyzing design file 'conv_relu1.c' ... 
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:01 ; elapsed = 00:00:22 . Memory (MB): peak = 103.508 ; gain = 18.781
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:01 ; elapsed = 00:00:22 . Memory (MB): peak = 103.508 ; gain = 18.781
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:01 ; elapsed = 00:00:23 . Memory (MB): peak = 105.793 ; gain = 21.066
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [XFORM 203-602] Inlining function 'sigmoid' into 'decode' (decode.c:65) automatically.
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:02 ; elapsed = 00:00:23 . Memory (MB): peak = 106.621 ; gain = 21.895
+INFO: [XFORM 203-602] Inlining function 'sigmoid' into 'decode' (decode.c:65) automatically.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (decode.c:48:40) to (decode.c:68:30) in function 'decode'... converting 4 basic blocks.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:02 ; elapsed = 00:00:24 . Memory (MB): peak = 127.645 ; gain = 42.918
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:03 ; elapsed = 00:00:24 . Memory (MB): peak = 190.887 ; gain = 106.160
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'tinyyolo_lite' ...
+WARNING: [SYN 201-107] Renaming port name 'tinyyolo_lite/image' to 'tinyyolo_lite/image_r' to avoid the conflict with HDL keywords or other object names.
+WARNING: [SYN 201-107] Renaming port name 'tinyyolo_lite/output' to 'tinyyolo_lite/output_r' to avoid the conflict with HDL keywords or other object names.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'conv_layer1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 24.695 seconds; current allocated memory: 149.225 MB.
+INFO: [HLS 200-434] Only 0 loops out of a total 6 loops have been pipelined in this design.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.195 seconds; current allocated memory: 149.680 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'maxpool_layer1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.179 seconds; current allocated memory: 149.891 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.148 seconds; current allocated memory: 150.165 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'conv_layer2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.181 seconds; current allocated memory: 150.395 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.165 seconds; current allocated memory: 150.704 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'maxpool_layer2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.196 seconds; current allocated memory: 150.988 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.161 seconds; current allocated memory: 151.231 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'conv_layer3' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.194 seconds; current allocated memory: 151.503 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.15 seconds; current allocated memory: 151.819 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'detection_head' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.216 seconds; current allocated memory: 152.101 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.158 seconds; current allocated memory: 152.403 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'decode' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.205 seconds; current allocated memory: 152.701 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.186 seconds; current allocated memory: 153.052 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'tinyyolo_lite' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.192 seconds; current allocated memory: 153.111 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.375 seconds; current allocated memory: 153.418 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'conv_layer1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'conv_layer1'.
+INFO: [HLS 200-111]  Elapsed time: 0.264 seconds; current allocated memory: 154.115 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'maxpool_layer1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'maxpool_layer1'.
+INFO: [HLS 200-111]  Elapsed time: 0.343 seconds; current allocated memory: 154.730 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'conv_layer2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'conv_layer2'.
+INFO: [HLS 200-111]  Elapsed time: 0.314 seconds; current allocated memory: 155.293 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'maxpool_layer2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SYN 201-210] Renamed object name 'tinyyolo_lite_mul_mul_6ns_11s_11_1_1' to 'tinyyolo_lite_mulbkb' due to the length limit 20
+INFO: [RTGEN 206-100] Generating core module 'tinyyolo_lite_mulbkb': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'maxpool_layer2'.
+INFO: [HLS 200-111]  Elapsed time: 0.406 seconds; current allocated memory: 155.872 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'conv_layer3' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'conv_layer3'.
+INFO: [HLS 200-111]  Elapsed time: 0.282 seconds; current allocated memory: 156.460 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'detection_head' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SYN 201-210] Renamed object name 'detection_head_w_det' to 'detection_head_w_cud' due to the length limit 20
+INFO: [RTGEN 206-100] Finished creating RTL model for 'detection_head'.
+INFO: [HLS 200-111]  Elapsed time: 0.412 seconds; current allocated memory: 157.108 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'decode' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'decode'.
+INFO: [HLS 200-111]  Elapsed time: 0.364 seconds; current allocated memory: 157.835 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'tinyyolo_lite' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'tinyyolo_lite/image_r' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'tinyyolo_lite/output_r' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'tinyyolo_lite' to 'ap_ctrl_hs'.
+INFO: [SYN 201-210] Renamed object name 'tinyyolo_lite_buf_conv1' to 'tinyyolo_lite_bufdEe' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'tinyyolo_lite_buf_pool1' to 'tinyyolo_lite_bufeOg' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'tinyyolo_lite_buf_conv2' to 'tinyyolo_lite_buffYi' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'tinyyolo_lite_buf_pool2' to 'tinyyolo_lite_bufg8j' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'tinyyolo_lite_buf_conv3' to 'tinyyolo_lite_bufhbi' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'tinyyolo_lite_buf_det' to 'tinyyolo_lite_bufibs' due to the length limit 20
+INFO: [RTGEN 206-100] Finished creating RTL model for 'tinyyolo_lite'.
+INFO: [HLS 200-111]  Elapsed time: 0.569 seconds; current allocated memory: 158.633 MB.
+INFO: [RTMG 210-279] Implementing memory 'conv_layer1_w_conv1_rom' using distributed ROMs.
+INFO: [RTMG 210-279] Implementing memory 'conv_layer2_w_conv2_rom' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'conv_layer3_w_conv3_rom' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'detection_head_w_cud_rom' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'decode_sigmoid_lut_rom' using distributed ROMs.
+INFO: [RTMG 210-278] Implementing memory 'tinyyolo_lite_bufdEe_ram (RAM)' using block RAMs with power-on initialization.
+INFO: [RTMG 210-278] Implementing memory 'tinyyolo_lite_bufeOg_ram (RAM)' using block RAMs with power-on initialization.
+INFO: [RTMG 210-278] Implementing memory 'tinyyolo_lite_buffYi_ram (RAM)' using block RAMs with power-on initialization.
+INFO: [RTMG 210-278] Implementing memory 'tinyyolo_lite_bufg8j_ram (RAM)' using block RAMs with power-on initialization.
+INFO: [RTMG 210-278] Implementing memory 'tinyyolo_lite_bufhbi_ram (RAM)' using block RAMs with power-on initialization.
+INFO: [RTMG 210-278] Implementing memory 'tinyyolo_lite_bufibs_ram (RAM)' using block RAMs with power-on initialization.
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:07 ; elapsed = 00:00:35 . Memory (MB): peak = 221.121 ; gain = 136.395
+INFO: [SYSC 207-301] Generating SystemC RTL for tinyyolo_lite.
+INFO: [VHDL 208-304] Generating VHDL RTL for tinyyolo_lite.
+INFO: [VLOG 209-307] Generating Verilog RTL for tinyyolo_lite.
+INFO: [HLS 200-112] Total elapsed time: 35.44 seconds; peak allocated memory: 158.633 MB.
+==============================================================
+File generated on Sat Jun 20 09:27:11 +0700 2026
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2018.3 (64-bit)
+SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xc7z020clg484-1'
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'tinyyolo_lite.c' ... 
+INFO: [HLS 200-10] Analyzing design file 'maxpool_2.c' ... 
+INFO: [HLS 200-10] Analyzing design file 'maxpool_1.c' ... 
+INFO: [HLS 200-10] Analyzing design file 'detection_head.c' ... 
+INFO: [HLS 200-10] Analyzing design file 'decode.c' ... 
+INFO: [HLS 200-10] Analyzing design file 'conv_relu3.c' ... 
+INFO: [HLS 200-10] Analyzing design file 'conv_relu2.c' ... 
+INFO: [HLS 200-10] Analyzing design file 'conv_relu1.c' ... 
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:02 ; elapsed = 00:00:23 . Memory (MB): peak = 102.605 ; gain = 17.691
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:02 ; elapsed = 00:00:23 . Memory (MB): peak = 102.605 ; gain = 17.691
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:02 ; elapsed = 00:00:24 . Memory (MB): peak = 105.203 ; gain = 20.289
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [XFORM 203-602] Inlining function 'sigmoid' into 'decode' (decode.c:65) automatically.
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:03 ; elapsed = 00:00:24 . Memory (MB): peak = 106.004 ; gain = 21.090
+INFO: [XFORM 203-602] Inlining function 'sigmoid' into 'decode' (decode.c:65) automatically.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (decode.c:48:40) to (decode.c:68:30) in function 'decode'... converting 4 basic blocks.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:04 ; elapsed = 00:00:25 . Memory (MB): peak = 127.562 ; gain = 42.648
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:05 ; elapsed = 00:00:27 . Memory (MB): peak = 190.930 ; gain = 106.016
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'tinyyolo_lite' ...
+WARNING: [SYN 201-107] Renaming port name 'tinyyolo_lite/image' to 'tinyyolo_lite/image_r' to avoid the conflict with HDL keywords or other object names.
+WARNING: [SYN 201-107] Renaming port name 'tinyyolo_lite/output' to 'tinyyolo_lite/output_r' to avoid the conflict with HDL keywords or other object names.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'conv_layer1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 27.116 seconds; current allocated memory: 149.093 MB.
+INFO: [HLS 200-434] Only 0 loops out of a total 6 loops have been pipelined in this design.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.259 seconds; current allocated memory: 149.516 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'maxpool_layer1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.375 seconds; current allocated memory: 149.730 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.185 seconds; current allocated memory: 150.006 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'conv_layer2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.325 seconds; current allocated memory: 150.286 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.227 seconds; current allocated memory: 150.600 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'maxpool_layer2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.318 seconds; current allocated memory: 150.823 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.2 seconds; current allocated memory: 151.069 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'conv_layer3' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.32 seconds; current allocated memory: 151.360 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.24 seconds; current allocated memory: 151.680 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'detection_head' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.442 seconds; current allocated memory: 151.949 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.234 seconds; current allocated memory: 152.256 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'decode' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.341 seconds; current allocated memory: 152.572 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.239 seconds; current allocated memory: 152.926 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'tinyyolo_lite' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.313 seconds; current allocated memory: 152.987 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.786 seconds; current allocated memory: 153.364 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'conv_layer1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'conv_layer1'.
+INFO: [HLS 200-111]  Elapsed time: 0.513 seconds; current allocated memory: 154.076 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'maxpool_layer1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'maxpool_layer1'.
+INFO: [HLS 200-111]  Elapsed time: 0.672 seconds; current allocated memory: 154.624 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'conv_layer2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'conv_layer2'.
+INFO: [HLS 200-111]  Elapsed time: 0.596 seconds; current allocated memory: 155.246 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'maxpool_layer2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SYN 201-210] Renamed object name 'tinyyolo_lite_mul_mul_6ns_11s_11_1_1' to 'tinyyolo_lite_mulbkb' due to the length limit 20
+INFO: [RTGEN 206-100] Generating core module 'tinyyolo_lite_mulbkb': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'maxpool_layer2'.
+INFO: [HLS 200-111]  Elapsed time: 0.707 seconds; current allocated memory: 155.806 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'conv_layer3' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'conv_layer3'.
+INFO: [HLS 200-111]  Elapsed time: 0.598 seconds; current allocated memory: 156.446 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'detection_head' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SYN 201-210] Renamed object name 'detection_head_w_det' to 'detection_head_w_cud' due to the length limit 20
+INFO: [RTGEN 206-100] Finished creating RTL model for 'detection_head'.
+INFO: [HLS 200-111]  Elapsed time: 0.705 seconds; current allocated memory: 157.075 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'decode' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'decode'.
+INFO: [HLS 200-111]  Elapsed time: 0.757 seconds; current allocated memory: 157.840 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'tinyyolo_lite' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'tinyyolo_lite/image_r' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'tinyyolo_lite/output_r' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'tinyyolo_lite' to 'ap_ctrl_hs'.
+INFO: [SYN 201-210] Renamed object name 'tinyyolo_lite_buf_conv1' to 'tinyyolo_lite_bufdEe' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'tinyyolo_lite_buf_pool1' to 'tinyyolo_lite_bufeOg' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'tinyyolo_lite_buf_conv2' to 'tinyyolo_lite_buffYi' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'tinyyolo_lite_buf_pool2' to 'tinyyolo_lite_bufg8j' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'tinyyolo_lite_buf_conv3' to 'tinyyolo_lite_bufhbi' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'tinyyolo_lite_buf_det' to 'tinyyolo_lite_bufibs' due to the length limit 20
+INFO: [RTGEN 206-100] Finished creating RTL model for 'tinyyolo_lite'.
+INFO: [HLS 200-111]  Elapsed time: 0.975 seconds; current allocated memory: 158.643 MB.
+INFO: [RTMG 210-279] Implementing memory 'conv_layer1_w_conv1_rom' using distributed ROMs.
+INFO: [RTMG 210-279] Implementing memory 'conv_layer2_w_conv2_rom' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'conv_layer3_w_conv3_rom' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'detection_head_w_cud_rom' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'decode_sigmoid_lut_rom' using distributed ROMs.
+INFO: [RTMG 210-278] Implementing memory 'tinyyolo_lite_bufdEe_ram (RAM)' using block RAMs with power-on initialization.
+INFO: [RTMG 210-278] Implementing memory 'tinyyolo_lite_bufeOg_ram (RAM)' using block RAMs with power-on initialization.
+INFO: [RTMG 210-278] Implementing memory 'tinyyolo_lite_buffYi_ram (RAM)' using block RAMs with power-on initialization.
+INFO: [RTMG 210-278] Implementing memory 'tinyyolo_lite_bufg8j_ram (RAM)' using block RAMs with power-on initialization.
+INFO: [RTMG 210-278] Implementing memory 'tinyyolo_lite_bufhbi_ram (RAM)' using block RAMs with power-on initialization.
+INFO: [RTMG 210-278] Implementing memory 'tinyyolo_lite_bufibs_ram (RAM)' using block RAMs with power-on initialization.
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:15 ; elapsed = 00:00:44 . Memory (MB): peak = 221.309 ; gain = 136.395
+INFO: [SYSC 207-301] Generating SystemC RTL for tinyyolo_lite.
+INFO: [VHDL 208-304] Generating VHDL RTL for tinyyolo_lite.
+INFO: [VLOG 209-307] Generating Verilog RTL for tinyyolo_lite.
+INFO: [HLS 200-112] Total elapsed time: 44.369 seconds; peak allocated memory: 158.643 MB.
+INFO: [Common 17-206] Exiting vivado_hls at Sat Jun 20 09:27:55 2026...
+==============================================================
+File generated on Sat Jun 20 09:30:04 +0700 2026
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2018.3 (64-bit)
+SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xc7z020clg484-1'
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'tinyyolo_lite.c' ... 
+INFO: [HLS 200-10] Analyzing design file 'maxpool_2.c' ... 
+INFO: [HLS 200-10] Analyzing design file 'maxpool_1.c' ... 
+INFO: [HLS 200-10] Analyzing design file 'detection_head.c' ... 
+INFO: [HLS 200-10] Analyzing design file 'decode.c' ... 
+INFO: [HLS 200-10] Analyzing design file 'conv_relu3.c' ... 
+INFO: [HLS 200-10] Analyzing design file 'conv_relu2.c' ... 
+INFO: [HLS 200-10] Analyzing design file 'conv_relu1.c' ... 
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:01 ; elapsed = 00:00:28 . Memory (MB): peak = 103.598 ; gain = 18.562
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:01 ; elapsed = 00:00:28 . Memory (MB): peak = 103.598 ; gain = 18.562
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:02 ; elapsed = 00:00:28 . Memory (MB): peak = 105.781 ; gain = 20.746
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [XFORM 203-602] Inlining function 'sigmoid' into 'decode' (decode.c:65) automatically.
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:02 ; elapsed = 00:00:29 . Memory (MB): peak = 106.586 ; gain = 21.551
+INFO: [XFORM 203-602] Inlining function 'sigmoid' into 'decode' (decode.c:65) automatically.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (decode.c:48:40) to (decode.c:68:30) in function 'decode'... converting 4 basic blocks.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:04 ; elapsed = 00:00:31 . Memory (MB): peak = 127.977 ; gain = 42.941
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:05 ; elapsed = 00:00:32 . Memory (MB): peak = 191.031 ; gain = 105.996
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'tinyyolo_lite' ...
+WARNING: [SYN 201-107] Renaming port name 'tinyyolo_lite/image' to 'tinyyolo_lite/image_r' to avoid the conflict with HDL keywords or other object names.
+WARNING: [SYN 201-107] Renaming port name 'tinyyolo_lite/output' to 'tinyyolo_lite/output_r' to avoid the conflict with HDL keywords or other object names.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'conv_layer1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 32.758 seconds; current allocated memory: 149.339 MB.
+INFO: [HLS 200-434] Only 0 loops out of a total 6 loops have been pipelined in this design.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.243 seconds; current allocated memory: 149.759 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'maxpool_layer1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.332 seconds; current allocated memory: 150.023 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.158 seconds; current allocated memory: 150.260 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'conv_layer2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.204 seconds; current allocated memory: 150.537 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.152 seconds; current allocated memory: 150.849 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'maxpool_layer2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.219 seconds; current allocated memory: 151.086 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.169 seconds; current allocated memory: 151.329 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'conv_layer3' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.204 seconds; current allocated memory: 151.602 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.166 seconds; current allocated memory: 151.920 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'detection_head' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.226 seconds; current allocated memory: 152.202 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.137 seconds; current allocated memory: 152.507 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'decode' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.233 seconds; current allocated memory: 152.805 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.18 seconds; current allocated memory: 153.156 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'tinyyolo_lite' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.191 seconds; current allocated memory: 153.215 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.423 seconds; current allocated memory: 153.589 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'conv_layer1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'conv_layer1'.
+INFO: [HLS 200-111]  Elapsed time: 0.295 seconds; current allocated memory: 154.284 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'maxpool_layer1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'maxpool_layer1'.
+INFO: [HLS 200-111]  Elapsed time: 0.379 seconds; current allocated memory: 154.862 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'conv_layer2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'conv_layer2'.
+INFO: [HLS 200-111]  Elapsed time: 0.333 seconds; current allocated memory: 155.481 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'maxpool_layer2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SYN 201-210] Renamed object name 'tinyyolo_lite_mul_mul_6ns_11s_11_1_1' to 'tinyyolo_lite_mulbkb' due to the length limit 20
+INFO: [RTGEN 206-100] Generating core module 'tinyyolo_lite_mulbkb': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'maxpool_layer2'.
+INFO: [HLS 200-111]  Elapsed time: 0.435 seconds; current allocated memory: 156.023 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'conv_layer3' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'conv_layer3'.
+INFO: [HLS 200-111]  Elapsed time: 0.365 seconds; current allocated memory: 156.661 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'detection_head' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SYN 201-210] Renamed object name 'detection_head_w_det' to 'detection_head_w_cud' due to the length limit 20
+INFO: [RTGEN 206-100] Finished creating RTL model for 'detection_head'.
+INFO: [HLS 200-111]  Elapsed time: 0.453 seconds; current allocated memory: 157.340 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'decode' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'decode'.
+INFO: [HLS 200-111]  Elapsed time: 0.419 seconds; current allocated memory: 158.066 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'tinyyolo_lite' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'tinyyolo_lite/image_r' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'tinyyolo_lite/output_r' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'tinyyolo_lite' to 'ap_ctrl_hs'.
+INFO: [SYN 201-210] Renamed object name 'tinyyolo_lite_buf_conv1' to 'tinyyolo_lite_bufdEe' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'tinyyolo_lite_buf_pool1' to 'tinyyolo_lite_bufeOg' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'tinyyolo_lite_buf_conv2' to 'tinyyolo_lite_buffYi' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'tinyyolo_lite_buf_pool2' to 'tinyyolo_lite_bufg8j' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'tinyyolo_lite_buf_conv3' to 'tinyyolo_lite_bufhbi' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'tinyyolo_lite_buf_det' to 'tinyyolo_lite_bufibs' due to the length limit 20
+INFO: [RTGEN 206-100] Finished creating RTL model for 'tinyyolo_lite'.
+INFO: [HLS 200-111]  Elapsed time: 0.656 seconds; current allocated memory: 158.849 MB.
+INFO: [RTMG 210-279] Implementing memory 'conv_layer1_w_conv1_rom' using distributed ROMs.
+INFO: [RTMG 210-279] Implementing memory 'conv_layer2_w_conv2_rom' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'conv_layer3_w_conv3_rom' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'detection_head_w_cud_rom' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'decode_sigmoid_lut_rom' using distributed ROMs.
+INFO: [RTMG 210-278] Implementing memory 'tinyyolo_lite_bufdEe_ram (RAM)' using block RAMs with power-on initialization.
+INFO: [RTMG 210-278] Implementing memory 'tinyyolo_lite_bufeOg_ram (RAM)' using block RAMs with power-on initialization.
+INFO: [RTMG 210-278] Implementing memory 'tinyyolo_lite_buffYi_ram (RAM)' using block RAMs with power-on initialization.
+INFO: [RTMG 210-278] Implementing memory 'tinyyolo_lite_bufg8j_ram (RAM)' using block RAMs with power-on initialization.
+INFO: [RTMG 210-278] Implementing memory 'tinyyolo_lite_bufhbi_ram (RAM)' using block RAMs with power-on initialization.
+INFO: [RTMG 210-278] Implementing memory 'tinyyolo_lite_bufibs_ram (RAM)' using block RAMs with power-on initialization.
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:11 ; elapsed = 00:00:45 . Memory (MB): peak = 221.340 ; gain = 136.305
+INFO: [SYSC 207-301] Generating SystemC RTL for tinyyolo_lite.
+INFO: [VHDL 208-304] Generating VHDL RTL for tinyyolo_lite.
+INFO: [VLOG 209-307] Generating Verilog RTL for tinyyolo_lite.
+INFO: [HLS 200-112] Total elapsed time: 44.689 seconds; peak allocated memory: 158.849 MB.
+==============================================================
+File generated on Sat Jun 20 09:43:04 +0700 2026
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2018.3 (64-bit)
+SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xc7z020clg484-1'
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+INFO: [SIM 211-1] CSim done with 0 errors.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'tinyyolo_lite.c' ... 
+INFO: [HLS 200-10] Analyzing design file 'maxpool_2.c' ... 
+INFO: [HLS 200-10] Analyzing design file 'maxpool_1.c' ... 
+INFO: [HLS 200-10] Analyzing design file 'detection_head.c' ... 
+INFO: [HLS 200-10] Analyzing design file 'decode.c' ... 
+INFO: [HLS 200-10] Analyzing design file 'conv_relu3.c' ... 
+INFO: [HLS 200-10] Analyzing design file 'conv_relu2.c' ... 
+INFO: [HLS 200-10] Analyzing design file 'conv_relu1.c' ... 
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:02 ; elapsed = 00:01:27 . Memory (MB): peak = 103.340 ; gain = 18.523
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:02 ; elapsed = 00:01:27 . Memory (MB): peak = 103.340 ; gain = 18.523
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:03 ; elapsed = 00:01:28 . Memory (MB): peak = 105.613 ; gain = 20.797
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [XFORM 203-602] Inlining function 'sigmoid' into 'decode' (decode.c:65) automatically.
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:03 ; elapsed = 00:01:28 . Memory (MB): peak = 106.473 ; gain = 21.656
+INFO: [XFORM 203-602] Inlining function 'sigmoid' into 'decode' (decode.c:65) automatically.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (decode.c:48:40) to (decode.c:68:30) in function 'decode'... converting 4 basic blocks.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:06 ; elapsed = 00:01:31 . Memory (MB): peak = 128.000 ; gain = 43.184
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:08 ; elapsed = 00:01:33 . Memory (MB): peak = 191.336 ; gain = 106.520
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'tinyyolo_lite' ...
+WARNING: [SYN 201-107] Renaming port name 'tinyyolo_lite/image' to 'tinyyolo_lite/image_r' to avoid the conflict with HDL keywords or other object names.
+WARNING: [SYN 201-107] Renaming port name 'tinyyolo_lite/output' to 'tinyyolo_lite/output_r' to avoid the conflict with HDL keywords or other object names.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'conv_layer1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 93.748 seconds; current allocated memory: 149.571 MB.
+INFO: [HLS 200-434] Only 0 loops out of a total 6 loops have been pipelined in this design.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.413 seconds; current allocated memory: 149.994 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'maxpool_layer1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.447 seconds; current allocated memory: 150.279 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.292 seconds; current allocated memory: 150.575 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'conv_layer2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.469 seconds; current allocated memory: 150.855 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.321 seconds; current allocated memory: 151.206 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'maxpool_layer2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.476 seconds; current allocated memory: 151.427 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.353 seconds; current allocated memory: 151.740 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'conv_layer3' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.577 seconds; current allocated memory: 152.009 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.349 seconds; current allocated memory: 152.330 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'detection_head' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.569 seconds; current allocated memory: 152.599 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.34 seconds; current allocated memory: 152.906 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'decode' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.544 seconds; current allocated memory: 153.222 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.456 seconds; current allocated memory: 153.575 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'tinyyolo_lite' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.579 seconds; current allocated memory: 153.673 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 1.515 seconds; current allocated memory: 154.066 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'conv_layer1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'conv_layer1'.
+INFO: [HLS 200-111]  Elapsed time: 0.742 seconds; current allocated memory: 154.778 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'maxpool_layer1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'maxpool_layer1'.
+INFO: [HLS 200-111]  Elapsed time: 0.812 seconds; current allocated memory: 155.470 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'conv_layer2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'conv_layer2'.
+INFO: [HLS 200-111]  Elapsed time: 0.788 seconds; current allocated memory: 156.092 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'maxpool_layer2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'maxpool_layer2'.
+INFO: [HLS 200-111]  Elapsed time: 0.78 seconds; current allocated memory: 156.686 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'conv_layer3' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'conv_layer3'.
+INFO: [HLS 200-111]  Elapsed time: 0.692 seconds; current allocated memory: 157.341 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'detection_head' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SYN 201-210] Renamed object name 'detection_head_w_det' to 'detection_head_w_bkb' due to the length limit 20
+INFO: [RTGEN 206-100] Finished creating RTL model for 'detection_head'.
+INFO: [HLS 200-111]  Elapsed time: 0.823 seconds; current allocated memory: 157.968 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'decode' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'decode'.
+INFO: [HLS 200-111]  Elapsed time: 0.667 seconds; current allocated memory: 158.696 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'tinyyolo_lite' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'tinyyolo_lite/image_r' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'tinyyolo_lite/output_r' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'tinyyolo_lite' to 'ap_ctrl_hs'.
+INFO: [SYN 201-210] Renamed object name 'tinyyolo_lite_buf_conv1' to 'tinyyolo_lite_bufcud' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'tinyyolo_lite_buf_pool1' to 'tinyyolo_lite_bufdEe' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'tinyyolo_lite_buf_conv2' to 'tinyyolo_lite_bufeOg' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'tinyyolo_lite_buf_pool2' to 'tinyyolo_lite_buffYi' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'tinyyolo_lite_buf_conv3' to 'tinyyolo_lite_bufg8j' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'tinyyolo_lite_buf_det' to 'tinyyolo_lite_bufhbi' due to the length limit 20
+INFO: [RTGEN 206-100] Finished creating RTL model for 'tinyyolo_lite'.
+INFO: [HLS 200-111]  Elapsed time: 0.985 seconds; current allocated memory: 159.520 MB.
+INFO: [RTMG 210-279] Implementing memory 'conv_layer1_w_conv1_rom' using distributed ROMs.
+INFO: [RTMG 210-279] Implementing memory 'conv_layer2_w_conv2_rom' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'conv_layer3_w_conv3_rom' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'detection_head_w_bkb_rom' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'decode_sigmoid_lut_rom' using distributed ROMs.
+INFO: [RTMG 210-278] Implementing memory 'tinyyolo_lite_bufcud_ram (RAM)' using block RAMs with power-on initialization.
+INFO: [RTMG 210-278] Implementing memory 'tinyyolo_lite_bufdEe_ram (RAM)' using block RAMs with power-on initialization.
+INFO: [RTMG 210-278] Implementing memory 'tinyyolo_lite_bufeOg_ram (RAM)' using block RAMs with power-on initialization.
+INFO: [RTMG 210-278] Implementing memory 'tinyyolo_lite_buffYi_ram (RAM)' using block RAMs with power-on initialization.
+INFO: [RTMG 210-278] Implementing memory 'tinyyolo_lite_bufg8j_ram (RAM)' using block RAMs with power-on initialization.
+INFO: [RTMG 210-278] Implementing memory 'tinyyolo_lite_bufhbi_ram (RAM)' using block RAMs with power-on initialization.
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:20 ; elapsed = 00:01:55 . Memory (MB): peak = 223.098 ; gain = 138.281
+INFO: [SYSC 207-301] Generating SystemC RTL for tinyyolo_lite.
+INFO: [VHDL 208-304] Generating VHDL RTL for tinyyolo_lite.
+INFO: [VLOG 209-307] Generating Verilog RTL for tinyyolo_lite.
+INFO: [HLS 200-112] Total elapsed time: 114.958 seconds; peak allocated memory: 159.520 MB.
+INFO: [Common 17-206] Exiting vivado_hls at Sat Jun 20 09:44:58 2026...
+==============================================================
+File generated on Sat Jun 20 09:54:43 +0700 2026
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2018.3 (64-bit)
+SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xc7z020clg484-1'
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'tinyyolo_lite.c' ... 
+INFO: [HLS 200-10] Analyzing design file 'maxpool_2.c' ... 
+INFO: [HLS 200-10] Analyzing design file 'maxpool_1.c' ... 
+INFO: [HLS 200-10] Analyzing design file 'detection_head.c' ... 
+INFO: [HLS 200-10] Analyzing design file 'decode.c' ... 
+INFO: [HLS 200-10] Analyzing design file 'conv_relu3.c' ... 
+INFO: [HLS 200-10] Analyzing design file 'conv_relu2.c' ... 
+INFO: [HLS 200-10] Analyzing design file 'conv_relu1.c' ... 
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:02 ; elapsed = 00:00:21 . Memory (MB): peak = 103.387 ; gain = 18.375
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:02 ; elapsed = 00:00:21 . Memory (MB): peak = 103.387 ; gain = 18.375
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:02 ; elapsed = 00:00:22 . Memory (MB): peak = 105.789 ; gain = 20.777
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [XFORM 203-602] Inlining function 'sigmoid' into 'decode' (decode.c:65) automatically.
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:02 ; elapsed = 00:00:22 . Memory (MB): peak = 106.535 ; gain = 21.523
+INFO: [XFORM 203-602] Inlining function 'sigmoid' into 'decode' (decode.c:65) automatically.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (decode.c:48:40) to (decode.c:68:30) in function 'decode'... converting 4 basic blocks.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:03 ; elapsed = 00:00:23 . Memory (MB): peak = 127.699 ; gain = 42.688
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:04 ; elapsed = 00:00:25 . Memory (MB): peak = 191.113 ; gain = 106.102
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'tinyyolo_lite' ...
+WARNING: [SYN 201-107] Renaming port name 'tinyyolo_lite/image' to 'tinyyolo_lite/image_r' to avoid the conflict with HDL keywords or other object names.
+WARNING: [SYN 201-107] Renaming port name 'tinyyolo_lite/output' to 'tinyyolo_lite/output_r' to avoid the conflict with HDL keywords or other object names.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'conv_layer1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 24.846 seconds; current allocated memory: 149.325 MB.
+INFO: [HLS 200-434] Only 0 loops out of a total 6 loops have been pipelined in this design.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.203 seconds; current allocated memory: 149.745 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'maxpool_layer1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.292 seconds; current allocated memory: 150.044 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.169 seconds; current allocated memory: 150.337 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'conv_layer2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.282 seconds; current allocated memory: 150.615 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.202 seconds; current allocated memory: 150.963 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'maxpool_layer2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.309 seconds; current allocated memory: 151.197 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.201 seconds; current allocated memory: 151.508 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'conv_layer3' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.312 seconds; current allocated memory: 151.760 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.206 seconds; current allocated memory: 152.114 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'detection_head' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.342 seconds; current allocated memory: 152.344 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.196 seconds; current allocated memory: 152.649 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'decode' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.295 seconds; current allocated memory: 152.963 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.206 seconds; current allocated memory: 153.314 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'tinyyolo_lite' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.251 seconds; current allocated memory: 153.409 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.842 seconds; current allocated memory: 153.800 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'conv_layer1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'conv_layer1'.
+INFO: [HLS 200-111]  Elapsed time: 0.509 seconds; current allocated memory: 154.510 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'maxpool_layer1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'maxpool_layer1'.
+INFO: [HLS 200-111]  Elapsed time: 0.574 seconds; current allocated memory: 155.215 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'conv_layer2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'conv_layer2'.
+INFO: [HLS 200-111]  Elapsed time: 0.535 seconds; current allocated memory: 155.835 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'maxpool_layer2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'maxpool_layer2'.
+INFO: [HLS 200-111]  Elapsed time: 0.686 seconds; current allocated memory: 156.428 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'conv_layer3' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'conv_layer3'.
+INFO: [HLS 200-111]  Elapsed time: 0.563 seconds; current allocated memory: 157.080 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'detection_head' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SYN 201-210] Renamed object name 'detection_head_w_det' to 'detection_head_w_bkb' due to the length limit 20
+INFO: [RTGEN 206-100] Finished creating RTL model for 'detection_head'.
+INFO: [HLS 200-111]  Elapsed time: 0.598 seconds; current allocated memory: 157.690 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'decode' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'decode'.
+INFO: [HLS 200-111]  Elapsed time: 0.569 seconds; current allocated memory: 158.416 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'tinyyolo_lite' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'tinyyolo_lite/image_r' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'tinyyolo_lite/output_r' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'tinyyolo_lite' to 'ap_ctrl_hs'.
+INFO: [SYN 201-210] Renamed object name 'tinyyolo_lite_buf_conv1' to 'tinyyolo_lite_bufcud' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'tinyyolo_lite_buf_pool1' to 'tinyyolo_lite_bufdEe' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'tinyyolo_lite_buf_conv2' to 'tinyyolo_lite_bufeOg' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'tinyyolo_lite_buf_pool2' to 'tinyyolo_lite_buffYi' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'tinyyolo_lite_buf_conv3' to 'tinyyolo_lite_bufg8j' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'tinyyolo_lite_buf_det' to 'tinyyolo_lite_bufhbi' due to the length limit 20
+INFO: [RTGEN 206-100] Finished creating RTL model for 'tinyyolo_lite'.
+INFO: [HLS 200-111]  Elapsed time: 0.818 seconds; current allocated memory: 159.250 MB.
+INFO: [RTMG 210-279] Implementing memory 'conv_layer1_w_conv1_rom' using distributed ROMs.
+INFO: [RTMG 210-279] Implementing memory 'conv_layer2_w_conv2_rom' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'conv_layer3_w_conv3_rom' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'detection_head_w_bkb_rom' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'decode_sigmoid_lut_rom' using distributed ROMs.
+INFO: [RTMG 210-278] Implementing memory 'tinyyolo_lite_bufcud_ram (RAM)' using block RAMs with power-on initialization.
+INFO: [RTMG 210-278] Implementing memory 'tinyyolo_lite_bufdEe_ram (RAM)' using block RAMs with power-on initialization.
+INFO: [RTMG 210-278] Implementing memory 'tinyyolo_lite_bufeOg_ram (RAM)' using block RAMs with power-on initialization.
+INFO: [RTMG 210-278] Implementing memory 'tinyyolo_lite_buffYi_ram (RAM)' using block RAMs with power-on initialization.
+INFO: [RTMG 210-278] Implementing memory 'tinyyolo_lite_bufg8j_ram (RAM)' using block RAMs with power-on initialization.
+INFO: [RTMG 210-278] Implementing memory 'tinyyolo_lite_bufhbi_ram (RAM)' using block RAMs with power-on initialization.
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:12 ; elapsed = 00:00:40 . Memory (MB): peak = 222.336 ; gain = 137.324
+INFO: [SYSC 207-301] Generating SystemC RTL for tinyyolo_lite.
+INFO: [VHDL 208-304] Generating VHDL RTL for tinyyolo_lite.
+INFO: [VLOG 209-307] Generating Verilog RTL for tinyyolo_lite.
+INFO: [HLS 200-112] Total elapsed time: 39.726 seconds; peak allocated memory: 159.250 MB.
+==============================================================
+File generated on Sat Jun 20 11:23:40 +0700 2026
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2018.3 (64-bit)
+SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xc7z020clg484-1'
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'tinyyolo_lite.c' ... 
+INFO: [HLS 200-10] Analyzing design file 'maxpool_2.c' ... 
+INFO: [HLS 200-10] Analyzing design file 'maxpool_1.c' ... 
+INFO: [HLS 200-10] Analyzing design file 'detection_head.c' ... 
+INFO: [HLS 200-10] Analyzing design file 'decode.c' ... 
+INFO: [HLS 200-10] Analyzing design file 'conv_relu3.c' ... 
+INFO: [HLS 200-10] Analyzing design file 'conv_relu2.c' ... 
+INFO: [HLS 200-10] Analyzing design file 'conv_relu1.c' ... 
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:01 ; elapsed = 00:00:19 . Memory (MB): peak = 103.504 ; gain = 17.812
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:01 ; elapsed = 00:00:19 . Memory (MB): peak = 103.504 ; gain = 17.812
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:01 ; elapsed = 00:00:19 . Memory (MB): peak = 105.824 ; gain = 20.133
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [XFORM 203-602] Inlining function 'sigmoid' into 'decode' (decode.c:65) automatically.
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:01 ; elapsed = 00:00:19 . Memory (MB): peak = 106.797 ; gain = 21.105
+INFO: [XFORM 203-602] Inlining function 'sigmoid' into 'decode' (decode.c:65) automatically.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (decode.c:48:40) to (decode.c:68:30) in function 'decode'... converting 4 basic blocks.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:02 ; elapsed = 00:00:20 . Memory (MB): peak = 127.695 ; gain = 42.004
+INFO: [XFORM 203-541] Flattening a loop nest 'LOOP_KC' (conv_relu1.c:17:58) in function 'conv_layer1'.
+INFO: [XFORM 203-541] Flattening a loop nest 'LOOP_KR' (conv_relu1.c:16:53) in function 'conv_layer1'.
+WARNING: [XFORM 203-542] Cannot flatten a loop nest 'LOOP_OC' (conv_relu1.c:14:49) in function 'conv_layer1' : 
+
+the outer loop is not a perfect loop because there is nontrivial logic in the loop latch.
+INFO: [XFORM 203-541] Flattening a loop nest 'LOOP_COL' (conv_relu1.c:13:51) in function 'conv_layer1'.
+INFO: [XFORM 203-541] Flattening a loop nest 'LOOP_ROW' (conv_relu1.c:12:46) in function 'conv_layer1'.
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:03 ; elapsed = 00:00:21 . Memory (MB): peak = 191.398 ; gain = 105.707
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'tinyyolo_lite' ...
+WARNING: [SYN 201-107] Renaming port name 'tinyyolo_lite/image' to 'tinyyolo_lite/image_r' to avoid the conflict with HDL keywords or other object names.
+WARNING: [SYN 201-107] Renaming port name 'tinyyolo_lite/output' to 'tinyyolo_lite/output_r' to avoid the conflict with HDL keywords or other object names.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'conv_layer1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'LOOP_KR_LOOP_KC_LOOP_IC'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 5.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 21.251 seconds; current allocated memory: 149.632 MB.
+INFO: [HLS 200-434] Only 1 loops out of a total 2 loops have been pipelined in this design.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.165 seconds; current allocated memory: 150.181 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'maxpool_layer1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.193 seconds; current allocated memory: 150.479 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.127 seconds; current allocated memory: 150.773 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'conv_layer2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.17 seconds; current allocated memory: 151.087 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.131 seconds; current allocated memory: 151.399 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'maxpool_layer2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.186 seconds; current allocated memory: 151.686 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.145 seconds; current allocated memory: 151.959 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'conv_layer3' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.17 seconds; current allocated memory: 152.248 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.143 seconds; current allocated memory: 152.566 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'detection_head' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.186 seconds; current allocated memory: 152.833 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.132 seconds; current allocated memory: 153.137 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'decode' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.228 seconds; current allocated memory: 153.399 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.165 seconds; current allocated memory: 153.750 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'tinyyolo_lite' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.182 seconds; current allocated memory: 153.845 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.522 seconds; current allocated memory: 154.340 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'conv_layer1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'conv_layer1'.
+INFO: [HLS 200-111]  Elapsed time: 0.306 seconds; current allocated memory: 155.235 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'maxpool_layer1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'maxpool_layer1'.
+INFO: [HLS 200-111]  Elapsed time: 0.399 seconds; current allocated memory: 156.037 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'conv_layer2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'conv_layer2'.
+INFO: [HLS 200-111]  Elapsed time: 0.327 seconds; current allocated memory: 156.657 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'maxpool_layer2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'maxpool_layer2'.
+INFO: [HLS 200-111]  Elapsed time: 0.33 seconds; current allocated memory: 157.234 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'conv_layer3' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'conv_layer3'.
+INFO: [HLS 200-111]  Elapsed time: 0.296 seconds; current allocated memory: 157.887 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'detection_head' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SYN 201-210] Renamed object name 'detection_head_w_det' to 'detection_head_w_bkb' due to the length limit 20
+INFO: [RTGEN 206-100] Finished creating RTL model for 'detection_head'.
+INFO: [HLS 200-111]  Elapsed time: 0.367 seconds; current allocated memory: 158.512 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'decode' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'decode'.
+INFO: [HLS 200-111]  Elapsed time: 0.331 seconds; current allocated memory: 159.238 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'tinyyolo_lite' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'tinyyolo_lite/image_r' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'tinyyolo_lite/output_r' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'tinyyolo_lite' to 'ap_ctrl_hs'.
+INFO: [SYN 201-210] Renamed object name 'tinyyolo_lite_buf_conv1' to 'tinyyolo_lite_bufcud' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'tinyyolo_lite_buf_pool1' to 'tinyyolo_lite_bufdEe' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'tinyyolo_lite_buf_conv2' to 'tinyyolo_lite_bufeOg' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'tinyyolo_lite_buf_pool2' to 'tinyyolo_lite_buffYi' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'tinyyolo_lite_buf_conv3' to 'tinyyolo_lite_bufg8j' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'tinyyolo_lite_buf_det' to 'tinyyolo_lite_bufhbi' due to the length limit 20
+INFO: [RTGEN 206-100] Finished creating RTL model for 'tinyyolo_lite'.
+INFO: [HLS 200-111]  Elapsed time: 0.69 seconds; current allocated memory: 160.072 MB.
+INFO: [RTMG 210-279] Implementing memory 'conv_layer1_w_conv1_rom' using distributed ROMs.
+INFO: [RTMG 210-279] Implementing memory 'conv_layer2_w_conv2_rom' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'conv_layer3_w_conv3_rom' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'detection_head_w_bkb_rom' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'decode_sigmoid_lut_rom' using distributed ROMs.
+INFO: [RTMG 210-278] Implementing memory 'tinyyolo_lite_bufcud_ram (RAM)' using block RAMs with power-on initialization.
+INFO: [RTMG 210-278] Implementing memory 'tinyyolo_lite_bufdEe_ram (RAM)' using block RAMs with power-on initialization.
+INFO: [RTMG 210-278] Implementing memory 'tinyyolo_lite_bufeOg_ram (RAM)' using block RAMs with power-on initialization.
+INFO: [RTMG 210-278] Implementing memory 'tinyyolo_lite_buffYi_ram (RAM)' using block RAMs with power-on initialization.
+INFO: [RTMG 210-278] Implementing memory 'tinyyolo_lite_bufg8j_ram (RAM)' using block RAMs with power-on initialization.
+INFO: [RTMG 210-278] Implementing memory 'tinyyolo_lite_bufhbi_ram (RAM)' using block RAMs with power-on initialization.
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:08 ; elapsed = 00:00:31 . Memory (MB): peak = 223.785 ; gain = 138.094
+INFO: [SYSC 207-301] Generating SystemC RTL for tinyyolo_lite.
+INFO: [VHDL 208-304] Generating VHDL RTL for tinyyolo_lite.
+INFO: [VLOG 209-307] Generating Verilog RTL for tinyyolo_lite.
+INFO: [HLS 200-112] Total elapsed time: 31.229 seconds; peak allocated memory: 160.072 MB.
+==============================================================
+File generated on Sat Jun 20 11:35:23 +0700 2026
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2018.3 (64-bit)
+SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xc7z020clg484-1'
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'tinyyolo_lite.c' ... 
+INFO: [HLS 200-10] Analyzing design file 'maxpool_2.c' ... 
+INFO: [HLS 200-10] Analyzing design file 'maxpool_1.c' ... 
+INFO: [HLS 200-10] Analyzing design file 'detection_head.c' ... 
+INFO: [HLS 200-10] Analyzing design file 'decode.c' ... 
+INFO: [HLS 200-10] Analyzing design file 'conv_relu3.c' ... 
+INFO: [HLS 200-10] Analyzing design file 'conv_relu2.c' ... 
+INFO: [HLS 200-10] Analyzing design file 'conv_relu1.c' ... 
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:01 ; elapsed = 00:00:18 . Memory (MB): peak = 103.543 ; gain = 18.449
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:01 ; elapsed = 00:00:18 . Memory (MB): peak = 103.543 ; gain = 18.449
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:01 ; elapsed = 00:00:19 . Memory (MB): peak = 105.703 ; gain = 20.609
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [XFORM 203-602] Inlining function 'sigmoid' into 'decode' (decode.c:65) automatically.
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:02 ; elapsed = 00:00:19 . Memory (MB): peak = 106.340 ; gain = 21.246
+INFO: [XFORM 203-602] Inlining function 'sigmoid' into 'decode' (decode.c:65) automatically.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (decode.c:48:40) to (decode.c:68:30) in function 'decode'... converting 4 basic blocks.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:02 ; elapsed = 00:00:20 . Memory (MB): peak = 128.879 ; gain = 43.785
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:03 ; elapsed = 00:00:21 . Memory (MB): peak = 191.191 ; gain = 106.098
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'tinyyolo_lite' ...
+WARNING: [SYN 201-107] Renaming port name 'tinyyolo_lite/image' to 'tinyyolo_lite/image_r' to avoid the conflict with HDL keywords or other object names.
+WARNING: [SYN 201-107] Renaming port name 'tinyyolo_lite/output' to 'tinyyolo_lite/output_r' to avoid the conflict with HDL keywords or other object names.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'conv_layer1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 20.87 seconds; current allocated memory: 149.321 MB.
+INFO: [HLS 200-434] Only 0 loops out of a total 6 loops have been pipelined in this design.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.168 seconds; current allocated memory: 149.741 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'maxpool_layer1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.181 seconds; current allocated memory: 150.040 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.139 seconds; current allocated memory: 150.333 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'conv_layer2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.235 seconds; current allocated memory: 150.611 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.169 seconds; current allocated memory: 150.959 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'maxpool_layer2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.196 seconds; current allocated memory: 151.193 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.135 seconds; current allocated memory: 151.504 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'conv_layer3' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.191 seconds; current allocated memory: 151.756 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.149 seconds; current allocated memory: 152.110 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'detection_head' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.194 seconds; current allocated memory: 152.341 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.141 seconds; current allocated memory: 152.645 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'decode' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.173 seconds; current allocated memory: 152.959 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.145 seconds; current allocated memory: 153.310 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'tinyyolo_lite' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.155 seconds; current allocated memory: 153.405 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.402 seconds; current allocated memory: 153.796 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'conv_layer1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'conv_layer1'.
+INFO: [HLS 200-111]  Elapsed time: 0.248 seconds; current allocated memory: 154.506 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'maxpool_layer1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'maxpool_layer1'.
+INFO: [HLS 200-111]  Elapsed time: 0.289 seconds; current allocated memory: 155.211 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'conv_layer2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'conv_layer2'.
+INFO: [HLS 200-111]  Elapsed time: 0.3 seconds; current allocated memory: 155.831 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'maxpool_layer2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'maxpool_layer2'.
+INFO: [HLS 200-111]  Elapsed time: 0.345 seconds; current allocated memory: 156.424 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'conv_layer3' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'conv_layer3'.
+INFO: [HLS 200-111]  Elapsed time: 0.315 seconds; current allocated memory: 157.076 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'detection_head' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SYN 201-210] Renamed object name 'detection_head_w_det' to 'detection_head_w_bkb' due to the length limit 20
+INFO: [RTGEN 206-100] Finished creating RTL model for 'detection_head'.
+INFO: [HLS 200-111]  Elapsed time: 0.368 seconds; current allocated memory: 157.686 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'decode' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'decode'.
+INFO: [HLS 200-111]  Elapsed time: 0.376 seconds; current allocated memory: 158.412 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'tinyyolo_lite' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'tinyyolo_lite/image_r' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'tinyyolo_lite/output_r' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'tinyyolo_lite' to 'ap_ctrl_hs'.
+INFO: [SYN 201-210] Renamed object name 'tinyyolo_lite_buf_conv1' to 'tinyyolo_lite_bufcud' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'tinyyolo_lite_buf_pool1' to 'tinyyolo_lite_bufdEe' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'tinyyolo_lite_buf_conv2' to 'tinyyolo_lite_bufeOg' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'tinyyolo_lite_buf_pool2' to 'tinyyolo_lite_buffYi' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'tinyyolo_lite_buf_conv3' to 'tinyyolo_lite_bufg8j' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'tinyyolo_lite_buf_det' to 'tinyyolo_lite_bufhbi' due to the length limit 20
+INFO: [RTGEN 206-100] Finished creating RTL model for 'tinyyolo_lite'.
+INFO: [HLS 200-111]  Elapsed time: 0.563 seconds; current allocated memory: 159.246 MB.
+INFO: [RTMG 210-279] Implementing memory 'conv_layer1_w_conv1_rom' using distributed ROMs.
+INFO: [RTMG 210-279] Implementing memory 'conv_layer2_w_conv2_rom' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'conv_layer3_w_conv3_rom' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'detection_head_w_bkb_rom' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'decode_sigmoid_lut_rom' using distributed ROMs.
+INFO: [RTMG 210-278] Implementing memory 'tinyyolo_lite_bufcud_ram (RAM)' using block RAMs with power-on initialization.
+INFO: [RTMG 210-278] Implementing memory 'tinyyolo_lite_bufdEe_ram (RAM)' using block RAMs with power-on initialization.
+INFO: [RTMG 210-278] Implementing memory 'tinyyolo_lite_bufeOg_ram (RAM)' using block RAMs with power-on initialization.
+INFO: [RTMG 210-278] Implementing memory 'tinyyolo_lite_buffYi_ram (RAM)' using block RAMs with power-on initialization.
+INFO: [RTMG 210-278] Implementing memory 'tinyyolo_lite_bufg8j_ram (RAM)' using block RAMs with power-on initialization.
+INFO: [RTMG 210-278] Implementing memory 'tinyyolo_lite_bufhbi_ram (RAM)' using block RAMs with power-on initialization.
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:08 ; elapsed = 00:00:31 . Memory (MB): peak = 221.895 ; gain = 136.801
+INFO: [SYSC 207-301] Generating SystemC RTL for tinyyolo_lite.
+INFO: [VHDL 208-304] Generating VHDL RTL for tinyyolo_lite.
+INFO: [VLOG 209-307] Generating Verilog RTL for tinyyolo_lite.
+INFO: [HLS 200-112] Total elapsed time: 30.824 seconds; peak allocated memory: 159.246 MB.
+==============================================================
+File generated on Sat Jun 20 16:02:40 +0700 2026
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2018.3 (64-bit)
+SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xc7z020clg484-1'
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s).
+INFO: [SIM 211-3] *************** CSIM finish ***************
+INFO: [Common 17-206] Exiting vivado_hls at Sat Jun 20 16:03:03 2026...
+==============================================================
+File generated on Sat Jun 20 16:03:15 +0700 2026
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2018.3 (64-bit)
+SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xc7z020clg484-1'
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+INFO: [SIM 211-1] CSim done with 0 errors.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+INFO: [Common 17-206] Exiting vivado_hls at Sat Jun 20 16:04:03 2026...
+==============================================================
+File generated on Sat Jun 20 16:15:06 +0700 2026
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2018.3 (64-bit)
+SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xc7z020clg484-1'
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'tinyyolo_lite.c' ... 
+INFO: [HLS 200-10] Analyzing design file 'maxpool_2.c' ... 
+INFO: [HLS 200-10] Analyzing design file 'maxpool_1.c' ... 
+INFO: [HLS 200-10] Analyzing design file 'detection_head.c' ... 
+INFO: [HLS 200-10] Analyzing design file 'decode.c' ... 
+INFO: [HLS 200-10] Analyzing design file 'conv_relu3.c' ... 
+INFO: [HLS 200-10] Analyzing design file 'conv_relu2.c' ... 
+INFO: [HLS 200-10] Analyzing design file 'conv_relu1.c' ... 
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:02 ; elapsed = 00:00:30 . Memory (MB): peak = 102.664 ; gain = 17.645
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:02 ; elapsed = 00:00:30 . Memory (MB): peak = 102.664 ; gain = 17.645
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:02 ; elapsed = 00:00:31 . Memory (MB): peak = 105.098 ; gain = 20.078
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [XFORM 203-602] Inlining function 'sigmoid' into 'decode' (decode.c:65) automatically.
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:02 ; elapsed = 00:00:31 . Memory (MB): peak = 106.094 ; gain = 21.074
+INFO: [XFORM 203-602] Inlining function 'sigmoid' into 'decode' (decode.c:65) automatically.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (decode.c:48:40) to (decode.c:68:30) in function 'decode'... converting 4 basic blocks.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:03 ; elapsed = 00:00:32 . Memory (MB): peak = 126.723 ; gain = 41.703
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:04 ; elapsed = 00:00:33 . Memory (MB): peak = 190.848 ; gain = 105.828
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'tinyyolo_lite' ...
+WARNING: [SYN 201-107] Renaming port name 'tinyyolo_lite/image' to 'tinyyolo_lite/image_r' to avoid the conflict with HDL keywords or other object names.
+WARNING: [SYN 201-107] Renaming port name 'tinyyolo_lite/output' to 'tinyyolo_lite/output_r' to avoid the conflict with HDL keywords or other object names.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'conv_layer1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 32.775 seconds; current allocated memory: 149.060 MB.
+INFO: [HLS 200-434] Only 0 loops out of a total 6 loops have been pipelined in this design.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.185 seconds; current allocated memory: 149.484 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'maxpool_layer1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.204 seconds; current allocated memory: 149.732 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.15 seconds; current allocated memory: 150.065 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'conv_layer2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.214 seconds; current allocated memory: 150.360 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.153 seconds; current allocated memory: 150.711 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'maxpool_layer2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.229 seconds; current allocated memory: 150.948 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.172 seconds; current allocated memory: 151.260 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'conv_layer3' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.203 seconds; current allocated memory: 151.515 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.184 seconds; current allocated memory: 151.835 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'detection_head' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.231 seconds; current allocated memory: 152.104 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.169 seconds; current allocated memory: 152.411 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'decode' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.203 seconds; current allocated memory: 152.712 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.172 seconds; current allocated memory: 153.065 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'tinyyolo_lite' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.231 seconds; current allocated memory: 153.163 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.486 seconds; current allocated memory: 153.555 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'conv_layer1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'conv_layer1'.
+INFO: [HLS 200-111]  Elapsed time: 0.29 seconds; current allocated memory: 154.267 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'maxpool_layer1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'maxpool_layer1'.
+INFO: [HLS 200-111]  Elapsed time: 0.365 seconds; current allocated memory: 154.959 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'conv_layer2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'conv_layer2'.
+INFO: [HLS 200-111]  Elapsed time: 0.428 seconds; current allocated memory: 155.597 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'maxpool_layer2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'maxpool_layer2'.
+INFO: [HLS 200-111]  Elapsed time: 0.403 seconds; current allocated memory: 156.176 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'conv_layer3' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'conv_layer3'.
+INFO: [HLS 200-111]  Elapsed time: 0.346 seconds; current allocated memory: 156.815 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'detection_head' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SYN 201-210] Renamed object name 'detection_head_w_det' to 'detection_head_w_bkb' due to the length limit 20
+INFO: [RTGEN 206-100] Finished creating RTL model for 'detection_head'.
+INFO: [HLS 200-111]  Elapsed time: 0.42 seconds; current allocated memory: 157.442 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'decode' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'decode'.
+INFO: [HLS 200-111]  Elapsed time: 0.416 seconds; current allocated memory: 158.170 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'tinyyolo_lite' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'tinyyolo_lite/image_r' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'tinyyolo_lite/output_r' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'tinyyolo_lite' to 'ap_ctrl_hs'.
+INFO: [SYN 201-210] Renamed object name 'tinyyolo_lite_buf_conv1' to 'tinyyolo_lite_bufcud' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'tinyyolo_lite_buf_pool1' to 'tinyyolo_lite_bufdEe' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'tinyyolo_lite_buf_conv2' to 'tinyyolo_lite_bufeOg' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'tinyyolo_lite_buf_pool2' to 'tinyyolo_lite_buffYi' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'tinyyolo_lite_buf_conv3' to 'tinyyolo_lite_bufg8j' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'tinyyolo_lite_buf_det' to 'tinyyolo_lite_bufhbi' due to the length limit 20
+INFO: [RTGEN 206-100] Finished creating RTL model for 'tinyyolo_lite'.
+INFO: [HLS 200-111]  Elapsed time: 0.643 seconds; current allocated memory: 158.994 MB.
+INFO: [RTMG 210-279] Implementing memory 'conv_layer1_w_conv1_rom' using distributed ROMs.
+INFO: [RTMG 210-279] Implementing memory 'conv_layer2_w_conv2_rom' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'conv_layer3_w_conv3_rom' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'detection_head_w_bkb_rom' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'decode_sigmoid_lut_rom' using distributed ROMs.
+INFO: [RTMG 210-278] Implementing memory 'tinyyolo_lite_bufcud_ram (RAM)' using block RAMs with power-on initialization.
+INFO: [RTMG 210-278] Implementing memory 'tinyyolo_lite_bufdEe_ram (RAM)' using block RAMs with power-on initialization.
+INFO: [RTMG 210-278] Implementing memory 'tinyyolo_lite_bufeOg_ram (RAM)' using block RAMs with power-on initialization.
+INFO: [RTMG 210-278] Implementing memory 'tinyyolo_lite_buffYi_ram (RAM)' using block RAMs with power-on initialization.
+INFO: [RTMG 210-278] Implementing memory 'tinyyolo_lite_bufg8j_ram (RAM)' using block RAMs with power-on initialization.
+INFO: [RTMG 210-278] Implementing memory 'tinyyolo_lite_bufhbi_ram (RAM)' using block RAMs with power-on initialization.
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:09 ; elapsed = 00:00:44 . Memory (MB): peak = 222.406 ; gain = 137.387
+INFO: [SYSC 207-301] Generating SystemC RTL for tinyyolo_lite.
+INFO: [VHDL 208-304] Generating VHDL RTL for tinyyolo_lite.
+INFO: [VLOG 209-307] Generating Verilog RTL for tinyyolo_lite.
+INFO: [HLS 200-10] Opening solution 'E:/work_station/TinyYOLO_Lite/tinyyolo_lite/optimization_solution'.
+==============================================================
+File generated on Sat Jun 20 16:25:15 +0700 2026
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2018.3 (64-bit)
+SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xc7z020clg484-1'
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+INFO: [SIM 211-1] CSim done with 0 errors.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+==============================================================
+File generated on Sat Jun 20 16:25:55 +0700 2026
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2018.3 (64-bit)
+SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xc7z020clg484-1'
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'conv_relu1.c' ... 
+INFO: [HLS 200-10] Analyzing design file 'conv_relu2.c' ... 
+INFO: [HLS 200-10] Analyzing design file 'conv_relu3.c' ... 
+INFO: [HLS 200-10] Analyzing design file 'decode.c' ... 
+INFO: [HLS 200-10] Analyzing design file 'detection_head.c' ... 
+INFO: [HLS 200-10] Analyzing design file 'maxpool_1.c' ... 
+INFO: [HLS 200-10] Analyzing design file 'maxpool_2.c' ... 
+INFO: [HLS 200-10] Analyzing design file 'tinyyolo_lite.c' ... 
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:01 ; elapsed = 00:00:19 . Memory (MB): peak = 103.598 ; gain = 18.887
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:01 ; elapsed = 00:00:19 . Memory (MB): peak = 103.598 ; gain = 18.887
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:01 ; elapsed = 00:00:19 . Memory (MB): peak = 105.398 ; gain = 20.688
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [XFORM 203-602] Inlining function 'sigmoid' into 'decode' (decode.c:65) automatically.
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:02 ; elapsed = 00:00:19 . Memory (MB): peak = 106.512 ; gain = 21.801
+INFO: [XFORM 203-602] Inlining function 'sigmoid' into 'decode' (decode.c:65) automatically.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (decode.c:48:40) to (decode.c:68:30) in function 'decode'... converting 4 basic blocks.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:02 ; elapsed = 00:00:20 . Memory (MB): peak = 128.094 ; gain = 43.383
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:03 ; elapsed = 00:00:21 . Memory (MB): peak = 191.234 ; gain = 106.523
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'tinyyolo_lite' ...
+WARNING: [SYN 201-107] Renaming port name 'tinyyolo_lite/image' to 'tinyyolo_lite/image_r' to avoid the conflict with HDL keywords or other object names.
+WARNING: [SYN 201-107] Renaming port name 'tinyyolo_lite/output' to 'tinyyolo_lite/output_r' to avoid the conflict with HDL keywords or other object names.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'conv_layer1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 20.907 seconds; current allocated memory: 149.296 MB.
+INFO: [HLS 200-434] Only 0 loops out of a total 6 loops have been pipelined in this design.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.174 seconds; current allocated memory: 149.717 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'maxpool_layer1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.166 seconds; current allocated memory: 149.984 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.138 seconds; current allocated memory: 150.278 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'conv_layer2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.172 seconds; current allocated memory: 150.571 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.138 seconds; current allocated memory: 150.919 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'maxpool_layer2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.187 seconds; current allocated memory: 151.153 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.126 seconds; current allocated memory: 151.464 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'conv_layer3' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.17 seconds; current allocated memory: 151.716 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.14 seconds; current allocated memory: 152.070 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'detection_head' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.182 seconds; current allocated memory: 152.300 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.13 seconds; current allocated memory: 152.605 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'decode' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.182 seconds; current allocated memory: 152.919 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.146 seconds; current allocated memory: 153.270 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'tinyyolo_lite' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.172 seconds; current allocated memory: 153.365 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.386 seconds; current allocated memory: 153.771 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'conv_layer1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'conv_layer1'.
+INFO: [HLS 200-111]  Elapsed time: 0.247 seconds; current allocated memory: 154.481 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'maxpool_layer1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'maxpool_layer1'.
+INFO: [HLS 200-111]  Elapsed time: 0.29 seconds; current allocated memory: 155.171 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'conv_layer2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'conv_layer2'.
+INFO: [HLS 200-111]  Elapsed time: 0.304 seconds; current allocated memory: 155.791 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'maxpool_layer2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'maxpool_layer2'.
+INFO: [HLS 200-111]  Elapsed time: 0.323 seconds; current allocated memory: 156.384 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'conv_layer3' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'conv_layer3'.
+INFO: [HLS 200-111]  Elapsed time: 0.304 seconds; current allocated memory: 157.036 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'detection_head' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SYN 201-210] Renamed object name 'detection_head_w_det' to 'detection_head_w_bkb' due to the length limit 20
+INFO: [RTGEN 206-100] Finished creating RTL model for 'detection_head'.
+INFO: [HLS 200-111]  Elapsed time: 0.377 seconds; current allocated memory: 157.661 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'decode' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'decode'.
+INFO: [HLS 200-111]  Elapsed time: 0.347 seconds; current allocated memory: 158.387 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'tinyyolo_lite' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'tinyyolo_lite/image_r' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'tinyyolo_lite/output_r' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'tinyyolo_lite' to 'ap_ctrl_hs'.
+INFO: [SYN 201-210] Renamed object name 'tinyyolo_lite_buf_conv1' to 'tinyyolo_lite_bufcud' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'tinyyolo_lite_buf_pool1' to 'tinyyolo_lite_bufdEe' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'tinyyolo_lite_buf_conv2' to 'tinyyolo_lite_bufeOg' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'tinyyolo_lite_buf_pool2' to 'tinyyolo_lite_buffYi' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'tinyyolo_lite_buf_conv3' to 'tinyyolo_lite_bufg8j' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'tinyyolo_lite_buf_det' to 'tinyyolo_lite_bufhbi' due to the length limit 20
+INFO: [RTGEN 206-100] Finished creating RTL model for 'tinyyolo_lite'.
+INFO: [HLS 200-111]  Elapsed time: 0.525 seconds; current allocated memory: 159.191 MB.
+INFO: [RTMG 210-279] Implementing memory 'conv_layer1_w_conv1_rom' using distributed ROMs.
+INFO: [RTMG 210-279] Implementing memory 'conv_layer2_w_conv2_rom' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'conv_layer3_w_conv3_rom' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'detection_head_w_bkb_rom' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'decode_sigmoid_lut_rom' using distributed ROMs.
+INFO: [RTMG 210-278] Implementing memory 'tinyyolo_lite_bufcud_ram (RAM)' using block RAMs with power-on initialization.
+INFO: [RTMG 210-278] Implementing memory 'tinyyolo_lite_bufdEe_ram (RAM)' using block RAMs with power-on initialization.
+INFO: [RTMG 210-278] Implementing memory 'tinyyolo_lite_bufeOg_ram (RAM)' using block RAMs with power-on initialization.
+INFO: [RTMG 210-278] Implementing memory 'tinyyolo_lite_buffYi_ram (RAM)' using block RAMs with power-on initialization.
+INFO: [RTMG 210-278] Implementing memory 'tinyyolo_lite_bufg8j_ram (RAM)' using block RAMs with power-on initialization.
+INFO: [RTMG 210-278] Implementing memory 'tinyyolo_lite_bufhbi_ram (RAM)' using block RAMs with power-on initialization.
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:08 ; elapsed = 00:00:31 . Memory (MB): peak = 221.910 ; gain = 137.199
+INFO: [SYSC 207-301] Generating SystemC RTL for tinyyolo_lite.
+INFO: [VHDL 208-304] Generating VHDL RTL for tinyyolo_lite.
+INFO: [VLOG 209-307] Generating Verilog RTL for tinyyolo_lite.
+INFO: [HLS 200-112] Total elapsed time: 30.636 seconds; peak allocated memory: 159.191 MB.
+==============================================================
+File generated on Sat Jun 20 22:48:53 +0700 2026
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2018.3 (64-bit)
+SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xc7z020clg484-1'
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'conv_relu1.c' ... 
+INFO: [HLS 200-10] Analyzing design file 'conv_relu2.c' ... 
+INFO: [HLS 200-10] Analyzing design file 'conv_relu3.c' ... 
+INFO: [HLS 200-10] Analyzing design file 'decode.c' ... 
+INFO: [HLS 200-10] Analyzing design file 'detection_head.c' ... 
+INFO: [HLS 200-10] Analyzing design file 'maxpool_1.c' ... 
+INFO: [HLS 200-10] Analyzing design file 'maxpool_2.c' ... 
+INFO: [HLS 200-10] Analyzing design file 'tinyyolo_lite.c' ... 
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:02 ; elapsed = 00:00:26 . Memory (MB): peak = 103.879 ; gain = 19.051
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:02 ; elapsed = 00:00:26 . Memory (MB): peak = 103.879 ; gain = 19.051
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:02 ; elapsed = 00:00:27 . Memory (MB): peak = 105.941 ; gain = 21.113
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [XFORM 203-602] Inlining function 'sigmoid' into 'decode' (decode.c:65) automatically.
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:02 ; elapsed = 00:00:28 . Memory (MB): peak = 106.801 ; gain = 21.973
+INFO: [XFORM 203-502] Unrolling all sub-loops inside loop 'POOL_ROW' (maxpool_1.c:18) in function 'maxpool_layer1' for pipelining.
+INFO: [HLS 200-489] Unrolling loop 'POOL_COL' (maxpool_1.c:20) in function 'maxpool_layer1' completely with a factor of 2.
+INFO: [XFORM 203-101] Partitioning array 'image' (tinyyolo_lite.c:40) in dimension 3 completely.
+INFO: [XFORM 203-101] Partitioning array 'w_conv1'  in dimension 3 completely.
+INFO: [XFORM 203-602] Inlining function 'sigmoid' into 'decode' (decode.c:65) automatically.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (decode.c:48:40) to (decode.c:68:30) in function 'decode'... converting 4 basic blocks.
+INFO: [XFORM 203-603] Inlining function 'aesl_mux_load.3[3 x [3 x [8 x i32]]]P.i2.i64.i64.i64' into 'conv_layer1' (conv_relu1.c:24).
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:04 ; elapsed = 00:00:29 . Memory (MB): peak = 128.559 ; gain = 43.730
+WARNING: [XFORM 203-542] Cannot flatten a loop nest 'Col' (maxpool_1.c:12:64) in function 'maxpool_layer1' : 
+
+the outer loop is not a perfect loop.
+INFO: [XFORM 203-541] Flattening a loop nest 'Row' (maxpool_1.c:10:60) in function 'maxpool_layer1'.
+INFO: [XFORM 203-541] Flattening a loop nest 'Channel' (maxpool_1.c:8:44) in function 'maxpool_layer1'.
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:05 ; elapsed = 00:00:31 . Memory (MB): peak = 192.027 ; gain = 107.199
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'tinyyolo_lite' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'conv_layer1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 31.534 seconds; current allocated memory: 149.890 MB.
+INFO: [HLS 200-434] Only 0 loops out of a total 6 loops have been pipelined in this design.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.282 seconds; current allocated memory: 150.232 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'maxpool_layer1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'POOL_ROW'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 5.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.444 seconds; current allocated memory: 150.560 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.291 seconds; current allocated memory: 150.921 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'conv_layer2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.408 seconds; current allocated memory: 151.251 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.246 seconds; current allocated memory: 151.562 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'maxpool_layer2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.374 seconds; current allocated memory: 151.833 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.254 seconds; current allocated memory: 152.107 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'conv_layer3' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.393 seconds; current allocated memory: 152.395 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.268 seconds; current allocated memory: 152.713 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'detection_head' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.394 seconds; current allocated memory: 152.980 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.252 seconds; current allocated memory: 153.285 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'decode' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.375 seconds; current allocated memory: 153.546 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.261 seconds; current allocated memory: 153.934 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'tinyyolo_lite' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.3 seconds; current allocated memory: 153.997 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.527 seconds; current allocated memory: 154.433 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'conv_layer1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SYN 201-210] Renamed object name 'conv_layer1_w_conv1_2' to 'conv_layer1_w_conbkb' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'conv_layer1_w_conv1_0' to 'conv_layer1_w_concud' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'conv_layer1_w_conv1_1' to 'conv_layer1_w_condEe' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'tinyyolo_lite_mux_32_32_1_1' to 'tinyyolo_lite_muxeOg' due to the length limit 20
+INFO: [RTGEN 206-100] Generating core module 'tinyyolo_lite_muxeOg': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'conv_layer1'.
+INFO: [HLS 200-111]  Elapsed time: 0.413 seconds; current allocated memory: 155.227 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'maxpool_layer1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'maxpool_layer1'.
+INFO: [HLS 200-111]  Elapsed time: 0.411 seconds; current allocated memory: 156.101 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'conv_layer2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'conv_layer2'.
+INFO: [HLS 200-111]  Elapsed time: 0.431 seconds; current allocated memory: 156.807 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'maxpool_layer2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'maxpool_layer2'.
+INFO: [HLS 200-111]  Elapsed time: 0.431 seconds; current allocated memory: 157.385 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'conv_layer3' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'conv_layer3'.
+INFO: [HLS 200-111]  Elapsed time: 0.393 seconds; current allocated memory: 158.039 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'detection_head' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SYN 201-210] Renamed object name 'detection_head_w_det' to 'detection_head_w_fYi' due to the length limit 20
+INFO: [RTGEN 206-100] Finished creating RTL model for 'detection_head'.
+INFO: [HLS 200-111]  Elapsed time: 0.422 seconds; current allocated memory: 158.702 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'decode' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'decode'.
+INFO: [HLS 200-111]  Elapsed time: 0.447 seconds; current allocated memory: 159.429 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'tinyyolo_lite' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'tinyyolo_lite/image_0' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'tinyyolo_lite/image_1' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'tinyyolo_lite/image_2' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'tinyyolo_lite/output_r' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'tinyyolo_lite' to 'ap_ctrl_hs'.
+WARNING: [RTGEN 206-101] Global array 'w_conv1_2' will not be exposed as RTL port.
+WARNING: [RTGEN 206-101] Global array 'w_conv1_0' will not be exposed as RTL port.
+WARNING: [RTGEN 206-101] Global array 'w_conv1_1' will not be exposed as RTL port.
+INFO: [SYN 201-210] Renamed object name 'tinyyolo_lite_buf_conv1' to 'tinyyolo_lite_bufg8j' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'tinyyolo_lite_buf_pool1' to 'tinyyolo_lite_bufhbi' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'tinyyolo_lite_buf_conv2' to 'tinyyolo_lite_bufibs' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'tinyyolo_lite_buf_pool2' to 'tinyyolo_lite_bufjbC' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'tinyyolo_lite_buf_conv3' to 'tinyyolo_lite_bufkbM' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'tinyyolo_lite_buf_det' to 'tinyyolo_lite_buflbW' due to the length limit 20
+INFO: [RTGEN 206-100] Finished creating RTL model for 'tinyyolo_lite'.
+INFO: [HLS 200-111]  Elapsed time: 0.761 seconds; current allocated memory: 160.272 MB.
+INFO: [RTMG 210-279] Implementing memory 'conv_layer1_w_conbkb_rom' using distributed ROMs.
+INFO: [RTMG 210-279] Implementing memory 'conv_layer1_w_condEe_rom' using distributed ROMs.
+INFO: [RTMG 210-279] Implementing memory 'conv_layer2_w_conv2_rom' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'conv_layer3_w_conv3_rom' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'detection_head_w_fYi_rom' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'decode_sigmoid_lut_rom' using distributed ROMs.
+INFO: [RTMG 210-278] Implementing memory 'tinyyolo_lite_bufg8j_ram (RAM)' using block RAMs with power-on initialization.
+INFO: [RTMG 210-278] Implementing memory 'tinyyolo_lite_bufhbi_ram (RAM)' using block RAMs with power-on initialization.
+INFO: [RTMG 210-278] Implementing memory 'tinyyolo_lite_bufibs_ram (RAM)' using block RAMs with power-on initialization.
+INFO: [RTMG 210-278] Implementing memory 'tinyyolo_lite_bufjbC_ram (RAM)' using block RAMs with power-on initialization.
+INFO: [RTMG 210-278] Implementing memory 'tinyyolo_lite_bufkbM_ram (RAM)' using block RAMs with power-on initialization.
+INFO: [RTMG 210-278] Implementing memory 'tinyyolo_lite_buflbW_ram (RAM)' using block RAMs with power-on initialization.
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:13 ; elapsed = 00:00:45 . Memory (MB): peak = 224.820 ; gain = 139.992
+INFO: [SYSC 207-301] Generating SystemC RTL for tinyyolo_lite.
+INFO: [VHDL 208-304] Generating VHDL RTL for tinyyolo_lite.
+INFO: [VLOG 209-307] Generating Verilog RTL for tinyyolo_lite.
+INFO: [HLS 200-112] Total elapsed time: 45.474 seconds; peak allocated memory: 160.272 MB.
+==============================================================
+File generated on Sat Jun 20 22:51:47 +0700 2026
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2018.3 (64-bit)
+SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xc7z020clg484-1'
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'conv_relu1.c' ... 
+INFO: [HLS 200-10] Analyzing design file 'conv_relu2.c' ... 
+INFO: [HLS 200-10] Analyzing design file 'conv_relu3.c' ... 
+INFO: [HLS 200-10] Analyzing design file 'decode.c' ... 
+INFO: [HLS 200-10] Analyzing design file 'detection_head.c' ... 
+INFO: [HLS 200-10] Analyzing design file 'maxpool_1.c' ... 
+INFO: [HLS 200-10] Analyzing design file 'maxpool_2.c' ... 
+INFO: [HLS 200-10] Analyzing design file 'tinyyolo_lite.c' ... 
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:02 ; elapsed = 00:00:22 . Memory (MB): peak = 103.539 ; gain = 18.523
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:02 ; elapsed = 00:00:22 . Memory (MB): peak = 103.539 ; gain = 18.523
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:02 ; elapsed = 00:00:22 . Memory (MB): peak = 105.539 ; gain = 20.523
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [XFORM 203-602] Inlining function 'sigmoid' into 'decode' (decode.c:65) automatically.
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:02 ; elapsed = 00:00:23 . Memory (MB): peak = 106.258 ; gain = 21.242
+INFO: [XFORM 203-602] Inlining function 'sigmoid' into 'decode' (decode.c:65) automatically.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (decode.c:48:40) to (decode.c:68:30) in function 'decode'... converting 4 basic blocks.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:04 ; elapsed = 00:00:24 . Memory (MB): peak = 127.863 ; gain = 42.848
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:05 ; elapsed = 00:00:26 . Memory (MB): peak = 191.043 ; gain = 106.027
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'tinyyolo_lite' ...
+WARNING: [SYN 201-107] Renaming port name 'tinyyolo_lite/image' to 'tinyyolo_lite/image_r' to avoid the conflict with HDL keywords or other object names.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'conv_layer1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 26.026 seconds; current allocated memory: 149.296 MB.
+INFO: [HLS 200-434] Only 0 loops out of a total 6 loops have been pipelined in this design.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.268 seconds; current allocated memory: 149.716 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'maxpool_layer1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.374 seconds; current allocated memory: 149.984 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.282 seconds; current allocated memory: 150.277 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'conv_layer2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.402 seconds; current allocated memory: 150.570 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.292 seconds; current allocated memory: 150.919 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'maxpool_layer2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.493 seconds; current allocated memory: 151.153 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.26 seconds; current allocated memory: 151.463 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'conv_layer3' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.418 seconds; current allocated memory: 151.715 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.281 seconds; current allocated memory: 152.070 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'detection_head' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.425 seconds; current allocated memory: 152.300 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.254 seconds; current allocated memory: 152.605 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'decode' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.386 seconds; current allocated memory: 152.918 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.276 seconds; current allocated memory: 153.269 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'tinyyolo_lite' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.332 seconds; current allocated memory: 153.365 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.512 seconds; current allocated memory: 153.771 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'conv_layer1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'conv_layer1'.
+INFO: [HLS 200-111]  Elapsed time: 0.287 seconds; current allocated memory: 154.481 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'maxpool_layer1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'maxpool_layer1'.
+INFO: [HLS 200-111]  Elapsed time: 0.344 seconds; current allocated memory: 155.170 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'conv_layer2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'conv_layer2'.
+INFO: [HLS 200-111]  Elapsed time: 0.384 seconds; current allocated memory: 155.791 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'maxpool_layer2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'maxpool_layer2'.
+INFO: [HLS 200-111]  Elapsed time: 0.45 seconds; current allocated memory: 156.383 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'conv_layer3' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'conv_layer3'.
+INFO: [HLS 200-111]  Elapsed time: 0.385 seconds; current allocated memory: 157.036 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'detection_head' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SYN 201-210] Renamed object name 'detection_head_w_det' to 'detection_head_w_bkb' due to the length limit 20
+INFO: [RTGEN 206-100] Finished creating RTL model for 'detection_head'.
+INFO: [HLS 200-111]  Elapsed time: 0.491 seconds; current allocated memory: 157.661 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'decode' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'decode'.
+INFO: [HLS 200-111]  Elapsed time: 0.477 seconds; current allocated memory: 158.387 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'tinyyolo_lite' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'tinyyolo_lite/image_r' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'tinyyolo_lite/output_r' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'tinyyolo_lite' to 'ap_ctrl_hs'.
+INFO: [SYN 201-210] Renamed object name 'tinyyolo_lite_buf_conv1' to 'tinyyolo_lite_bufcud' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'tinyyolo_lite_buf_pool1' to 'tinyyolo_lite_bufdEe' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'tinyyolo_lite_buf_conv2' to 'tinyyolo_lite_bufeOg' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'tinyyolo_lite_buf_pool2' to 'tinyyolo_lite_buffYi' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'tinyyolo_lite_buf_conv3' to 'tinyyolo_lite_bufg8j' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'tinyyolo_lite_buf_det' to 'tinyyolo_lite_bufhbi' due to the length limit 20
+INFO: [RTGEN 206-100] Finished creating RTL model for 'tinyyolo_lite'.
+INFO: [HLS 200-111]  Elapsed time: 0.733 seconds; current allocated memory: 159.190 MB.
+INFO: [RTMG 210-279] Implementing memory 'conv_layer1_w_conv1_rom' using distributed ROMs.
+INFO: [RTMG 210-279] Implementing memory 'conv_layer2_w_conv2_rom' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'conv_layer3_w_conv3_rom' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'detection_head_w_bkb_rom' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'decode_sigmoid_lut_rom' using distributed ROMs.
+INFO: [RTMG 210-278] Implementing memory 'tinyyolo_lite_bufcud_ram (RAM)' using block RAMs with power-on initialization.
+INFO: [RTMG 210-278] Implementing memory 'tinyyolo_lite_bufdEe_ram (RAM)' using block RAMs with power-on initialization.
+INFO: [RTMG 210-278] Implementing memory 'tinyyolo_lite_bufeOg_ram (RAM)' using block RAMs with power-on initialization.
+INFO: [RTMG 210-278] Implementing memory 'tinyyolo_lite_buffYi_ram (RAM)' using block RAMs with power-on initialization.
+INFO: [RTMG 210-278] Implementing memory 'tinyyolo_lite_bufg8j_ram (RAM)' using block RAMs with power-on initialization.
+INFO: [RTMG 210-278] Implementing memory 'tinyyolo_lite_bufhbi_ram (RAM)' using block RAMs with power-on initialization.
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:13 ; elapsed = 00:00:39 . Memory (MB): peak = 222.383 ; gain = 137.367
+INFO: [SYSC 207-301] Generating SystemC RTL for tinyyolo_lite.
+INFO: [VHDL 208-304] Generating VHDL RTL for tinyyolo_lite.
+INFO: [VLOG 209-307] Generating Verilog RTL for tinyyolo_lite.
+INFO: [HLS 200-112] Total elapsed time: 39.599 seconds; peak allocated memory: 159.190 MB.
+==============================================================
+File generated on Sun Jun 21 08:47:35 +0700 2026
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2018.3 (64-bit)
+SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xc7z020clg484-1'
+INFO: [IMPL 213-8] Exporting RTL as a Vivado IP.
+ERROR: [IMPL 213-28] Failed to generate IP.

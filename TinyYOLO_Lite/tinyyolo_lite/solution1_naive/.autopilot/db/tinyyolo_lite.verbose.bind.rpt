@@ -1,0 +1,682 @@
+
+
+================================================================
+== Vivado HLS Report for 'tinyyolo_lite'
+================================================================
+* Date:           Sat Jun 20 22:52:18 2026
+
+* Version:        2018.3 (Build 2405991 on Thu Dec 06 23:56:15 MST 2018)
+* Project:        tinyyolo_lite
+* Solution:       solution1_naive
+* Product family: zynq
+* Target device:  xc7z020clg484-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |  10.00|     8.662|        1.25|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +----------+----------+----------+----------+---------+
+    |       Latency       |       Interval      | Pipeline|
+    |    min   |    max   |    min   |    max   |   Type  |
+    +----------+----------+----------+----------+---------+
+    |  14997860|  14997860|  14997860|  14997860|   none  |
+    +----------+----------+----------+----------+---------+
+
+    + Detail: 
+        * Instance: 
+        +---------------------------+----------------+---------+---------+---------+---------+---------+
+        |                           |                |      Latency      |      Interval     | Pipeline|
+        |          Instance         |     Module     |   min   |   max   |   min   |   max   |   Type  |
+        +---------------------------+----------------+---------+---------+---------+---------+---------+
+        |grp_conv_layer2_fu_46      |conv_layer2     |  4226925|  4226925|  4226925|  4226925|   none  |
+        |grp_conv_layer3_fu_56      |conv_layer3     |  2774329|  2774329|  2774329|  2774329|   none  |
+        |grp_conv_layer1_fu_66      |conv_layer1     |  4128581|  4128581|  4128581|  4128581|   none  |
+        |grp_detection_head_fu_76   |detection_head  |  3672353|  3672353|  3672353|  3672353|   none  |
+        |grp_decode_fu_86           |decode          |     1553|     1553|     1553|     1553|   none  |
+        |grp_maxpool_layer1_fu_96   |maxpool_layer1  |   146585|   146585|   146585|   146585|   none  |
+        |grp_maxpool_layer2_fu_104  |maxpool_layer2  |    47521|    47521|    47521|    47521|   none  |
+        +---------------------------+----------------+---------+---------+---------+---------+---------+
+
+        * Loop: 
+        N/A
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 1
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 14
+* Pipeline : 0
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 
+	2  / true
+2 --> 
+	3  / true
+3 --> 
+	4  / true
+4 --> 
+	5  / true
+5 --> 
+	6  / true
+6 --> 
+	7  / true
+7 --> 
+	8  / true
+8 --> 
+	9  / true
+9 --> 
+	10  / true
+10 --> 
+	11  / true
+11 --> 
+	12  / true
+12 --> 
+	13  / true
+13 --> 
+	14  / true
+14 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 0.00>
+ST_1 : Operation 15 [2/2] (0.00ns)   --->   "call fastcc void @conv_layer1([12288 x i32]* %image_r, [30752 x i31]* @buf_conv1) nounwind" [tinyyolo_lite.c:47]   --->   Operation 15 'call' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 2 <SV = 1> <Delay = 0.00>
+ST_2 : Operation 16 [1/2] (0.00ns)   --->   "call fastcc void @conv_layer1([12288 x i32]* %image_r, [30752 x i31]* @buf_conv1) nounwind" [tinyyolo_lite.c:47]   --->   Operation 16 'call' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 3 <SV = 2> <Delay = 0.00>
+ST_3 : Operation 17 [2/2] (0.00ns)   --->   "call fastcc void @maxpool_layer1([7688 x i32]* @buf_pool1) nounwind" [tinyyolo_lite.c:52]   --->   Operation 17 'call' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 4 <SV = 3> <Delay = 0.00>
+ST_4 : Operation 18 [1/2] (0.00ns)   --->   "call fastcc void @maxpool_layer1([7688 x i32]* @buf_pool1) nounwind" [tinyyolo_lite.c:52]   --->   Operation 18 'call' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 5 <SV = 4> <Delay = 0.00>
+ST_5 : Operation 19 [2/2] (0.00ns)   --->   "call fastcc void @conv_layer2([13456 x i31]* @buf_conv2) nounwind" [tinyyolo_lite.c:57]   --->   Operation 19 'call' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 6 <SV = 5> <Delay = 0.00>
+ST_6 : Operation 20 [1/2] (0.00ns)   --->   "call fastcc void @conv_layer2([13456 x i31]* @buf_conv2) nounwind" [tinyyolo_lite.c:57]   --->   Operation 20 'call' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 7 <SV = 6> <Delay = 0.00>
+ST_7 : Operation 21 [2/2] (0.00ns)   --->   "call fastcc void @maxpool_layer2([3136 x i32]* @buf_pool2) nounwind" [tinyyolo_lite.c:62]   --->   Operation 21 'call' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 8 <SV = 7> <Delay = 0.00>
+ST_8 : Operation 22 [1/2] (0.00ns)   --->   "call fastcc void @maxpool_layer2([3136 x i32]* @buf_pool2) nounwind" [tinyyolo_lite.c:62]   --->   Operation 22 'call' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 9 <SV = 8> <Delay = 0.00>
+ST_9 : Operation 23 [2/2] (0.00ns)   --->   "call fastcc void @conv_layer3([4608 x i31]* @buf_conv3) nounwind" [tinyyolo_lite.c:67]   --->   Operation 23 'call' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 10 <SV = 9> <Delay = 0.00>
+ST_10 : Operation 24 [1/2] (0.00ns)   --->   "call fastcc void @conv_layer3([4608 x i31]* @buf_conv3) nounwind" [tinyyolo_lite.c:67]   --->   Operation 24 'call' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 11 <SV = 10> <Delay = 0.00>
+ST_11 : Operation 25 [2/2] (0.00ns)   --->   "call fastcc void @detection_head([1024 x i32]* @buf_det) nounwind" [tinyyolo_lite.c:72]   --->   Operation 25 'call' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 12 <SV = 11> <Delay = 0.00>
+ST_12 : Operation 26 [1/2] (0.00ns)   --->   "call fastcc void @detection_head([1024 x i32]* @buf_det) nounwind" [tinyyolo_lite.c:72]   --->   Operation 26 'call' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 13 <SV = 12> <Delay = 0.00>
+ST_13 : Operation 27 [2/2] (0.00ns)   --->   "call fastcc void @decode([1024 x i32]* %output_r) nounwind" [tinyyolo_lite.c:77]   --->   Operation 27 'call' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 14 <SV = 13> <Delay = 0.00>
+ST_14 : Operation 28 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap([12288 x i32]* %image_r) nounwind, !map !28"   --->   Operation 28 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_14 : Operation 29 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap([1024 x i32]* %output_r) nounwind, !map !35"   --->   Operation 29 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_14 : Operation 30 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecTopModule([14 x i8]* @tinyyolo_lite_str) nounwind"   --->   Operation 30 'spectopmodule' <Predicate = true> <Delay = 0.00>
+ST_14 : Operation 31 [1/2] (0.00ns)   --->   "call fastcc void @decode([1024 x i32]* %output_r) nounwind" [tinyyolo_lite.c:77]   --->   Operation 31 'call' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_14 : Operation 32 [1/1] (0.00ns)   --->   "ret void" [tinyyolo_lite.c:78]   --->   Operation 32 'ret' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+STG Binding: 
+---------------- STG Properties BEGIN ----------------
+- Is combinational: 0
+- Is one-state seq: 0
+- Is datapath-only: 0
+- Is pipelined: 0
+- Is top level: 1
+Port [ Return ] is wired: 1; IO mode=ap_ctrl_hs:ce=0
+Port [ image_r]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=1; pingpong=0; private_global=0; MemPort=[13]; IO mode=ap_memory:ce=0
+Port [ output_r]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0; extern=0; dir=1; type=1; pingpong=0; private_global=0; MemPort=[00]; IO mode=ap_memory:ce=0
+Port [ w_conv1]:  wired=0; compound=1; hidden=1; nouse=1; global=1; static=1; extern=0; dir=0; type=1; pingpong=0; private_global=0; linkage=7; visibility=0; MemPort=[1]; IO mode=ap_memory:ce=0
+Port [ buf_conv1]:  wired=0; compound=1; hidden=1; nouse=0; global=1; static=1; extern=0; dir=2; type=1; pingpong=0; private_global=1; linkage=7; visibility=0; MemPort=[23]; IO mode=ap_memory:ce=0
+Port [ buf_pool1]:  wired=0; compound=1; hidden=1; nouse=0; global=1; static=1; extern=0; dir=2; type=1; pingpong=0; private_global=1; linkage=7; visibility=0; MemPort=[23]; IO mode=ap_memory:ce=0
+Port [ w_conv2]:  wired=0; compound=1; hidden=1; nouse=1; global=1; static=1; extern=0; dir=0; type=1; pingpong=0; private_global=0; linkage=7; visibility=0; MemPort=[1]; IO mode=ap_memory:ce=0
+Port [ buf_conv2]:  wired=0; compound=1; hidden=1; nouse=0; global=1; static=1; extern=0; dir=2; type=1; pingpong=0; private_global=1; linkage=7; visibility=0; MemPort=[23]; IO mode=ap_memory:ce=0
+Port [ buf_pool2]:  wired=0; compound=1; hidden=1; nouse=0; global=1; static=1; extern=0; dir=2; type=1; pingpong=0; private_global=1; linkage=7; visibility=0; MemPort=[23]; IO mode=ap_memory:ce=0
+Port [ w_conv3]:  wired=0; compound=1; hidden=1; nouse=1; global=1; static=1; extern=0; dir=0; type=1; pingpong=0; private_global=0; linkage=7; visibility=0; MemPort=[1]; IO mode=ap_memory:ce=0
+Port [ buf_conv3]:  wired=0; compound=1; hidden=1; nouse=0; global=1; static=1; extern=0; dir=2; type=1; pingpong=0; private_global=1; linkage=7; visibility=0; MemPort=[23]; IO mode=ap_memory:ce=0
+Port [ w_det]:  wired=0; compound=1; hidden=1; nouse=1; global=1; static=1; extern=0; dir=0; type=1; pingpong=0; private_global=0; linkage=7; visibility=0; MemPort=[1]; IO mode=ap_memory:ce=0
+Port [ buf_det]:  wired=0; compound=1; hidden=1; nouse=0; global=1; static=1; extern=0; dir=2; type=1; pingpong=0; private_global=1; linkage=7; visibility=0; MemPort=[21]; IO mode=ap_memory:ce=0
+Port [ sigmoid_lut]:  wired=0; compound=1; hidden=1; nouse=1; global=1; static=1; extern=0; dir=0; type=1; pingpong=0; private_global=0; linkage=7; visibility=0; MemPort=[1]; IO mode=ap_memory:ce=0
+---------------- STG Properties END ------------------
+
+---------------- Datapath Model BEGIN ----------------
+
+<LifeTime>
+<method=bitvector/>
+StgValue_16 (call         ) [ 000000000000000]
+StgValue_18 (call         ) [ 000000000000000]
+StgValue_20 (call         ) [ 000000000000000]
+StgValue_22 (call         ) [ 000000000000000]
+StgValue_24 (call         ) [ 000000000000000]
+StgValue_26 (call         ) [ 000000000000000]
+StgValue_28 (specbitsmap  ) [ 000000000000000]
+StgValue_29 (specbitsmap  ) [ 000000000000000]
+StgValue_30 (spectopmodule) [ 000000000000000]
+StgValue_31 (call         ) [ 000000000000000]
+StgValue_32 (ret          ) [ 000000000000000]
+</LifeTime>
+
+<model>
+
+<comp_list>
+<comp id="0" class="1000" name="image_r">
+<pin_list>
+<pin id="1" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="image_r"/><MemPortTyVec>1 3 </MemPortTyVec>
+</StgValue>
+</bind>
+</comp>
+
+<comp id="2" class="1000" name="output_r">
+<pin_list>
+<pin id="3" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="output_r"/><MemPortTyVec>0 0 </MemPortTyVec>
+</StgValue>
+</bind>
+</comp>
+
+<comp id="4" class="1000" name="w_conv1">
+<pin_list>
+<pin id="5" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="w_conv1"/><MemPortTyVec>1 </MemPortTyVec>
+</StgValue>
+</bind>
+</comp>
+
+<comp id="6" class="1000" name="buf_conv1">
+<pin_list>
+<pin id="7" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="buf_conv1"/><MemPortTyVec>2 3 </MemPortTyVec>
+</StgValue>
+</bind>
+</comp>
+
+<comp id="8" class="1000" name="buf_pool1">
+<pin_list>
+<pin id="9" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="buf_pool1"/><MemPortTyVec>2 3 </MemPortTyVec>
+</StgValue>
+</bind>
+</comp>
+
+<comp id="10" class="1000" name="w_conv2">
+<pin_list>
+<pin id="11" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="w_conv2"/><MemPortTyVec>1 </MemPortTyVec>
+</StgValue>
+</bind>
+</comp>
+
+<comp id="12" class="1000" name="buf_conv2">
+<pin_list>
+<pin id="13" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="buf_conv2"/><MemPortTyVec>2 3 </MemPortTyVec>
+</StgValue>
+</bind>
+</comp>
+
+<comp id="14" class="1000" name="buf_pool2">
+<pin_list>
+<pin id="15" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="buf_pool2"/><MemPortTyVec>2 3 </MemPortTyVec>
+</StgValue>
+</bind>
+</comp>
+
+<comp id="16" class="1000" name="w_conv3">
+<pin_list>
+<pin id="17" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="w_conv3"/><MemPortTyVec>1 </MemPortTyVec>
+</StgValue>
+</bind>
+</comp>
+
+<comp id="18" class="1000" name="buf_conv3">
+<pin_list>
+<pin id="19" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="buf_conv3"/><MemPortTyVec>2 3 </MemPortTyVec>
+</StgValue>
+</bind>
+</comp>
+
+<comp id="20" class="1000" name="w_det">
+<pin_list>
+<pin id="21" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="w_det"/><MemPortTyVec>1 </MemPortTyVec>
+</StgValue>
+</bind>
+</comp>
+
+<comp id="22" class="1000" name="buf_det">
+<pin_list>
+<pin id="23" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="buf_det"/><MemPortTyVec>2 1 </MemPortTyVec>
+</StgValue>
+</bind>
+</comp>
+
+<comp id="24" class="1000" name="sigmoid_lut">
+<pin_list>
+<pin id="25" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="sigmoid_lut"/><MemPortTyVec>1 </MemPortTyVec>
+</StgValue>
+</bind>
+</comp>
+
+<comp id="26" class="1001" name="const_26">
+<pin_list>
+<pin id="27" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="conv_layer1"/></StgValue>
+</bind>
+</comp>
+
+<comp id="28" class="1001" name="const_28">
+<pin_list>
+<pin id="29" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="maxpool_layer1"/></StgValue>
+</bind>
+</comp>
+
+<comp id="30" class="1001" name="const_30">
+<pin_list>
+<pin id="31" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="conv_layer2"/></StgValue>
+</bind>
+</comp>
+
+<comp id="32" class="1001" name="const_32">
+<pin_list>
+<pin id="33" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="maxpool_layer2"/></StgValue>
+</bind>
+</comp>
+
+<comp id="34" class="1001" name="const_34">
+<pin_list>
+<pin id="35" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="conv_layer3"/></StgValue>
+</bind>
+</comp>
+
+<comp id="36" class="1001" name="const_36">
+<pin_list>
+<pin id="37" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="detection_head"/></StgValue>
+</bind>
+</comp>
+
+<comp id="38" class="1001" name="const_38">
+<pin_list>
+<pin id="39" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="decode"/></StgValue>
+</bind>
+</comp>
+
+<comp id="40" class="1001" name="const_40">
+<pin_list>
+<pin id="41" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="_ssdm_op_SpecBitsMap"/></StgValue>
+</bind>
+</comp>
+
+<comp id="42" class="1001" name="const_42">
+<pin_list>
+<pin id="43" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="_ssdm_op_SpecTopModule"/></StgValue>
+</bind>
+</comp>
+
+<comp id="44" class="1001" name="const_44">
+<pin_list>
+<pin id="45" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="tinyyolo_lite_str"/></StgValue>
+</bind>
+</comp>
+
+<comp id="46" class="1004" name="grp_conv_layer2_fu_46">
+<pin_list>
+<pin id="47" dir="0" index="0" bw="0" slack="0"/>
+<pin id="48" dir="0" index="1" bw="31" slack="0"/>
+<pin id="49" dir="0" index="2" bw="32" slack="0"/>
+<pin id="50" dir="0" index="3" bw="5" slack="0"/>
+<pin id="51" dir="1" index="4" bw="0" slack="2147483647"/>
+</pin_list>
+<bind>
+<opcode="call(48) " fcode="call"/>
+<opset="StgValue_19/5 "/>
+</bind>
+</comp>
+
+<comp id="56" class="1004" name="grp_conv_layer3_fu_56">
+<pin_list>
+<pin id="57" dir="0" index="0" bw="0" slack="0"/>
+<pin id="58" dir="0" index="1" bw="31" slack="0"/>
+<pin id="59" dir="0" index="2" bw="32" slack="0"/>
+<pin id="60" dir="0" index="3" bw="5" slack="0"/>
+<pin id="61" dir="1" index="4" bw="0" slack="2147483647"/>
+</pin_list>
+<bind>
+<opcode="call(48) " fcode="call"/>
+<opset="StgValue_23/9 "/>
+</bind>
+</comp>
+
+<comp id="66" class="1004" name="grp_conv_layer1_fu_66">
+<pin_list>
+<pin id="67" dir="0" index="0" bw="0" slack="0"/>
+<pin id="68" dir="0" index="1" bw="32" slack="0"/>
+<pin id="69" dir="0" index="2" bw="31" slack="0"/>
+<pin id="70" dir="0" index="3" bw="4" slack="0"/>
+<pin id="71" dir="1" index="4" bw="0" slack="2147483647"/>
+</pin_list>
+<bind>
+<opcode="call(48) " fcode="call"/>
+<opset="StgValue_15/1 "/>
+</bind>
+</comp>
+
+<comp id="76" class="1004" name="grp_detection_head_fu_76">
+<pin_list>
+<pin id="77" dir="0" index="0" bw="0" slack="0"/>
+<pin id="78" dir="0" index="1" bw="32" slack="0"/>
+<pin id="79" dir="0" index="2" bw="31" slack="0"/>
+<pin id="80" dir="0" index="3" bw="5" slack="0"/>
+<pin id="81" dir="1" index="4" bw="0" slack="2147483647"/>
+</pin_list>
+<bind>
+<opcode="call(48) " fcode="call"/>
+<opset="StgValue_25/11 "/>
+</bind>
+</comp>
+
+<comp id="86" class="1004" name="grp_decode_fu_86">
+<pin_list>
+<pin id="87" dir="0" index="0" bw="0" slack="0"/>
+<pin id="88" dir="0" index="1" bw="32" slack="0"/>
+<pin id="89" dir="0" index="2" bw="32" slack="0"/>
+<pin id="90" dir="0" index="3" bw="10" slack="0"/>
+<pin id="91" dir="1" index="4" bw="0" slack="2147483647"/>
+</pin_list>
+<bind>
+<opcode="call(48) " fcode="call"/>
+<opset="StgValue_27/13 "/>
+</bind>
+</comp>
+
+<comp id="96" class="1004" name="grp_maxpool_layer1_fu_96">
+<pin_list>
+<pin id="97" dir="0" index="0" bw="0" slack="0"/>
+<pin id="98" dir="0" index="1" bw="32" slack="0"/>
+<pin id="99" dir="0" index="2" bw="31" slack="0"/>
+<pin id="100" dir="1" index="3" bw="0" slack="2147483647"/>
+</pin_list>
+<bind>
+<opcode="call(48) " fcode="call"/>
+<opset="StgValue_17/3 "/>
+</bind>
+</comp>
+
+<comp id="104" class="1004" name="grp_maxpool_layer2_fu_104">
+<pin_list>
+<pin id="105" dir="0" index="0" bw="0" slack="0"/>
+<pin id="106" dir="0" index="1" bw="32" slack="0"/>
+<pin id="107" dir="0" index="2" bw="31" slack="0"/>
+<pin id="108" dir="1" index="3" bw="0" slack="2147483647"/>
+</pin_list>
+<bind>
+<opcode="call(48) " fcode="call"/>
+<opset="StgValue_21/7 "/>
+</bind>
+</comp>
+
+</comp_list>
+
+<net_list>
+<net id="52"><net_src comp="30" pin="0"/><net_sink comp="46" pin=0"/></net>
+
+<net id="53"><net_src comp="12" pin="0"/><net_sink comp="46" pin=1"/></net>
+
+<net id="54"><net_src comp="8" pin="0"/><net_sink comp="46" pin=2"/></net>
+
+<net id="55"><net_src comp="10" pin="0"/><net_sink comp="46" pin=3"/></net>
+
+<net id="62"><net_src comp="34" pin="0"/><net_sink comp="56" pin=0"/></net>
+
+<net id="63"><net_src comp="18" pin="0"/><net_sink comp="56" pin=1"/></net>
+
+<net id="64"><net_src comp="14" pin="0"/><net_sink comp="56" pin=2"/></net>
+
+<net id="65"><net_src comp="16" pin="0"/><net_sink comp="56" pin=3"/></net>
+
+<net id="72"><net_src comp="26" pin="0"/><net_sink comp="66" pin=0"/></net>
+
+<net id="73"><net_src comp="0" pin="0"/><net_sink comp="66" pin=1"/></net>
+
+<net id="74"><net_src comp="6" pin="0"/><net_sink comp="66" pin=2"/></net>
+
+<net id="75"><net_src comp="4" pin="0"/><net_sink comp="66" pin=3"/></net>
+
+<net id="82"><net_src comp="36" pin="0"/><net_sink comp="76" pin=0"/></net>
+
+<net id="83"><net_src comp="22" pin="0"/><net_sink comp="76" pin=1"/></net>
+
+<net id="84"><net_src comp="18" pin="0"/><net_sink comp="76" pin=2"/></net>
+
+<net id="85"><net_src comp="20" pin="0"/><net_sink comp="76" pin=3"/></net>
+
+<net id="92"><net_src comp="38" pin="0"/><net_sink comp="86" pin=0"/></net>
+
+<net id="93"><net_src comp="2" pin="0"/><net_sink comp="86" pin=1"/></net>
+
+<net id="94"><net_src comp="22" pin="0"/><net_sink comp="86" pin=2"/></net>
+
+<net id="95"><net_src comp="24" pin="0"/><net_sink comp="86" pin=3"/></net>
+
+<net id="101"><net_src comp="28" pin="0"/><net_sink comp="96" pin=0"/></net>
+
+<net id="102"><net_src comp="8" pin="0"/><net_sink comp="96" pin=1"/></net>
+
+<net id="103"><net_src comp="6" pin="0"/><net_sink comp="96" pin=2"/></net>
+
+<net id="109"><net_src comp="32" pin="0"/><net_sink comp="104" pin=0"/></net>
+
+<net id="110"><net_src comp="14" pin="0"/><net_sink comp="104" pin=1"/></net>
+
+<net id="111"><net_src comp="12" pin="0"/><net_sink comp="104" pin=2"/></net>
+
+</net_list>
+
+</model> 
+---------------- Datapath Model END ------------------
+
+* FSMD analyzer results:
+  - Output states:
+	Port: output_r | {13 14 }
+	Port: buf_conv1 | {1 2 }
+	Port: buf_pool1 | {3 4 }
+	Port: buf_conv2 | {5 6 }
+	Port: buf_pool2 | {7 8 }
+	Port: buf_conv3 | {9 10 }
+	Port: buf_det | {11 12 }
+ - Input state : 
+	Port: tinyyolo_lite : image_r | {1 2 }
+	Port: tinyyolo_lite : w_conv1 | {1 2 }
+	Port: tinyyolo_lite : buf_conv1 | {3 4 }
+	Port: tinyyolo_lite : buf_pool1 | {5 6 }
+	Port: tinyyolo_lite : w_conv2 | {5 6 }
+	Port: tinyyolo_lite : buf_conv2 | {7 8 }
+	Port: tinyyolo_lite : buf_pool2 | {9 10 }
+	Port: tinyyolo_lite : w_conv3 | {9 10 }
+	Port: tinyyolo_lite : buf_conv3 | {11 12 }
+	Port: tinyyolo_lite : w_det | {11 12 }
+	Port: tinyyolo_lite : buf_det | {13 14 }
+	Port: tinyyolo_lite : sigmoid_lut | {13 14 }
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+	State 6
+	State 7
+	State 8
+	State 9
+	State 10
+	State 11
+	State 12
+	State 13
+	State 14
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+
+* Functional unit list:
+|----------|---------------------------|---------|---------|---------|---------|
+| Operation|      Functional Unit      |  DSP48E |  Delay  |    FF   |   LUT   |
+|----------|---------------------------|---------|---------|---------|---------|
+|          |   grp_conv_layer2_fu_46   |    2    |  10.614 |   367   |   476   |
+|          |   grp_conv_layer3_fu_56   |    2    |  8.845  |   355   |   469   |
+|          |   grp_conv_layer1_fu_66   |    0    |  8.845  |   348   |   476   |
+|   call   |  grp_detection_head_fu_76 |    2    |  8.845  |   348   |   412   |
+|          |      grp_decode_fu_86     |    0    | 14.6095 |   309   |   376   |
+|          |  grp_maxpool_layer1_fu_96 |    0    |  5.3985 |   290   |   360   |
+|          | grp_maxpool_layer2_fu_104 |    0    |  5.3985 |   257   |   376   |
+|----------|---------------------------|---------|---------|---------|---------|
+|   Total  |                           |    6    | 62.5555 |   2274  |   2945  |
+|----------|---------------------------|---------|---------|---------|---------|
+
+Memories:
++-----------+--------+--------+--------+
+|           |  BRAM  |   FF   |   LUT  |
++-----------+--------+--------+--------+
+| buf_conv1 |   62   |    0   |    0   |
+| buf_conv2 |   31   |    0   |    0   |
+| buf_conv3 |   16   |    0   |    0   |
+|  buf_det  |    2   |    0   |    0   |
+| buf_pool1 |   16   |    0   |    0   |
+| buf_pool2 |    8   |    0   |    0   |
+|sigmoid_lut|    0   |   10   |    3   |
+|  w_conv1  |    0   |    4   |   14   |
+|  w_conv2  |    1   |    0   |    0   |
+|  w_conv3  |    3   |    0   |    0   |
+|   w_det   |    5   |    0   |    0   |
++-----------+--------+--------+--------+
+|   Total   |   144  |   14   |   17   |
++-----------+--------+--------+--------+
+
+* Register list:
+N/A
+
+* Multiplexer (MUX) list: 
+|--------|------|------|------|--------|
+|  Comp  |  Pin | Size |  BW  | S x BW |
+|--------|------|------|------|--------|
+|  Total |      |      |      |    0   |
+|--------|------|------|------|--------|
+
+
+
+* Summary:
++-----------+--------+--------+--------+--------+--------+
+|           |  BRAM  | DSP48E |  Delay |   FF   |   LUT  |
++-----------+--------+--------+--------+--------+--------+
+|  Function |    -   |    6   |   62   |  2274  |  2945  |
+|   Memory  |   144  |    -   |    -   |   14   |   17   |
+|Multiplexer|    -   |    -   |    -   |    -   |    -   |
+|  Register |    -   |    -   |    -   |    -   |    -   |
++-----------+--------+--------+--------+--------+--------+
+|   Total   |   144  |    6   |   62   |  2288  |  2962  |
++-----------+--------+--------+--------+--------+--------+

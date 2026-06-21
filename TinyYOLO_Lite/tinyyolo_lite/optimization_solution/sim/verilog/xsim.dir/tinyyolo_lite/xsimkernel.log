@@ -1,0 +1,7 @@
+Running: xsim.dir/tinyyolo_lite/xsimk.exe -simmode gui -wdb tinyyolo_lite.wdb -simrunnum 0 -socket 52823
+Design successfully loaded
+Design Loading Memory Usage: 10028 KB (Peak: 10028 KB)
+Design Loading CPU Usage: 46 ms
+Simulation completed
+Simulation Memory Usage: 12328 KB (Peak: 12328 KB)
+Simulation CPU Usage: 138952 ms

@@ -1,0 +1,9 @@
+{
+	"version": "1.0",
+	"modules": {
+		"tinyyolo_lite": {
+			"proto_instances": {
+			}
+		}
+	}
+}

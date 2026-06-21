@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vivadoHLSLog:LogRoot xmlns:vivadoHLSLog="www.xilinx.com/vivadoHLSLog">
+  <errorLogs>
+    <logs>
+      <synLog/>
+      <simLog/>
+      <mgLog/>
+      <packageLog>
+        <logs message="ERROR: [IMPL 213-28] Failed to generate IP.&#xD;&#xA;command 'ap_source' returned error code&#xD;&#xA;    while executing&#xD;&#xA;&quot;source E:/work_station/TinyYOLO_Lite/tinyyolo_lite/optimization_solution/export.tcl&quot;&#xD;&#xA;    invoked from within&#xD;&#xA;&quot;hls::main E:/work_station/TinyYOLO_Lite/tinyyolo_lite/optimization_solution/export.tcl&quot;&#xD;&#xA;    (&quot;uplevel&quot; body line 1)&#xD;&#xA;    invoked from within&#xD;&#xA;&quot;uplevel 1 hls::main {*}$args&quot;&#xD;&#xA;    (procedure &quot;hls_proc&quot; line 5)&#xD;&#xA;    invoked from within&#xD;&#xA;&quot;hls_proc $argv&quot;&#xD;&#xA;" projectName="tinyyolo_lite" solutionName="optimization_solution" date="2026-06-21T22:51:35.437+0700"/>
+        <logs message="ERROR: [IMPL 213-28] Failed to generate IP.&#xD;&#xA;command 'ap_source' returned error code&#xD;&#xA;    while executing&#xD;&#xA;&quot;source E:/work_station/TinyYOLO_Lite/tinyyolo_lite/optimization_solution/export.tcl&quot;&#xD;&#xA;    invoked from within&#xD;&#xA;&quot;hls::main E:/work_station/TinyYOLO_Lite/tinyyolo_lite/optimization_solution/export.tcl&quot;&#xD;&#xA;    (&quot;uplevel&quot; body line 1)&#xD;&#xA;    invoked from within&#xD;&#xA;&quot;uplevel 1 hls::main {*}$args&quot;&#xD;&#xA;    (procedure &quot;hls_proc&quot; line 5)&#xD;&#xA;    invoked from within&#xD;&#xA;&quot;hls_proc $argv&quot;&#xD;&#xA;" projectName="tinyyolo_lite" solutionName="optimization_solution" date="2026-06-21T18:22:56.752+0700"/>
+        <logs message="ERROR: [IMPL 213-28] Failed to generate IP.&#xD;&#xA;command 'ap_source' returned error code&#xD;&#xA;    while executing&#xD;&#xA;&quot;source E:/work_station/TinyYOLO_Lite/tinyyolo_lite/optimization_solution/export.tcl&quot;&#xD;&#xA;    invoked from within&#xD;&#xA;&quot;hls::main E:/work_station/TinyYOLO_Lite/tinyyolo_lite/optimization_solution/export.tcl&quot;&#xD;&#xA;    (&quot;uplevel&quot; body line 1)&#xD;&#xA;    invoked from within&#xD;&#xA;&quot;uplevel 1 hls::main {*}$args&quot;&#xD;&#xA;    (procedure &quot;hls_proc&quot; line 5)&#xD;&#xA;    invoked from within&#xD;&#xA;&quot;hls_proc $argv&quot;&#xD;&#xA;" projectName="tinyyolo_lite" solutionName="optimization_solution" date="2026-06-21T08:56:26.682+0700"/>
+        <logs message="ERROR: [IMPL 213-28] Failed to generate IP.&#xD;&#xA;command 'ap_source' returned error code&#xD;&#xA;    while executing&#xD;&#xA;&quot;source E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/export.tcl&quot;&#xD;&#xA;    invoked from within&#xD;&#xA;&quot;hls::main E:/work_station/TinyYOLO_Lite/tinyyolo_lite/solution1_naive/export.tcl&quot;&#xD;&#xA;    (&quot;uplevel&quot; body line 1)&#xD;&#xA;    invoked from within&#xD;&#xA;&quot;uplevel 1 hls::main {*}$args&quot;&#xD;&#xA;    (procedure &quot;hls_proc&quot; line 5)&#xD;&#xA;    invoked from within&#xD;&#xA;&quot;hls_proc $argv&quot;&#xD;&#xA;" projectName="tinyyolo_lite" solutionName="solution1_naive" date="2026-06-21T08:47:48.289+0700"/>
+      </packageLog>
+      <csimLog/>
+    </logs>
+  </errorLogs>
+  <warningLogs>
+    <logs>
+      <synLog>
+        <logs message="WARNING: [XFORM 203-542] Cannot flatten a loop nest 'LOOP_OC' (conv_relu1.c:18:49) in function 'conv_layer1' : &#xD;&#xA;&#xD;&#xA;the outer loop is not a perfect loop because there is nontrivial logic before entering the inner loop." projectName="tinyyolo_lite" solutionName="optimization_solution" date="2026-06-21T08:37:47.368+0700" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-542] Cannot flatten a loop nest 'LOOP_OC' (conv_relu2.c:20:42) in function 'conv_layer2' : &#xD;&#xA;&#xD;&#xA;the outer loop is not a perfect loop because there is nontrivial logic before entering the inner loop." projectName="tinyyolo_lite" solutionName="optimization_solution" date="2026-06-21T08:37:47.285+0700" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-542] Cannot flatten a loop nest 'LOOP_OC' (conv_relu3.c:20:42) in function 'conv_layer3' : &#xD;&#xA;&#xD;&#xA;the outer loop is not a perfect loop because there is nontrivial logic before entering the inner loop." projectName="tinyyolo_lite" solutionName="optimization_solution" date="2026-06-21T08:37:47.181+0700" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-542] Cannot flatten a loop nest 'OUTPUT_COLS' (detection_head.c:19:43) in function 'detection_head' : &#xD;&#xA;&#xD;&#xA;the outer loop is not a perfect loop because there is nontrivial logic in the loop latch." projectName="tinyyolo_lite" solutionName="optimization_solution" date="2026-06-21T08:37:47.097+0700" type="Warning"/>
+        <logs message="WARNING: [SYN 201-107] Renaming port name 'tinyyolo_lite/image' to 'tinyyolo_lite/image_r' to avoid the conflict with HDL keywords or other object names." projectName="tinyyolo_lite" solutionName="solution1_naive" date="2026-06-20T22:52:13.076+0700" type="Warning"/>
+      </synLog>
+      <simLog/>
+      <mgLog/>
+      <packageLog/>
+      <csimLog/>
+    </logs>
+  </warningLogs>
+</vivadoHLSLog:LogRoot>

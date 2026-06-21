@@ -1,0 +1,147 @@
+INFO: [XSIM 43-3496] Using init file passed via -initfile option "E:/Xilinx/Vivado/2018.3/data/xsim/ip/xsim_ip.ini".
+Vivado Simulator 2018.3
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: E:/Xilinx/Vivado/2018.3/bin/unwrapped/win64.o/xelab.exe xil_defaultlib.apatb_tinyyolo_lite_top glbl -prj tinyyolo_lite.prj -L smartconnect_v1_0 -L axi_protocol_checker_v1_1_12 -L axi_protocol_checker_v1_1_13 -L axis_protocol_checker_v1_1_11 -L axis_protocol_checker_v1_1_12 -L xil_defaultlib -L unisims_ver -L xpm --initfile E:/Xilinx/Vivado/2018.3/data/xsim/ip/xsim_ip.ini --lib ieee_proposed=./ieee_proposed -s tinyyolo_lite 
+Multi-threading is on. Using 10 slave threads.
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "E:/work_station/TinyYOLO_Lite/tinyyolo_lite/optimization_solution/sim/verilog/glbl.v" into library work
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "E:/work_station/TinyYOLO_Lite/tinyyolo_lite/optimization_solution/sim/verilog/AESL_automem_image_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_automem_image_0
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "E:/work_station/TinyYOLO_Lite/tinyyolo_lite/optimization_solution/sim/verilog/AESL_automem_image_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_automem_image_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "E:/work_station/TinyYOLO_Lite/tinyyolo_lite/optimization_solution/sim/verilog/AESL_automem_image_2.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_automem_image_2
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "E:/work_station/TinyYOLO_Lite/tinyyolo_lite/optimization_solution/sim/verilog/AESL_automem_output_r.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_automem_output_r
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "E:/work_station/TinyYOLO_Lite/tinyyolo_lite/optimization_solution/sim/verilog/conv_layer1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module conv_layer1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "E:/work_station/TinyYOLO_Lite/tinyyolo_lite/optimization_solution/sim/verilog/conv_layer1_w_conbkb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module conv_layer1_w_conbkb_rom
+INFO: [VRFC 10-311] analyzing module conv_layer1_w_conbkb
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "E:/work_station/TinyYOLO_Lite/tinyyolo_lite/optimization_solution/sim/verilog/conv_layer1_w_concud.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module conv_layer1_w_concud_rom
+INFO: [VRFC 10-311] analyzing module conv_layer1_w_concud
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "E:/work_station/TinyYOLO_Lite/tinyyolo_lite/optimization_solution/sim/verilog/conv_layer2.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module conv_layer2
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "E:/work_station/TinyYOLO_Lite/tinyyolo_lite/optimization_solution/sim/verilog/conv_layer2_w_coneOg.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module conv_layer2_w_coneOg_rom
+INFO: [VRFC 10-311] analyzing module conv_layer2_w_coneOg
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "E:/work_station/TinyYOLO_Lite/tinyyolo_lite/optimization_solution/sim/verilog/conv_layer2_w_confYi.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module conv_layer2_w_confYi_rom
+INFO: [VRFC 10-311] analyzing module conv_layer2_w_confYi
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "E:/work_station/TinyYOLO_Lite/tinyyolo_lite/optimization_solution/sim/verilog/conv_layer3.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module conv_layer3
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "E:/work_station/TinyYOLO_Lite/tinyyolo_lite/optimization_solution/sim/verilog/conv_layer3_w_conmb6.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module conv_layer3_w_conmb6_rom
+INFO: [VRFC 10-311] analyzing module conv_layer3_w_conmb6
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "E:/work_station/TinyYOLO_Lite/tinyyolo_lite/optimization_solution/sim/verilog/conv_layer3_w_conncg.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module conv_layer3_w_conncg_rom
+INFO: [VRFC 10-311] analyzing module conv_layer3_w_conncg
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "E:/work_station/TinyYOLO_Lite/tinyyolo_lite/optimization_solution/sim/verilog/decode.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module decode
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "E:/work_station/TinyYOLO_Lite/tinyyolo_lite/optimization_solution/sim/verilog/decode_sigmoid_lut.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module decode_sigmoid_lut_rom
+INFO: [VRFC 10-311] analyzing module decode_sigmoid_lut
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "E:/work_station/TinyYOLO_Lite/tinyyolo_lite/optimization_solution/sim/verilog/detection_head.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module detection_head
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "E:/work_station/TinyYOLO_Lite/tinyyolo_lite/optimization_solution/sim/verilog/detection_head_w_DeQ.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module detection_head_w_DeQ_rom
+INFO: [VRFC 10-311] analyzing module detection_head_w_DeQ
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "E:/work_station/TinyYOLO_Lite/tinyyolo_lite/optimization_solution/sim/verilog/maxpool_layer1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module maxpool_layer1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "E:/work_station/TinyYOLO_Lite/tinyyolo_lite/optimization_solution/sim/verilog/maxpool_layer2.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module maxpool_layer2
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "E:/work_station/TinyYOLO_Lite/tinyyolo_lite/optimization_solution/sim/verilog/tinyyolo_lite.autotb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module apatb_tinyyolo_lite_top
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "E:/work_station/TinyYOLO_Lite/tinyyolo_lite/optimization_solution/sim/verilog/tinyyolo_lite.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tinyyolo_lite
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "E:/work_station/TinyYOLO_Lite/tinyyolo_lite/optimization_solution/sim/verilog/tinyyolo_lite_bufbbk.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tinyyolo_lite_bufbbk_ram
+INFO: [VRFC 10-311] analyzing module tinyyolo_lite_bufbbk
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "E:/work_station/TinyYOLO_Lite/tinyyolo_lite/optimization_solution/sim/verilog/tinyyolo_lite_bufbdk.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tinyyolo_lite_bufbdk_ram
+INFO: [VRFC 10-311] analyzing module tinyyolo_lite_bufbdk
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "E:/work_station/TinyYOLO_Lite/tinyyolo_lite/optimization_solution/sim/verilog/tinyyolo_lite_bufbgk.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tinyyolo_lite_bufbgk_ram
+INFO: [VRFC 10-311] analyzing module tinyyolo_lite_bufbgk
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "E:/work_station/TinyYOLO_Lite/tinyyolo_lite/optimization_solution/sim/verilog/tinyyolo_lite_bufJfO.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tinyyolo_lite_bufJfO_ram
+INFO: [VRFC 10-311] analyzing module tinyyolo_lite_bufJfO
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "E:/work_station/TinyYOLO_Lite/tinyyolo_lite/optimization_solution/sim/verilog/tinyyolo_lite_bufLf8.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tinyyolo_lite_bufLf8_ram
+INFO: [VRFC 10-311] analyzing module tinyyolo_lite_bufLf8
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "E:/work_station/TinyYOLO_Lite/tinyyolo_lite/optimization_solution/sim/verilog/tinyyolo_lite_bufThq.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tinyyolo_lite_bufThq_ram
+INFO: [VRFC 10-311] analyzing module tinyyolo_lite_bufThq
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "E:/work_station/TinyYOLO_Lite/tinyyolo_lite/optimization_solution/sim/verilog/tinyyolo_lite_bufUhA.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tinyyolo_lite_bufUhA_ram
+INFO: [VRFC 10-311] analyzing module tinyyolo_lite_bufUhA
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "E:/work_station/TinyYOLO_Lite/tinyyolo_lite/optimization_solution/sim/verilog/tinyyolo_lite_bufVhK.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tinyyolo_lite_bufVhK_ram
+INFO: [VRFC 10-311] analyzing module tinyyolo_lite_bufVhK
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "E:/work_station/TinyYOLO_Lite/tinyyolo_lite/optimization_solution/sim/verilog/tinyyolo_lite_ureCeG.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tinyyolo_lite_ureCeG_div_u
+INFO: [VRFC 10-311] analyzing module tinyyolo_lite_ureCeG_div
+INFO: [VRFC 10-311] analyzing module tinyyolo_lite_ureCeG
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "E:/work_station/TinyYOLO_Lite/tinyyolo_lite/optimization_solution/sim/verilog/tinyyolo_lite_ureIfE.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tinyyolo_lite_ureIfE_div_u
+INFO: [VRFC 10-311] analyzing module tinyyolo_lite_ureIfE_div
+INFO: [VRFC 10-311] analyzing module tinyyolo_lite_ureIfE
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.tinyyolo_lite_bufJfO_ram
+Compiling module xil_defaultlib.tinyyolo_lite_bufJfO(DataWidth=3...
+Compiling module xil_defaultlib.tinyyolo_lite_bufLf8_ram
+Compiling module xil_defaultlib.tinyyolo_lite_bufLf8(DataWidth=3...
+Compiling module xil_defaultlib.tinyyolo_lite_bufThq_ram
+Compiling module xil_defaultlib.tinyyolo_lite_bufThq(DataWidth=3...
+Compiling module xil_defaultlib.tinyyolo_lite_bufUhA_ram
+Compiling module xil_defaultlib.tinyyolo_lite_bufUhA(DataWidth=3...
+Compiling module xil_defaultlib.tinyyolo_lite_bufVhK_ram
+Compiling module xil_defaultlib.tinyyolo_lite_bufVhK(DataWidth=3...
+Compiling module xil_defaultlib.tinyyolo_lite_bufbbk_ram
+Compiling module xil_defaultlib.tinyyolo_lite_bufbbk(DataWidth=3...
+Compiling module xil_defaultlib.tinyyolo_lite_bufbdk_ram
+Compiling module xil_defaultlib.tinyyolo_lite_bufbdk(DataWidth=3...
+Compiling module xil_defaultlib.tinyyolo_lite_bufbgk_ram
+Compiling module xil_defaultlib.tinyyolo_lite_bufbgk(DataWidth=3...
+Compiling module xil_defaultlib.conv_layer3_w_conmb6_rom
+Compiling module xil_defaultlib.conv_layer3_w_conmb6(DataWidth=5...
+Compiling module xil_defaultlib.conv_layer3_w_conncg_rom
+Compiling module xil_defaultlib.conv_layer3_w_conncg(DataWidth=5...
+Compiling module xil_defaultlib.tinyyolo_lite_ureCeG_div_u(in0_W...
+Compiling module xil_defaultlib.tinyyolo_lite_ureCeG_div(in0_WID...
+Compiling module xil_defaultlib.tinyyolo_lite_ureCeG(ID=1,NUM_ST...
+Compiling module xil_defaultlib.conv_layer3
+Compiling module xil_defaultlib.detection_head_w_DeQ_rom
+Compiling module xil_defaultlib.detection_head_w_DeQ(DataWidth=5...
+Compiling module xil_defaultlib.tinyyolo_lite_ureIfE_div_u(in0_W...
+Compiling module xil_defaultlib.tinyyolo_lite_ureIfE_div(in0_WID...
+Compiling module xil_defaultlib.tinyyolo_lite_ureIfE(ID=1,NUM_ST...
+Compiling module xil_defaultlib.detection_head
+Compiling module xil_defaultlib.conv_layer2_w_coneOg_rom
+Compiling module xil_defaultlib.conv_layer2_w_coneOg(DataWidth=5...
+Compiling module xil_defaultlib.conv_layer2_w_confYi_rom
+Compiling module xil_defaultlib.conv_layer2_w_confYi(DataWidth=5...
+Compiling module xil_defaultlib.conv_layer2
+Compiling module xil_defaultlib.conv_layer1_w_conbkb_rom
+Compiling module xil_defaultlib.conv_layer1_w_conbkb(DataWidth=4...
+Compiling module xil_defaultlib.conv_layer1_w_concud_rom
+Compiling module xil_defaultlib.conv_layer1_w_concud(DataWidth=4...
+Compiling module xil_defaultlib.conv_layer1
+Compiling module xil_defaultlib.maxpool_layer2
+Compiling module xil_defaultlib.maxpool_layer1
+Compiling module xil_defaultlib.decode_sigmoid_lut_rom
+Compiling module xil_defaultlib.decode_sigmoid_lut(DataWidth=10,...
+Compiling module xil_defaultlib.decode
+Compiling module xil_defaultlib.tinyyolo_lite
+Compiling module xil_defaultlib.AESL_automem_image_0
+Compiling module xil_defaultlib.AESL_automem_image_1
+Compiling module xil_defaultlib.AESL_automem_image_2
+Compiling module xil_defaultlib.AESL_automem_output_r
+Compiling module xil_defaultlib.apatb_tinyyolo_lite_top
+Compiling module work.glbl
+Built simulation snapshot tinyyolo_lite

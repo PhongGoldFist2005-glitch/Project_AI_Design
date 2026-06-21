@@ -1,0 +1,79 @@
+INFO: [SIM 2] *************** CSIM start ***************
+INFO: [SIM 4] CSIM will launch GCC as the compiler.
+   Compiling(apcc) ../../../../detection_head.c in debug mode
+INFO: [HLS 200-10] Running 'E:/Xilinx/Vivado/2018.3/bin/unwrapped/win64.o/apcc.exe'
+INFO: [HLS 200-10] For user 'HP' on host 'desktop-f2lqvgf' (Windows NT_amd64 version 6.2) on Sun Jun 21 00:57:29 +0700 2026
+INFO: [HLS 200-10] In directory 'E:/work_station/TinyYOLO_Lite/tinyyolo_lite/optimization_solution/csim/build'
+INFO: [APCC 202-3] Tmp directory is E:/tmp/apcc_db_HP/5876613379795
+INFO: [APCC 202-1] APCC is done.
+   Generating csim.exe
+--- TEST 1: zero image through top-level ---
+[PASS] TEST 1: zero top-level output
+
+--- TEST 2: decode raw[0]=3 ---
+[PASS] TEST 2: box 0 channel mapping
+
+--- TEST 3: decode raw[4]=1 ---
+[PASS] TEST 3: sigmoid(1)=731
+
+--- TEST 4: decode raw[4]=-8 ---
+[PASS] TEST 4: sigmoid(-8)=0
+
+--- TEST 5: decode raw[8]=2 ---
+[PASS] TEST 5: box 1 channel mapping
+
+--- TEST 6: Conv1 + ReLU ---
+[PASS] TEST 6: Conv1 signed multiply and ReLU
+
+--- TEST 7: Conv2 + ReLU ---
+[PASS] TEST 7: Conv2 signed multiply and ReLU
+
+--- TEST 8: Conv3 + ReLU ---
+[PASS] TEST 8: Conv3 signed multiply and ReLU
+
+--- TEST 9: MaxPool1 ---
+[PASS] TEST 9: MaxPool1 selects each 2x2 maximum
+
+--- TEST 10: MaxPool2 ---
+[PASS] TEST 10: MaxPool2 selects each 2x2 maximum
+
+--- TEST 11: Detection Head ---
+[PASS] TEST 11: Detection Head signed multiply
+
+--- TEST 12: complete Decode mapping ---
+[PASS] TEST 12: all Decode channels and boxes
+
+--- TEST 13: sigmoid saturation ---
+[PASS] TEST 13: sigmoid clamps outside [-8,8]
+
+--- TEST 14: non-zero end-to-end top-level ---
+       output checksum = 1192276800, non-zero raw values = 896
+[PASS] TEST 14: non-zero end-to-end pipeline
+
+--- TEST 15: dense weight coverage ---
+       checked 18776 coefficients: no zero taps
+[PASS] TEST 15: every convolution tap is non-zero
+
+--- Decoded output slice (zero raw detection, row=0) ---
+ col | box |   x    y    w    h  conf  cls0  cls1  cls2
+-----+-----+------------------------------------------
+   0 |  0  |    0     0     0     0   500     0     0     0 
+   0 |  1  |    0     0     0     0   500     0     0     0 
+   1 |  0  |    0     0     0     0   500     0     0     0 
+   1 |  1  |    0     0     0     0   500     0     0     0 
+   2 |  0  |    0     0     0     0   500     0     0     0 
+   2 |  1  |    0     0     0     0   500     0     0     0 
+   3 |  0  |    0     0     0     0   500     0     0     0 
+   3 |  1  |    0     0     0     0   500     0     0     0 
+   4 |  0  |    0     0     0     0   500     0     0     0 
+   4 |  1  |    0     0     0     0   500     0     0     0 
+   5 |  0  |    0     0     0     0   500     0     0     0 
+   5 |  1  |    0     0     0     0   500     0     0     0 
+   6 |  0  |    0     0     0     0   500     0     0     0 
+   6 |  1  |    0     0     0     0   500     0     0     0 
+   7 |  0  |    0     0     0     0   500     0     0     0 
+   7 |  1  |    0     0     0     0   500     0     0     0 
+
+=== C simulation summary: 15/15 tests PASSED ===
+INFO: [SIM 1] CSim done with 0 errors.
+INFO: [SIM 3] *************** CSIM finish ***************
